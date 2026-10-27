@@ -1,0 +1,5070 @@
+[
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "3",
+"at": "2026-10-21T13:20:22.922Z",
+"status": "ok",
+"trades": 1128,
+"openTrades": 0,
+"pf": 0.939789794478202,
+"net": -48207,
+"win": 0.30851063829787234,
+"avg": -42.73670213,
+"largestWin": 20416,
+"largestWinShare": null,
+"largestLoss": 8299,
+"worstTrade": {
+"pnl": -8299,
+"entry": "2026-06-11T17:03",
+"exit": "2026-06-11T17:33",
+"dir": "short",
+"comment": "X0 short"
+},
+"grossProfit": 752438,
+"grossLoss": 800645,
+"commission": 4512,
+"maxDD": 58284,
+"longPF": 0.9851348344261193,
+"longN": 575,
+"shortPF": 0.8974771290119299,
+"shortN": 553,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 527,
+"pf": 0.914,
+"net": -27298
+},
+"2026": {
+"n": 601,
+"pf": 0.957,
+"net": -20909
+}
+},
+"secs": 35,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "X0",
+"priority": 1,
+"inputs": {},
+"tag": "p1",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|X0|CME_MINI:NQ1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "3",
+"at": "2026-10-21T13:20:34.691Z",
+"status": "ok",
+"trades": 1174,
+"openTrades": 0,
+"pf": 0.856886769611696,
+"net": -59996,
+"win": 0.27427597955706984,
+"avg": -51.10391823,
+"largestWin": 10083.5,
+"largestWinShare": null,
+"largestLoss": 3116.5,
+"worstTrade": {
+"pnl": -3116.5,
+"entry": "2026-06-11T16:54",
+"exit": "2026-06-11T17:33",
+"dir": "short",
+"comment": "X0 short"
+},
+"grossProfit": 359224.5,
+"grossLoss": 419220.5,
+"commission": 4696,
+"maxDD": 62565.5,
+"longPF": 0.8869311249243421,
+"longN": 597,
+"shortPF": 0.8272513403444265,
+"shortN": 577,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 549,
+"pf": 0.862,
+"net": -25171
+},
+"2026": {
+"n": 625,
+"pf": 0.853,
+"net": -34825
+}
+},
+"secs": 12,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "X0",
+"priority": 1,
+"inputs": {},
+"tag": "p1",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|X0|CME_MINI:ES1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "3",
+"at": "2026-10-21T13:20:47.106Z",
+"status": "ok",
+"trades": 1214,
+"openTrades": 0,
+"pf": 1.0514317352944762,
+"net": 34184.00000000291,
+"win": 0.3187808896210873,
+"avg": 28.15815486,
+"largestWin": 13276.000000000018,
+"largestWinShare": 0.388,
+"largestLoss": 10694.000000000055,
+"worstTrade": {
+"pnl": -10694,
+"entry": "2026-02-12T15:09",
+"exit": "2026-02-12T16:15",
+"dir": "long",
+"comment": "X0 long"
+},
+"grossProfit": 698832.0000000009,
+"grossLoss": 664647.999999998,
+"commission": 4856,
+"maxDD": 58869.99999999898,
+"longPF": 0.9767452698294371,
+"longN": 611,
+"shortPF": 1.1312336611477696,
+"shortN": 603,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 528,
+"pf": 1.139,
+"net": 27478
+},
+"2026": {
+"n": 686,
+"pf": 1.014,
+"net": 6706
+}
+},
+"secs": 12,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "X0",
+"priority": 1,
+"inputs": {},
+"tag": "p1",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|X0|COMEX:GC1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "3",
+"at": "2026-10-21T13:21:03.236Z",
+"status": "ok",
+"trades": 1128,
+"openTrades": 0,
+"pf": 1.0218076913994547,
+"net": 16623,
+"win": 0.6888297872340425,
+"avg": 14.73670213,
+"largestWin": 8271,
+"largestWinShare": 0.498,
+"largestLoss": 20444,
+"worstTrade": {
+"pnl": -20444,
+"entry": "2025-11-20T16:00",
+"exit": "2025-11-20T20:57",
+"dir": "long",
+"comment": "C-REV long"
+},
+"grossProfit": 778877,
+"grossLoss": 762254,
+"commission": 4512,
+"maxDD": 76222,
+"longPF": 1.071710139842481,
+"longN": 553,
+"shortPF": 0.9731767021979303,
+"shortN": 575,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 527,
+"pf": 1.043,
+"net": 12542
+},
+"2026": {
+"n": 601,
+"pf": 1.009,
+"net": 4081
+}
+},
+"secs": 16,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "C-REV",
+"priority": 1,
+"inputs": {
+"Row": "C-REV: fade every cross (control)"
+},
+"tag": "p1",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-REV|CME_MINI:NQ1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "3",
+"at": "2026-10-21T13:21:14.650Z",
+"status": "ok",
+"trades": 1174,
+"openTrades": 0,
+"pf": 0.9786213461739048,
+"net": -8096,
+"win": 0.7001703577512777,
+"avg": -6.896081772,
+"largestWin": 3058.5,
+"largestWinShare": null,
+"largestLoss": 10141.5,
+"worstTrade": {
+"pnl": -10141.5,
+"entry": "2025-11-20T16:00",
+"exit": "2025-11-20T20:57",
+"dir": "long",
+"comment": "C-REV long"
+},
+"grossProfit": 370599.5,
+"grossLoss": 378695.5,
+"commission": 4696,
+"maxDD": 46940,
+"longPF": 1.0162564078880525,
+"longN": 577,
+"shortPF": 0.9430347555806725,
+"shortN": 597,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 549,
+"pf": 0.96,
+"net": -6671
+},
+"2026": {
+"n": 625,
+"pf": 0.993,
+"net": -1425
+}
+},
+"secs": 11,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "C-REV",
+"priority": 1,
+"inputs": {
+"Row": "C-REV: fade every cross (control)"
+},
+"tag": "p1",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-REV|CME_MINI:ES1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "3",
+"at": "2026-10-21T13:21:26.880Z",
+"status": "ok",
+"trades": 1214,
+"openTrades": 0,
+"pf": 0.8712014198268692,
+"net": -92455.9999999993,
+"win": 0.6655683690280065,
+"avg": -76.15815486,
+"largestWin": 10646,
+"largestWinShare": null,
+"largestLoss": 13323.999999999982,
+"worstTrade": {
+"pnl": -13324,
+"entry": "2026-01-29T14:48",
+"exit": "2026-01-29T17:27",
+"dir": "long",
+"comment": "C-REV long"
+},
+"grossProfit": 625378.0000000013,
+"grossLoss": 717834.0000000006,
+"commission": 4856,
+"maxDD": 114667.99999999924,
+"longPF": 0.8093266693837288,
+"longN": 603,
+"shortPF": 0.9381121659002207,
+"shortN": 611,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 528,
+"pf": 0.774,
+"net": -52822
+},
+"2026": {
+"n": 686,
+"pf": 0.918,
+"net": -39634
+}
+},
+"secs": 12,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "C-REV",
+"priority": 1,
+"inputs": {
+"Row": "C-REV: fade every cross (control)"
+},
+"tag": "p1",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-REV|COMEX:GC1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "3",
+"at": "2026-10-21T13:21:40.079Z",
+"status": "ok",
+"trades": 1128,
+"openTrades": 0,
+"pf": 0.989869774452335,
+"net": -7877,
+"win": 0.49379432624113473,
+"avg": -6.983156028,
+"largestWin": 20416,
+"largestWinShare": null,
+"largestLoss": 19119,
+"worstTrade": {
+"pnl": -19119,
+"entry": "2025-10-10T14:03",
+"exit": "2025-10-10T19:57",
+"dir": "long",
+"comment": "C-RND rev long"
+},
+"grossProfit": 769697,
+"grossLoss": 777574,
+"commission": 4512,
+"maxDD": 41742,
+"longPF": 1.0401517289283466,
+"longN": 548,
+"shortPF": 0.9445628841480409,
+"shortN": 580,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 527,
+"pf": 1.009,
+"net": 2712
+},
+"2026": {
+"n": 601,
+"pf": 0.978,
+"net": -10589
+}
+},
+"secs": 13,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "C-RND",
+"priority": 1,
+"inputs": {
+"Row": "C-RND: random side, same trades (control)"
+},
+"tag": "p1",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-RND|CME_MINI:NQ1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "3",
+"at": "2026-10-21T13:21:50.729Z",
+"status": "ok",
+"trades": 1174,
+"openTrades": 0,
+"pf": 1.0165836690872643,
+"net": 6279,
+"win": 0.49148211243611584,
+"avg": 5.348381601,
+"largestWin": 10083.5,
+"largestWinShare": 1.606,
+"largestLoss": 6041.5,
+"worstTrade": {
+"pnl": -6041.5,
+"entry": "2026-06-05T13:42",
+"exit": "2026-06-05T19:57",
+"dir": "long",
+"comment": "C-RND long"
+},
+"grossProfit": 384904.5,
+"grossLoss": 378625.5,
+"commission": 4696,
+"maxDD": 61602.5,
+"longPF": 1.057133338161802,
+"longN": 588,
+"shortPF": 0.982617284190295,
+"shortN": 586,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 549,
+"pf": 1.154,
+"net": 23704
+},
+"2026": {
+"n": 625,
+"pf": 0.922,
+"net": -17425
+}
+},
+"secs": 11,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "C-RND",
+"priority": 1,
+"inputs": {
+"Row": "C-RND: random side, same trades (control)"
+},
+"tag": "p1",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-RND|CME_MINI:ES1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "3",
+"at": "2026-10-21T13:22:02.492Z",
+"status": "ok",
+"trades": 1214,
+"openTrades": 0,
+"pf": 0.9227128889494893,
+"net": -54415.9999999993,
+"win": 0.48599670510708404,
+"avg": -44.82372323,
+"largestWin": 13276.000000000018,
+"largestWinShare": null,
+"largestLoss": 11114.000000000036,
+"worstTrade": {
+"pnl": -11114,
+"entry": "2026-06-11T17:30",
+"exit": "2026-06-11T19:57",
+"dir": "short",
+"comment": "C-RND short"
+},
+"grossProfit": 649659.9999999997,
+"grossLoss": 704075.999999999,
+"commission": 4856,
+"maxDD": 79060.00000000033,
+"longPF": 0.858811651160014,
+"longN": 600,
+"shortPF": 0.9928612289650544,
+"shortN": 614,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 528,
+"pf": 0.951,
+"net": -10522
+},
+"2026": {
+"n": 686,
+"pf": 0.91,
+"net": -43894
+}
+},
+"secs": 12,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "C-RND",
+"priority": 1,
+"inputs": {
+"Row": "C-RND: random side, same trades (control)"
+},
+"tag": "p1",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-RND|COMEX:GC1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "3",
+"at": "2026-10-21T13:22:18.089Z",
+"status": "ok",
+"trades": 1128,
+"openTrades": 0,
+"pf": 1.0278398758068554,
+"net": 21233,
+"win": 0.5150709219858156,
+"avg": 18.82358156,
+"largestWin": 11031,
+"largestWinShare": 0.52,
+"largestLoss": 20444,
+"worstTrade": {
+"pnl": -20444,
+"entry": "2025-11-20T16:00",
+"exit": "2025-11-20T20:57",
+"dir": "long",
+"comment": "C-LONG long"
+},
+"grossProfit": 783916,
+"grossLoss": 762683,
+"commission": 4512,
+"maxDD": 93154,
+"longPF": 1.0278398758068554,
+"longN": 1128,
+"shortPF": null,
+"shortN": 0,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 527,
+"pf": 0.971,
+"net": -8948
+},
+"2026": {
+"n": 601,
+"pf": 1.066,
+"net": 30181
+}
+},
+"secs": 16,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "C-LONG",
+"priority": 1,
+"inputs": {
+"Row": "C-LONG: always long, same trades (control)"
+},
+"tag": "p1",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-LONG|CME_MINI:NQ1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "3",
+"at": "2026-10-21T13:22:28.842Z",
+"status": "ok",
+"trades": 1174,
+"openTrades": 0,
+"pf": 0.9476167348036647,
+"net": -20546,
+"win": 0.48637137989778534,
+"avg": -17.50085179,
+"largestWin": 5758.5,
+"largestWinShare": null,
+"largestLoss": 10141.5,
+"worstTrade": {
+"pnl": -10141.5,
+"entry": "2025-11-20T16:00",
+"exit": "2025-11-20T20:57",
+"dir": "long",
+"comment": "C-LONG long"
+},
+"grossProfit": 371678.5,
+"grossLoss": 392224.5,
+"commission": 4696,
+"maxDD": 44568,
+"longPF": 0.9476167348036647,
+"longN": 1174,
+"shortPF": null,
+"shortN": 0,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 549,
+"pf": 0.949,
+"net": -8646
+},
+"2026": {
+"n": 625,
+"pf": 0.946,
+"net": -11900
+}
+},
+"secs": 11,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "C-LONG",
+"priority": 1,
+"inputs": {
+"Row": "C-LONG: always long, same trades (control)"
+},
+"tag": "p1",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-LONG|CME_MINI:ES1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "3",
+"at": "2026-10-21T13:22:39.415Z",
+"status": "ok",
+"trades": 1214,
+"openTrades": 0,
+"pf": 0.8895739096442749,
+"net": -79095.99999999872,
+"win": 0.48929159802306427,
+"avg": -65.15321252,
+"largestWin": 11206.000000000036,
+"largestWinShare": null,
+"largestLoss": 13323.999999999982,
+"worstTrade": {
+"pnl": -13324,
+"entry": "2026-01-29T14:48",
+"exit": "2026-01-29T17:27",
+"dir": "long",
+"comment": "C-LONG long"
+},
+"grossProfit": 637184.0000000002,
+"grossLoss": 716279.999999999,
+"commission": 4856,
+"maxDD": 133395.99999999927,
+"longPF": 0.8895739096442749,
+"longN": 1214,
+"shortPF": null,
+"shortN": 0,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 528,
+"pf": 1.068,
+"net": 13778
+},
+"2026": {
+"n": 686,
+"pf": 0.819,
+"net": -92874
+}
+},
+"secs": 11,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "C-LONG",
+"priority": 1,
+"inputs": {
+"Row": "C-LONG: always long, same trades (control)"
+},
+"tag": "p1",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-LONG|COMEX:GC1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "1",
+"at": "2026-10-21T13:23:22.460Z",
+"status": "ok",
+"trades": 1929,
+"openTrades": 0,
+"pf": 0.9681501709128586,
+"net": -32891,
+"win": 0.25090720580611714,
+"avg": -17.05080353,
+"largestWin": 21281,
+"largestWinShare": null,
+"largestLoss": 5769,
+"worstTrade": {
+"pnl": -5769,
+"entry": "2026-06-11T16:57",
+"exit": "2026-06-11T17:30",
+"dir": "short",
+"comment": "X0 short"
+},
+"grossProfit": 999799,
+"grossLoss": 1032690,
+"commission": 7716,
+"maxDD": 76836,
+"longPF": 0.9806029414070462,
+"longN": 973,
+"shortPF": 0.9559888067557584,
+"shortN": 956,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 948,
+"pf": 0.947,
+"net": -21687
+},
+"2026": {
+"n": 981,
+"pf": 0.982,
+"net": -11204
+}
+},
+"secs": 16,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "X0-tf",
+"priority": 2,
+"inputs": {},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|X0-tf|CME_MINI:NQ1!|1|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "2",
+"at": "2026-10-21T13:23:33.132Z",
+"status": "ok",
+"trades": 1366,
+"openTrades": 0,
+"pf": 0.9957868550813754,
+"net": -3604,
+"win": 0.2957540263543192,
+"avg": -2.638360176,
+"largestWin": 21096,
+"largestWinShare": null,
+"largestLoss": 6934,
+"worstTrade": {
+"pnl": -6934,
+"entry": "2026-06-11T17:00",
+"exit": "2026-06-11T17:32",
+"dir": "short",
+"comment": "X0 short"
+},
+"grossProfit": 851814,
+"grossLoss": 855418,
+"commission": 5464,
+"maxDD": 53590,
+"longPF": 1.050512265034482,
+"longN": 693,
+"shortPF": 0.9422964007489771,
+"shortN": 673,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 659,
+"pf": 0.949,
+"net": -18426
+},
+"2026": {
+"n": 707,
+"pf": 1.03,
+"net": 14822
+}
+},
+"secs": 11,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "X0-tf",
+"priority": 2,
+"inputs": {},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|X0-tf|CME_MINI:NQ1!|2|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "5",
+"at": "2026-10-21T13:23:39.814Z",
+"status": "ok",
+"trades": 826,
+"openTrades": 0,
+"pf": 0.9645270477616704,
+"net": -23119,
+"win": 0.3474576271186441,
+"avg": -27.98910412,
+"largestWin": 20456,
+"largestWinShare": null,
+"largestLoss": 6039,
+"worstTrade": {
+"pnl": -6039,
+"entry": "2026-06-11T17:10",
+"exit": "2026-06-11T17:30",
+"dir": "short",
+"comment": "X0 short"
+},
+"grossProfit": 628617,
+"grossLoss": 651736,
+"commission": 3304,
+"maxDD": 59415,
+"longPF": 1.0109919503552796,
+"longN": 423,
+"shortPF": 0.9203133328143059,
+"shortN": 403,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 379,
+"pf": 0.913,
+"net": -22016
+},
+"2026": {
+"n": 447,
+"pf": 0.997,
+"net": -1103
+}
+},
+"secs": 7,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "X0-tf",
+"priority": 2,
+"inputs": {},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|X0-tf|CME_MINI:NQ1!|5|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "15",
+"at": "2026-10-21T13:23:45.463Z",
+"status": "ok",
+"trades": 480,
+"openTrades": 0,
+"pf": 1.0098987981484921,
+"net": 3890,
+"win": 0.42083333333333334,
+"avg": 8.104166667,
+"largestWin": 16056,
+"largestWinShare": 4.128,
+"largestLoss": 6894,
+"worstTrade": {
+"pnl": -6894,
+"entry": "2026-06-11T17:15",
+"exit": "2026-06-11T17:30",
+"dir": "short",
+"comment": "X0 short"
+},
+"grossProfit": 396867,
+"grossLoss": 392977,
+"commission": 1920,
+"maxDD": 53543,
+"longPF": 0.99250588015313,
+"longN": 252,
+"shortPF": 1.0285268588834842,
+"shortN": 228,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 227,
+"pf": 0.782,
+"net": -31788
+},
+"2026": {
+"n": 253,
+"pf": 1.144,
+"net": 35678
+}
+},
+"secs": 6,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "X0-tf",
+"priority": 2,
+"inputs": {},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|X0-tf|CME_MINI:NQ1!|15|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "1",
+"at": "2026-10-21T13:23:57.474Z",
+"status": "ok",
+"trades": 2038,
+"openTrades": 0,
+"pf": 0.8956372660793677,
+"net": -55152,
+"win": 0.23307163886162904,
+"avg": -27.06182532,
+"largestWin": 10508.5,
+"largestWinShare": null,
+"largestLoss": 3129,
+"worstTrade": {
+"pnl": -3129,
+"entry": "2026-06-11T16:52",
+"exit": "2026-06-11T17:31",
+"dir": "short",
+"comment": "X0 short"
+},
+"grossProfit": 473312.5,
+"grossLoss": 528464.5,
+"commission": 8152,
+"maxDD": 63053.5,
+"longPF": 0.9164638444453311,
+"longN": 1024,
+"shortPF": 0.8749787978273899,
+"shortN": 1014,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 978,
+"pf": 0.929,
+"net": -16199
+},
+"2026": {
+"n": 1060,
+"pf": 0.87,
+"net": -38952
+}
+},
+"secs": 12,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "X0-tf",
+"priority": 2,
+"inputs": {},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|X0-tf|CME_MINI:ES1!|1|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "2",
+"at": "2026-10-21T13:24:07.240Z",
+"status": "ok",
+"trades": 1410,
+"openTrades": 0,
+"pf": 0.9192604792554424,
+"net": -36227.5,
+"win": 0.27375886524822696,
+"avg": -25.69326241,
+"largestWin": 10396,
+"largestWinShare": null,
+"largestLoss": 2566.5,
+"worstTrade": {
+"pnl": -2566.5,
+"entry": "2026-06-11T16:52",
+"exit": "2026-06-11T17:32",
+"dir": "short",
+"comment": "X0 short"
+},
+"grossProfit": 412468.5,
+"grossLoss": 448696,
+"commission": 5640,
+"maxDD": 38747,
+"longPF": 0.9610039173429414,
+"longN": 712,
+"shortPF": 0.8781157550720565,
+"shortN": 698,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 659,
+"pf": 0.939,
+"net": -12261
+},
+"2026": {
+"n": 751,
+"pf": 0.904,
+"net": -23966
+}
+},
+"secs": 10,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "X0-tf",
+"priority": 2,
+"inputs": {},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|X0-tf|CME_MINI:ES1!|2|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "5",
+"at": "2026-10-21T13:24:14.115Z",
+"status": "ok",
+"trades": 882,
+"openTrades": 0,
+"pf": 0.9288249745593805,
+"net": -23640.5,
+"win": 0.32086167800453513,
+"avg": -26.80328798,
+"largestWin": 9958.5,
+"largestWinShare": null,
+"largestLoss": 3904,
+"worstTrade": {
+"pnl": -3904,
+"entry": "2026-06-11T17:00",
+"exit": "2026-06-11T17:35",
+"dir": "short",
+"comment": "X0 short"
+},
+"grossProfit": 308505.5,
+"grossLoss": 332146,
+"commission": 3528,
+"maxDD": 36902,
+"longPF": 1.0289792087305827,
+"longN": 456,
+"shortPF": 0.8291550408318341,
+"shortN": 426,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 399,
+"pf": 0.978,
+"net": -3071
+},
+"2026": {
+"n": 483,
+"pf": 0.893,
+"net": -20569
+}
+},
+"secs": 7,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "X0-tf",
+"priority": 2,
+"inputs": {},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|X0-tf|CME_MINI:ES1!|5|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "15",
+"at": "2026-10-21T13:24:19.086Z",
+"status": "ok",
+"trades": 503,
+"openTrades": 0,
+"pf": 0.9011102108192711,
+"net": -19649.5,
+"win": 0.415506958250497,
+"avg": -39.06461233,
+"largestWin": 4733.5,
+"largestWinShare": null,
+"largestLoss": 3704,
+"worstTrade": {
+"pnl": -3704,
+"entry": "2025-05-21T15:15",
+"exit": "2025-05-21T17:30",
+"dir": "long",
+"comment": "X0 long"
+},
+"grossProfit": 179051.5,
+"grossLoss": 198701,
+"commission": 2012,
+"maxDD": 30063.5,
+"longPF": 0.9776559059788673,
+"longN": 265,
+"shortPF": 0.8243847874720358,
+"shortN": 238,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 250,
+"pf": 0.811,
+"net": -17012
+},
+"2026": {
+"n": 253,
+"pf": 0.976,
+"net": -2637
+}
+},
+"secs": 5,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "X0-tf",
+"priority": 2,
+"inputs": {},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|X0-tf|CME_MINI:ES1!|15|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "1",
+"at": "2026-10-21T13:24:38.208Z",
+"status": "ok",
+"trades": 2229,
+"openTrades": 0,
+"pf": 1.000302352854945,
+"net": 264.00000000104774,
+"win": 0.25841184387617766,
+"avg": 0.1184387618,
+"largestWin": 18565.99999999998,
+"largestWinShare": 70.326,
+"largestLoss": 4693.999999999964,
+"worstTrade": {
+"pnl": -4694,
+"entry": "2025-10-17T13:32",
+"exit": "2025-10-17T14:02",
+"dir": "long",
+"comment": "X0 long"
+},
+"grossProfit": 873416.000000001,
+"grossLoss": 873152,
+"commission": 8916,
+"maxDD": 56758.000000000146,
+"longPF": 0.9097805349997539,
+"longN": 1107,
+"shortPF": 1.0928240923007115,
+"shortN": 1122,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 1033,
+"pf": 0.963,
+"net": -10982
+},
+"2026": {
+"n": 1196,
+"pf": 1.019,
+"net": 11246
+}
+},
+"secs": 19,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "X0-tf",
+"priority": 2,
+"inputs": {},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|X0-tf|COMEX:GC1!|1|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "2",
+"at": "2026-10-21T13:24:50.187Z",
+"status": "ok",
+"trades": 1576,
+"openTrades": 0,
+"pf": 0.99991581362188,
+"net": -64.00000000162981,
+"win": 0.27220812182741116,
+"avg": -0.04060913706,
+"largestWin": 17785.999999999964,
+"largestWinShare": null,
+"largestLoss": 4914.000000000036,
+"worstTrade": {
+"pnl": -4914,
+"entry": "2026-01-29T17:24",
+"exit": "2026-01-29T19:32",
+"dir": "long",
+"comment": "X0 long"
+},
+"grossProfit": 760154.0000000001,
+"grossLoss": 760218.0000000017,
+"commission": 6304,
+"maxDD": 69372.0000000007,
+"longPF": 0.9104350720852209,
+"longN": 784,
+"shortPF": 1.0944312809027659,
+"shortN": 792,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 725,
+"pf": 1.024,
+"net": 5670
+},
+"2026": {
+"n": 851,
+"pf": 0.989,
+"net": -5734
+}
+},
+"secs": 12,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "X0-tf",
+"priority": 2,
+"inputs": {},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|X0-tf|COMEX:GC1!|2|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "5",
+"at": "2026-10-21T13:24:57.031Z",
+"status": "ok",
+"trades": 912,
+"openTrades": 0,
+"pf": 0.9553910617400893,
+"net": -25997.999999999418,
+"win": 0.34539473684210525,
+"avg": -28.50657895,
+"largestWin": 20015.99999999998,
+"largestWinShare": null,
+"largestLoss": 23744.000000000055,
+"worstTrade": {
+"pnl": -23744,
+"entry": "2026-01-29T14:40",
+"exit": "2026-01-29T15:25",
+"dir": "long",
+"comment": "X0 long"
+},
+"grossProfit": 556799.9999999997,
+"grossLoss": 582797.9999999991,
+"commission": 3648,
+"maxDD": 83271.99999999945,
+"longPF": 0.9397967469027485,
+"longN": 457,
+"shortPF": 0.9725633278772502,
+"shortN": 455,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 401,
+"pf": 1.097,
+"net": 15356
+},
+"2026": {
+"n": 511,
+"pf": 0.903,
+"net": -41354
+}
+},
+"secs": 7,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "X0-tf",
+"priority": 2,
+"inputs": {},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|X0-tf|COMEX:GC1!|5|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "15",
+"at": "2026-10-21T13:25:01.926Z",
+"status": "ok",
+"trades": 440,
+"openTrades": 0,
+"pf": 1.2043595696575253,
+"net": 53870.000000002154,
+"win": 0.45227272727272727,
+"avg": 122.4318182,
+"largestWin": 14935.999999999964,
+"largestWinShare": 0.277,
+"largestLoss": 6663.999999999945,
+"worstTrade": {
+"pnl": -6664,
+"entry": "2026-06-17T15:45",
+"exit": "2026-06-17T18:30",
+"dir": "long",
+"comment": "X0 long"
+},
+"grossProfit": 317474.0000000013,
+"grossLoss": 263603.9999999991,
+"commission": 1760,
+"maxDD": 32139.999999999593,
+"longPF": 1.0289568712952322,
+"longN": 230,
+"shortPF": 1.424705137203217,
+"shortN": 210,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-09-30",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 219,
+"pf": 1.171,
+"net": 16124
+},
+"2026": {
+"n": 221,
+"pf": 1.223,
+"net": 37746
+}
+},
+"secs": 5,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "X0-tf",
+"priority": 2,
+"inputs": {},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|X0-tf|COMEX:GC1!|15|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "1",
+"at": "2026-10-21T13:25:28.665Z",
+"status": "ok",
+"trades": 1929,
+"openTrades": 0,
+"pf": 0.9791601298483458,
+"net": -21121,
+"win": 0.7433903576982893,
+"avg": -10.94919647,
+"largestWin": 5741,
+"largestWinShare": null,
+"largestLoss": 21309,
+"worstTrade": {
+"pnl": -21309,
+"entry": "2025-11-20T15:55",
+"exit": "2025-11-20T20:59",
+"dir": "long",
+"comment": "C-REV long"
+},
+"grossProfit": 992369,
+"grossLoss": 1013490,
+"commission": 7716,
+"maxDD": 122808,
+"longPF": 0.9925452293616038,
+"longN": 956,
+"shortPF": 0.9658009963784188,
+"shortN": 973,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 948,
+"pf": 0.988,
+"net": -4857
+},
+"2026": {
+"n": 981,
+"pf": 0.974,
+"net": -16264
+}
+},
+"secs": 27,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "C-REV-tf",
+"priority": 3,
+"inputs": {
+"Row": "C-REV: fade every cross (control)"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-REV-tf|CME_MINI:NQ1!|1|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "2",
+"at": "2026-10-21T13:25:38.883Z",
+"status": "ok",
+"trades": 1366,
+"openTrades": 0,
+"pf": 0.9598652443488819,
+"net": -34644,
+"win": 0.7013177159590044,
+"avg": -25.36163982,
+"largestWin": 6906,
+"largestWinShare": null,
+"largestLoss": 21124,
+"worstTrade": {
+"pnl": -21124,
+"entry": "2025-11-20T15:58",
+"exit": "2025-11-20T20:58",
+"dir": "long",
+"comment": "C-REV long"
+},
+"grossProfit": 828548,
+"grossLoss": 863192,
+"commission": 5464,
+"maxDD": 101418,
+"longPF": 1.014815065938909,
+"longN": 673,
+"shortPF": 0.9094648560526304,
+"shortN": 693,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 659,
+"pf": 1,
+"net": -26
+},
+"2026": {
+"n": 707,
+"pf": 0.933,
+"net": -34618
+}
+},
+"secs": 10,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "C-REV-tf",
+"priority": 3,
+"inputs": {
+"Row": "C-REV: fade every cross (control)"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-REV-tf|CME_MINI:NQ1!|2|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "5",
+"at": "2026-10-21T13:25:45.754Z",
+"status": "ok",
+"trades": 826,
+"openTrades": 0,
+"pf": 0.9999858641037763,
+"net": -9,
+"win": 0.6513317191283293,
+"avg": -0.01089588378,
+"largestWin": 6011,
+"largestWinShare": null,
+"largestLoss": 20484,
+"worstTrade": {
+"pnl": -20484,
+"entry": "2025-11-20T16:00",
+"exit": "2025-11-20T20:55",
+"dir": "long",
+"comment": "C-REV long"
+},
+"grossProfit": 636668,
+"grossLoss": 636677,
+"commission": 3304,
+"maxDD": 105501,
+"longPF": 1.0492839550631161,
+"longN": 403,
+"shortPF": 0.9529053039491745,
+"shortN": 423,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 379,
+"pf": 1.048,
+"net": 11404
+},
+"2026": {
+"n": 447,
+"pf": 0.972,
+"net": -11413
+}
+},
+"secs": 7,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "C-REV-tf",
+"priority": 3,
+"inputs": {
+"Row": "C-REV: fade every cross (control)"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-REV-tf|CME_MINI:NQ1!|5|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "15",
+"at": "2026-10-21T13:25:51.398Z",
+"status": "ok",
+"trades": 480,
+"openTrades": 0,
+"pf": 0.956953617709376,
+"net": -17330,
+"win": 0.5708333333333333,
+"avg": -36.10416667,
+"largestWin": 6866,
+"largestWinShare": null,
+"largestLoss": 16084,
+"worstTrade": {
+"pnl": -16084,
+"entry": "2026-07-02T14:00",
+"exit": "2026-07-02T19:45",
+"dir": "long",
+"comment": "C-REV long"
+},
+"grossProfit": 385259,
+"grossLoss": 402589,
+"commission": 1920,
+"maxDD": 94943,
+"longPF": 0.9403676912889415,
+"longN": 228,
+"shortPF": 0.9729781207267044,
+"shortN": 252,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 227,
+"pf": 1.218,
+"net": 25432
+},
+"2026": {
+"n": 253,
+"pf": 0.851,
+"net": -42762
+}
+},
+"secs": 6,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "C-REV-tf",
+"priority": 3,
+"inputs": {
+"Row": "C-REV: fade every cross (control)"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-REV-tf|CME_MINI:NQ1!|15|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "1",
+"at": "2026-10-21T13:26:04.511Z",
+"status": "ok",
+"trades": 2038,
+"openTrades": 0,
+"pf": 0.8744097895509471,
+"net": -63052,
+"win": 0.7414131501472031,
+"avg": -30.93817468,
+"largestWin": 3071,
+"largestWinShare": null,
+"largestLoss": 10566.5,
+"worstTrade": {
+"pnl": -10566.5,
+"entry": "2025-11-20T15:55",
+"exit": "2025-11-20T20:59",
+"dir": "long",
+"comment": "C-REV long"
+},
+"grossProfit": 438993.5,
+"grossLoss": 502045.5,
+"commission": 8152,
+"maxDD": 82240,
+"longPF": 0.8959178496413025,
+"longN": 1014,
+"shortPF": 0.8536832923948245,
+"shortN": 1024,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 978,
+"pf": 0.82,
+"net": -40524
+},
+"2026": {
+"n": 1060,
+"pf": 0.919,
+"net": -22527
+}
+},
+"secs": 13,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "C-REV-tf",
+"priority": 3,
+"inputs": {
+"Row": "C-REV: fade every cross (control)"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-REV-tf|CME_MINI:ES1!|1|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "2",
+"at": "2026-10-21T13:26:14.338Z",
+"status": "ok",
+"trades": 1410,
+"openTrades": 0,
+"pf": 0.895447091213103,
+"net": -45552.5,
+"win": 0.7028368794326241,
+"avg": -32.30673759,
+"largestWin": 2508.5,
+"largestWinShare": null,
+"largestLoss": 10454,
+"worstTrade": {
+"pnl": -10454,
+"entry": "2025-11-20T15:58",
+"exit": "2025-11-20T20:58",
+"dir": "long",
+"comment": "C-REV long"
+},
+"grossProfit": 390136,
+"grossLoss": 435688.5,
+"commission": 5640,
+"maxDD": 81068,
+"longPF": 0.9382903244263889,
+"longN": 698,
+"shortPF": 0.8556830829621467,
+"shortN": 712,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 659,
+"pf": 0.869,
+"net": -25961
+},
+"2026": {
+"n": 751,
+"pf": 0.917,
+"net": -19591
+}
+},
+"secs": 10,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "C-REV-tf",
+"priority": 3,
+"inputs": {
+"Row": "C-REV: fade every cross (control)"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-REV-tf|CME_MINI:ES1!|2|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "5",
+"at": "2026-10-21T13:26:21.222Z",
+"status": "ok",
+"trades": 882,
+"openTrades": 0,
+"pf": 0.9154938445071997,
+"net": -27515.5,
+"win": 0.655328798185941,
+"avg": -31.19671202,
+"largestWin": 3846,
+"largestWinShare": null,
+"largestLoss": 10016.5,
+"worstTrade": {
+"pnl": -10016.5,
+"entry": "2025-11-20T16:00",
+"exit": "2025-11-20T20:55",
+"dir": "long",
+"comment": "C-REV long"
+},
+"grossProfit": 298088,
+"grossLoss": 325603.5,
+"commission": 3528,
+"maxDD": 55494,
+"longPF": 1.0255920759502348,
+"longN": 426,
+"shortPF": 0.8261225193844819,
+"shortN": 456,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 399,
+"pf": 0.861,
+"net": -20071
+},
+"2026": {
+"n": 483,
+"pf": 0.959,
+"net": -7444
+}
+},
+"secs": 7,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "C-REV-tf",
+"priority": 3,
+"inputs": {
+"Row": "C-REV: fade every cross (control)"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-REV-tf|CME_MINI:ES1!|5|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "15",
+"at": "2026-10-21T13:26:26.526Z",
+"status": "ok",
+"trades": 503,
+"openTrades": 0,
+"pf": 0.9502855144479706,
+"net": -9524.5,
+"win": 0.5606361829025845,
+"avg": -18.93538767,
+"largestWin": 3646,
+"largestWinShare": null,
+"largestLoss": 4791.5,
+"worstTrade": {
+"pnl": -4791.5,
+"entry": "2026-06-17T17:15",
+"exit": "2026-06-17T19:45",
+"dir": "long",
+"comment": "C-REV long"
+},
+"grossProfit": 182059.5,
+"grossLoss": 191584,
+"commission": 2012,
+"maxDD": 34768,
+"longPF": 1.041492492870804,
+"longN": 238,
+"shortPF": 0.8739054542664506,
+"shortN": 265,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 250,
+"pf": 1.032,
+"net": 2513
+},
+"2026": {
+"n": 253,
+"pf": 0.893,
+"net": -12037
+}
+},
+"secs": 5,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "C-REV-tf",
+"priority": 3,
+"inputs": {
+"Row": "C-REV: fade every cross (control)"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-REV-tf|CME_MINI:ES1!|15|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "1",
+"at": "2026-10-21T13:26:42.639Z",
+"status": "ok",
+"trades": 2229,
+"openTrades": 0,
+"pf": 0.8811109436103933,
+"net": -107255.99999999651,
+"win": 0.7227456258411844,
+"avg": -48.11843876,
+"largestWin": 4646,
+"largestWinShare": null,
+"largestLoss": 18613.999999999945,
+"worstTrade": {
+"pnl": -18614,
+"entry": "2026-01-29T14:42",
+"exit": "2026-01-29T17:20",
+"dir": "long",
+"comment": "C-REV long"
+},
+"grossProfit": 794896.0000000037,
+"grossLoss": 902152.0000000002,
+"commission": 8916,
+"maxDD": 126115.99999999645,
+"longPF": 0.8069105858170619,
+"longN": 1122,
+"shortPF": 0.9679587732045106,
+"shortN": 1107,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 1033,
+"pf": 0.869,
+"net": -38602
+},
+"2026": {
+"n": 1196,
+"pf": 0.887,
+"net": -68654
+}
+},
+"secs": 16,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "C-REV-tf",
+"priority": 3,
+"inputs": {
+"Row": "C-REV: fade every cross (control)"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-REV-tf|COMEX:GC1!|1|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "2",
+"at": "2026-10-21T13:26:53.330Z",
+"status": "ok",
+"trades": 1576,
+"openTrades": 0,
+"pf": 0.9032492601353779,
+"net": -75583.99999999953,
+"win": 0.7138324873096447,
+"avg": -47.95939086,
+"largestWin": 4865.999999999982,
+"largestWinShare": null,
+"largestLoss": 17834.00000000002,
+"worstTrade": {
+"pnl": -17834,
+"entry": "2026-01-29T14:44",
+"exit": "2026-01-29T17:24",
+"dir": "long",
+"comment": "C-REV long"
+},
+"grossProfit": 705640.0000000003,
+"grossLoss": 781223.9999999999,
+"commission": 6304,
+"maxDD": 104589.9999999997,
+"longPF": 0.8244467018761837,
+"longN": 792,
+"shortPF": 0.9927393208421941,
+"shortN": 784,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 725,
+"pf": 0.842,
+"net": -40470
+},
+"2026": {
+"n": 851,
+"pf": 0.933,
+"net": -35114
+}
+},
+"secs": 11,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "C-REV-tf",
+"priority": 3,
+"inputs": {
+"Row": "C-REV: fade every cross (control)"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-REV-tf|COMEX:GC1!|2|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "5",
+"at": "2026-10-21T13:27:02.150Z",
+"status": "ok",
+"trades": 912,
+"openTrades": 0,
+"pf": 0.9689354385523478,
+"net": -17777.999999999767,
+"win": 0.6403508771929824,
+"avg": -19.49342105,
+"largestWin": 23696,
+"largestWinShare": null,
+"largestLoss": 20063.999999999945,
+"worstTrade": {
+"pnl": -20064,
+"entry": "2026-01-30T16:10",
+"exit": "2026-01-30T20:55",
+"dir": "long",
+"comment": "C-REV long"
+},
+"grossProfit": 554514,
+"grossLoss": 572291.9999999998,
+"commission": 3648,
+"maxDD": 65134.00000000112,
+"longPF": 0.9487136977315808,
+"longN": 455,
+"shortPF": 0.9879659464776334,
+"shortN": 457,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 401,
+"pf": 0.808,
+"net": -34604
+},
+"2026": {
+"n": 511,
+"pf": 1.043,
+"net": 16826
+}
+},
+"secs": 9,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "C-REV-tf",
+"priority": 3,
+"inputs": {
+"Row": "C-REV: fade every cross (control)"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-REV-tf|COMEX:GC1!|5|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "15",
+"at": "2026-10-21T13:27:07.147Z",
+"status": "ok",
+"trades": 440,
+"openTrades": 0,
+"pf": 0.7707484989667025,
+"net": -74989.99999999983,
+"win": 0.5409090909090909,
+"avg": -170.4318182,
+"largestWin": 6615.999999999982,
+"largestWinShare": null,
+"largestLoss": 14984.000000000018,
+"worstTrade": {
+"pnl": -14984,
+"entry": "2026-06-11T14:15",
+"exit": "2026-06-11T19:45",
+"dir": "short",
+"comment": "C-REV short"
+},
+"grossProfit": 252118,
+"grossLoss": 327107.9999999998,
+"commission": 1760,
+"maxDD": 86754.00000000016,
+"longPF": 0.6513950039123173,
+"longN": 210,
+"shortPF": 0.9018953636095329,
+"shortN": 230,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-09-30",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 219,
+"pf": 0.769,
+"net": -26636
+},
+"2026": {
+"n": 221,
+"pf": 0.772,
+"net": -48354
+}
+},
+"secs": 5,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "C-REV-tf",
+"priority": 3,
+"inputs": {
+"Row": "C-REV: fade every cross (control)"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-REV-tf|COMEX:GC1!|15|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "3",
+"at": "2026-10-21T13:27:31.286Z",
+"status": "ok",
+"trades": 334,
+"openTrades": 0,
+"pf": 1.2154457107803571,
+"net": 53384,
+"win": 0.3383233532934132,
+"avg": 159.8323353,
+"largestWin": 11511,
+"largestWinShare": 0.216,
+"largestLoss": 4879,
+"worstTrade": {
+"pnl": -4879,
+"entry": "2026-06-25T13:54",
+"exit": "2026-06-25T15:03",
+"dir": "short",
+"comment": "V-1D short"
+},
+"grossProfit": 301168,
+"grossLoss": 247784,
+"commission": 1336,
+"maxDD": 28144,
+"longPF": 1.278436675246815,
+"longN": 172,
+"shortPF": 1.1535914253719406,
+"shortN": 162,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 154,
+"pf": 1.018,
+"net": 1709
+},
+"2026": {
+"n": 180,
+"pf": 1.333,
+"net": 51675
+}
+},
+"secs": 19,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "V-1D",
+"priority": 2,
+"inputs": {
+"Row": "V-1D: first cross of the day only"
+},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-1D|CME_MINI:NQ1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "3",
+"at": "2026-10-21T13:27:44.730Z",
+"status": "ok",
+"trades": 330,
+"openTrades": 0,
+"pf": 0.8946542712564085,
+"net": -12657.5,
+"win": 0.2787878787878788,
+"avg": -38.35606061,
+"largestWin": 5983.5,
+"largestWinShare": null,
+"largestLoss": 2191.5,
+"worstTrade": {
+"pnl": -2191.5,
+"entry": "2026-06-25T13:54",
+"exit": "2026-06-25T14:12",
+"dir": "short",
+"comment": "V-1D short"
+},
+"grossProfit": 107494.5,
+"grossLoss": 120152,
+"commission": 1320,
+"maxDD": 24843,
+"longPF": 1.0610259131208708,
+"longN": 168,
+"shortPF": 0.737177202475456,
+"shortN": 162,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 156,
+"pf": 0.984,
+"net": -774
+},
+"2026": {
+"n": 174,
+"pf": 0.835,
+"net": -11883
+}
+},
+"secs": 13,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "V-1D",
+"priority": 2,
+"inputs": {
+"Row": "V-1D: first cross of the day only"
+},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-1D|CME_MINI:ES1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "3",
+"at": "2026-10-21T13:27:56.696Z",
+"status": "ok",
+"trades": 341,
+"openTrades": 0,
+"pf": 1.0415290843250942,
+"net": 8326.000000000815,
+"win": 0.2991202346041056,
+"avg": 24.41642229,
+"largestWin": 11385.999999999964,
+"largestWinShare": 1.368,
+"largestLoss": 4093.9999999999636,
+"worstTrade": {
+"pnl": -4094,
+"entry": "2026-01-16T15:33",
+"exit": "2026-01-16T16:15",
+"dir": "short",
+"comment": "V-1D short"
+},
+"grossProfit": 208812.00000000044,
+"grossLoss": 200485.99999999962,
+"commission": 1364,
+"maxDD": 30637.999999999913,
+"longPF": 0.8923487017474583,
+"longN": 171,
+"shortPF": 1.193858623331594,
+"shortN": 170,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 160,
+"pf": 1.117,
+"net": 8010
+},
+"2026": {
+"n": 181,
+"pf": 1.002,
+"net": 316
+}
+},
+"secs": 12,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "V-1D",
+"priority": 2,
+"inputs": {
+"Row": "V-1D: first cross of the day only"
+},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-1D|COMEX:GC1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "3",
+"at": "2026-10-21T13:28:13.619Z",
+"status": "ok",
+"trades": 1128,
+"openTrades": 0,
+"pf": 1.0095562366319992,
+"net": 3963,
+"win": 0.399822695035461,
+"avg": 3.513297872,
+"largestWin": 2891,
+"largestWinShare": 0.729,
+"largestLoss": 1639,
+"worstTrade": {
+"pnl": -1639,
+"entry": "2026-06-10T13:45",
+"exit": "2026-06-10T13:51",
+"dir": "long",
+"comment": "V-ATR long"
+},
+"grossProfit": 418666,
+"grossLoss": 414703,
+"commission": 4512,
+"maxDD": 43013,
+"longPF": 0.9568664238678586,
+"longN": 575,
+"shortPF": 1.0676488929674153,
+"shortN": 553,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 527,
+"pf": 0.968,
+"net": -5113
+},
+"2026": {
+"n": 601,
+"pf": 1.035,
+"net": 9076
+}
+},
+"secs": 17,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "V-ATR",
+"priority": 2,
+"inputs": {
+"Row": "V-ATR: + 1 ATR stop, 1.5R target"
+},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-ATR|CME_MINI:NQ1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "3",
+"at": "2026-10-21T13:28:25.591Z",
+"status": "ok",
+"trades": 1174,
+"openTrades": 0,
+"pf": 0.7918028316352761,
+"net": -46571,
+"win": 0.358603066439523,
+"avg": -39.66865417,
+"largestWin": 1071,
+"largestWinShare": null,
+"largestLoss": 791.5,
+"worstTrade": {
+"pnl": -791.5,
+"entry": "2025-05-07T19:51",
+"exit": "2025-05-07T19:51",
+"dir": "short",
+"comment": "V-ATR short"
+},
+"grossProfit": 177116,
+"grossLoss": 223687,
+"commission": 4696,
+"maxDD": 47319,
+"longPF": 0.7584791586835271,
+"longN": 597,
+"shortPF": 0.8286338139517374,
+"shortN": 577,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 549,
+"pf": 0.887,
+"net": -10108
+},
+"2026": {
+"n": 625,
+"pf": 0.729,
+"net": -36462
+}
+},
+"secs": 12,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "V-ATR",
+"priority": 2,
+"inputs": {
+"Row": "V-ATR: + 1 ATR stop, 1.5R target"
+},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-ATR|CME_MINI:ES1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "3",
+"at": "2026-10-21T13:28:37.824Z",
+"status": "ok",
+"trades": 1214,
+"openTrades": 0,
+"pf": 0.9796526256398292,
+"net": -8005.999999998952,
+"win": 0.39950576606260296,
+"avg": -6.594728171,
+"largestWin": 4515.999999999982,
+"largestWinShare": null,
+"largestLoss": 3133.9999999999272,
+"worstTrade": {
+"pnl": -3134,
+"entry": "2026-01-30T19:54",
+"exit": "2026-01-30T20:00",
+"dir": "long",
+"comment": "V-ATR long"
+},
+"grossProfit": 385460.0000000011,
+"grossLoss": 393466.00000000006,
+"commission": 4856,
+"maxDD": 23485.999999998778,
+"longPF": 1.0059974296730056,
+"longN": 611,
+"shortPF": 0.9534810671692457,
+"shortN": 603,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 528,
+"pf": 0.998,
+"net": -282
+},
+"2026": {
+"n": 686,
+"pf": 0.972,
+"net": -7724
+}
+},
+"secs": 12,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "V-ATR",
+"priority": 2,
+"inputs": {
+"Row": "V-ATR: + 1 ATR stop, 1.5R target"
+},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-ATR|COMEX:GC1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "3",
+"at": "2026-10-21T13:28:53.986Z",
+"status": "ok",
+"trades": 1048,
+"openTrades": 0,
+"pf": 0.9447538675704009,
+"net": -42107,
+"win": 0.2948473282442748,
+"avg": -40.17843511,
+"largestWin": 20416,
+"largestWinShare": null,
+"largestLoss": 8299,
+"worstTrade": {
+"pnl": -8299,
+"entry": "2026-06-11T17:03",
+"exit": "2026-06-11T17:33",
+"dir": "short",
+"comment": "V-NY15 short"
+},
+"grossProfit": 720064,
+"grossLoss": 762171,
+"commission": 4192,
+"maxDD": 54836,
+"longPF": 1.0058946468827124,
+"longN": 537,
+"shortPF": 0.8885427631744625,
+"shortN": 511,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 501,
+"pf": 0.918,
+"net": -25254
+},
+"2026": {
+"n": 547,
+"pf": 0.963,
+"net": -16853
+}
+},
+"secs": 16,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "V-NY15",
+"priority": 2,
+"inputs": {
+"Row": "V-NY15: entries 09:30-15:00 only"
+},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-NY15|CME_MINI:NQ1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "3",
+"at": "2026-10-21T13:29:06.454Z",
+"status": "ok",
+"trades": 1084,
+"openTrades": 0,
+"pf": 0.8665620704532001,
+"net": -53198.5,
+"win": 0.26752767527675275,
+"avg": -49.07610701,
+"largestWin": 10083.5,
+"largestWinShare": null,
+"largestLoss": 3116.5,
+"worstTrade": {
+"pnl": -3116.5,
+"entry": "2026-06-11T16:54",
+"exit": "2026-06-11T17:33",
+"dir": "short",
+"comment": "V-NY15 short"
+},
+"grossProfit": 345477.5,
+"grossLoss": 398676,
+"commission": 4336,
+"maxDD": 55768,
+"longPF": 0.8965721708412163,
+"longN": 555,
+"shortPF": 0.8366525184990422,
+"shortN": 529,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 514,
+"pf": 0.895,
+"net": -18031
+},
+"2026": {
+"n": 570,
+"pf": 0.845,
+"net": -35167
+}
+},
+"secs": 12,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "V-NY15",
+"priority": 2,
+"inputs": {
+"Row": "V-NY15: entries 09:30-15:00 only"
+},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-NY15|CME_MINI:ES1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "3",
+"at": "2026-10-21T13:29:24.335Z",
+"status": "ok",
+"trades": 1116,
+"openTrades": 0,
+"pf": 1.0578879067911429,
+"net": 36846.00000000303,
+"win": 0.3109318996415771,
+"avg": 33.01612903,
+"largestWin": 13276.000000000018,
+"largestWinShare": 0.36,
+"largestLoss": 10694.000000000055,
+"worstTrade": {
+"pnl": -10694,
+"entry": "2026-02-12T15:09",
+"exit": "2026-02-12T16:15",
+"dir": "long",
+"comment": "V-NY15 long"
+},
+"grossProfit": 673352.0000000009,
+"grossLoss": 636505.9999999979,
+"commission": 4464,
+"maxDD": 59335.999999998865,
+"longPF": 0.987337300451328,
+"longN": 562,
+"shortPF": 1.1330693840462176,
+"shortN": 554,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 485,
+"pf": 1.173,
+"net": 32350
+},
+"2026": {
+"n": 631,
+"pf": 1.01,
+"net": 4496
+}
+},
+"secs": 18,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "V-NY15",
+"priority": 2,
+"inputs": {
+"Row": "V-NY15: entries 09:30-15:00 only"
+},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-NY15|COMEX:GC1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "3",
+"at": "2026-10-21T13:29:41.892Z",
+"status": "ok",
+"trades": 729,
+"openTrades": 0,
+"pf": 0.8977614545970563,
+"net": -54756,
+"win": 0.31550068587105623,
+"avg": -75.11111111,
+"largestWin": 19031,
+"largestWinShare": null,
+"largestLoss": 7534,
+"worstTrade": {
+"pnl": -7534,
+"entry": "2026-06-11T17:21",
+"exit": "2026-06-11T17:30",
+"dir": "short",
+"comment": "V-GX short"
+},
+"grossProfit": 480815,
+"grossLoss": 535571,
+"commission": 2916,
+"maxDD": 72520,
+"longPF": 0.8316622043559313,
+"longN": 364,
+"shortPF": 0.9604538889434603,
+"shortN": 365,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 353,
+"pf": 0.963,
+"net": -7682
+},
+"2026": {
+"n": 376,
+"pf": 0.856,
+"net": -47074
+}
+},
+"secs": 17,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "V-GX",
+"priority": 2,
+"inputs": {
+"Row": "V-GX: Globex VWAP (18:00 ET anchor), RTH entries"
+},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-GX|CME_MINI:NQ1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "3",
+"at": "2026-10-21T13:29:53.844Z",
+"status": "ok",
+"trades": 851,
+"openTrades": 0,
+"pf": 0.801120520814902,
+"net": -65191.5,
+"win": 0.282021151586369,
+"avg": -76.60575793,
+"largestWin": 9196,
+"largestWinShare": null,
+"largestLoss": 3354,
+"worstTrade": {
+"pnl": -3354,
+"entry": "2026-06-11T16:57",
+"exit": "2026-06-11T17:33",
+"dir": "short",
+"comment": "V-GX short"
+},
+"grossProfit": 262602.5,
+"grossLoss": 327794,
+"commission": 3404,
+"maxDD": 67085.5,
+"longPF": 0.7555678737428281,
+"longN": 419,
+"shortPF": 0.842968313290741,
+"shortN": 432,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 417,
+"pf": 0.895,
+"net": -14805
+},
+"2026": {
+"n": 434,
+"pf": 0.73,
+"net": -50386
+}
+},
+"secs": 12,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "V-GX",
+"priority": 2,
+"inputs": {
+"Row": "V-GX: Globex VWAP (18:00 ET anchor), RTH entries"
+},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-GX|CME_MINI:ES1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "3",
+"at": "2026-10-21T13:30:05.815Z",
+"status": "ok",
+"trades": 431,
+"openTrades": 0,
+"pf": 0.9133575284221568,
+"net": -24493.999999999418,
+"win": 0.29698375870069604,
+"avg": -56.83062645,
+"largestWin": 11066.000000000073,
+"largestWinShare": null,
+"largestLoss": 5473.999999999982,
+"worstTrade": {
+"pnl": -5474,
+"entry": "2026-02-12T15:33",
+"exit": "2026-02-12T16:12",
+"dir": "long",
+"comment": "V-GX long"
+},
+"grossProfit": 258208.00000000058,
+"grossLoss": 282702,
+"commission": 1724,
+"maxDD": 53881.99999999997,
+"longPF": 0.8836472958710466,
+"longN": 208,
+"shortPF": 0.9369298501592351,
+"shortN": 223,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-02",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 203,
+"pf": 0.877,
+"net": -11682
+},
+"2026": {
+"n": 228,
+"pf": 0.932,
+"net": -12812
+}
+},
+"secs": 12,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "V-GX",
+"priority": 2,
+"inputs": {
+"Row": "V-GX: Globex VWAP (18:00 ET anchor), RTH entries"
+},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-GX|COMEX:GC1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "3",
+"at": "2026-10-21T13:31:22.217Z",
+"status": "ok",
+"trades": 1750,
+"openTrades": 0,
+"pf": 1.0527160004325415,
+"net": 26325,
+"win": 0.2822857142857143,
+"avg": 15.04285714,
+"largestWin": 21533.5,
+"largestWinShare": 0.818,
+"largestLoss": 4591.5,
+"worstTrade": {
+"pnl": -4591.5,
+"entry": "2025-04-07T15:30",
+"exit": "2025-04-07T15:42",
+"dir": "short",
+"comment": "X0 short"
+},
+"grossProfit": 525699,
+"grossLoss": 499374,
+"commission": 7000,
+"maxDD": 25798.5,
+"longPF": 1.0789719050718647,
+"longN": 903,
+"shortPF": 1.025143638345434,
+"shortN": 847,
+"btFrom": "2023-05-01",
+"btTo": "2025-05-02",
+"firstTrade": "2023-05-01",
+"lastTrade": "2025-04-30",
+"openTrade": null,
+"byYear": {
+"2023": {
+"n": 610,
+"pf": 0.941,
+"net": -7990
+},
+"2024": {
+"n": 849,
+"pf": 1.074,
+"net": 16042
+},
+"2025": {
+"n": 291,
+"pf": 1.125,
+"net": 18274
+}
+},
+"secs": 15,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "X0-OOW",
+"priority": 3,
+"inputs": {
+"Trade from (New York date)": 1682913600000,
+"Trade to (New York date)": 1746072000000
+},
+"tag": "p3",
+"btFromWanted": "2023-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|X0-OOW|CME_MINI:ES1!|3|2023-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "3",
+"at": "2026-10-21T13:35:52.953Z",
+"status": "ok",
+"trades": 1128,
+"openTrades": 0,
+"pf": 0.8947230281743911,
+"net": -44122,
+"win": 0.4095744680851064,
+"avg": -39.11524823,
+"largestWin": 2171,
+"largestWinShare": null,
+"largestLoss": 1939,
+"worstTrade": {
+"pnl": -1939,
+"entry": "2026-06-25T15:09",
+"exit": "2026-06-25T15:12",
+"dir": "long",
+"comment": "C-REV-ATR long"
+},
+"grossProfit": 374982,
+"grossLoss": 419104,
+"commission": 4512,
+"maxDD": 59069,
+"longPF": 0.8558044336821471,
+"longN": 553,
+"shortPF": 0.9331184528605962,
+"shortN": 575,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 527,
+"pf": 0.85,
+"net": -23883
+},
+"2026": {
+"n": 601,
+"pf": 0.922,
+"net": -20239
+}
+},
+"secs": 12,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "C-REV-ATR",
+"priority": 2,
+"inputs": {
+"Row": "C-REV-ATR: fade + 1 ATR stop, 1.5R target (control)"
+},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-REV-ATR|CME_MINI:NQ1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "3",
+"at": "2026-10-21T13:36:06.362Z",
+"status": "ok",
+"trades": 1174,
+"openTrades": 0,
+"pf": 0.8881653014480376,
+"net": -23046,
+"win": 0.4097103918228279,
+"avg": -19.63032368,
+"largestWin": 1071,
+"largestWinShare": null,
+"largestLoss": 741.5,
+"worstTrade": {
+"pnl": -741.5,
+"entry": "2026-02-13T15:09",
+"exit": "2026-02-13T15:30",
+"dir": "short",
+"comment": "C-REV-ATR short"
+},
+"grossProfit": 183026,
+"grossLoss": 206072,
+"commission": 4696,
+"maxDD": 30962.5,
+"longPF": 0.8339434325194316,
+"longN": 577,
+"shortPF": 0.941200468438028,
+"shortN": 597,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 549,
+"pf": 0.885,
+"net": -9983
+},
+"2026": {
+"n": 625,
+"pf": 0.891,
+"net": -13062
+}
+},
+"secs": 13,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "C-REV-ATR",
+"priority": 2,
+"inputs": {
+"Row": "C-REV-ATR: fade + 1 ATR stop, 1.5R target (control)"
+},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-REV-ATR|CME_MINI:ES1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "3",
+"at": "2026-10-21T13:36:19.998Z",
+"status": "ok",
+"trades": 1214,
+"openTrades": 0,
+"pf": 0.8873372829796343,
+"net": -43775.99999999924,
+"win": 0.42174629324546953,
+"avg": -36.05930807,
+"largestWin": 4676.000000000018,
+"largestWinShare": null,
+"largestLoss": 3023.999999999982,
+"worstTrade": {
+"pnl": -3024,
+"entry": "2026-01-30T20:09",
+"exit": "2026-01-30T20:33",
+"dir": "long",
+"comment": "C-REV-ATR long"
+},
+"grossProfit": 344782.00000000076,
+"grossLoss": 388558,
+"commission": 4856,
+"maxDD": 53107.999999998894,
+"longPF": 0.8703572710031292,
+"longN": 603,
+"shortPF": 0.9044596522422309,
+"shortN": 611,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 528,
+"pf": 0.829,
+"net": -21002
+},
+"2026": {
+"n": 686,
+"pf": 0.914,
+"net": -22774
+}
+},
+"secs": 14,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "C-REV-ATR",
+"priority": 2,
+"inputs": {
+"Row": "C-REV-ATR: fade + 1 ATR stop, 1.5R target (control)"
+},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-REV-ATR|COMEX:GC1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "3",
+"at": "2026-10-21T13:36:37.086Z",
+"status": "ok",
+"trades": 334,
+"openTrades": 0,
+"pf": 1.1320926611507276,
+"net": 15949,
+"win": 0.41916167664670656,
+"avg": 47.75149701,
+"largestWin": 2531,
+"largestWinShare": 0.159,
+"largestLoss": 1639,
+"worstTrade": {
+"pnl": -1639,
+"entry": "2026-06-10T13:45",
+"exit": "2026-06-10T13:51",
+"dir": "long",
+"comment": "V-1D-ATR long"
+},
+"grossProfit": 136690,
+"grossLoss": 120741,
+"commission": 1336,
+"maxDD": 17466,
+"longPF": 0.9360583316773414,
+"longN": 172,
+"shortPF": 1.363905860236434,
+"shortN": 162,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 154,
+"pf": 0.845,
+"net": -7556
+},
+"2026": {
+"n": 180,
+"pf": 1.327,
+"net": 23505
+}
+},
+"secs": 17,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "V-1D-ATR",
+"priority": 2,
+"inputs": {
+"Row": "V-1D-ATR: first cross + 1 ATR stop, 1.5R target"
+},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-1D-ATR|CME_MINI:NQ1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "3",
+"at": "2026-10-21T13:36:51.002Z",
+"status": "ok",
+"trades": 330,
+"openTrades": 0,
+"pf": 0.6799063253570766,
+"net": -20707.5,
+"win": 0.3242424242424242,
+"avg": -62.75,
+"largestWin": 971,
+"largestWinShare": null,
+"largestLoss": 704,
+"worstTrade": {
+"pnl": -704,
+"entry": "2026-06-11T14:33",
+"exit": "2026-06-11T14:33",
+"dir": "short",
+"comment": "V-1D-ATR short"
+},
+"grossProfit": 43984.5,
+"grossLoss": 64692,
+"commission": 1320,
+"maxDD": 21320.5,
+"longPF": 0.6061045447222344,
+"longN": 168,
+"shortPF": 0.7623676501873763,
+"shortN": 162,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 156,
+"pf": 0.752,
+"net": -6324
+},
+"2026": {
+"n": 174,
+"pf": 0.633,
+"net": -14383
+}
+},
+"secs": 14,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "V-1D-ATR",
+"priority": 2,
+"inputs": {
+"Row": "V-1D-ATR: first cross + 1 ATR stop, 1.5R target"
+},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-1D-ATR|CME_MINI:ES1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "3",
+"at": "2026-10-21T13:37:04.124Z",
+"status": "ok",
+"trades": 341,
+"openTrades": 0,
+"pf": 1.0422907488986812,
+"net": 4896.00000000032,
+"win": 0.41348973607038125,
+"avg": 14.35777126,
+"largestWin": 3586.0000000000546,
+"largestWinShare": 0.732,
+"largestLoss": 2554,
+"worstTrade": {
+"pnl": -2554,
+"entry": "2026-01-30T15:33",
+"exit": "2026-01-30T16:03",
+"dir": "long",
+"comment": "V-1D-ATR long"
+},
+"grossProfit": 120666.00000000009,
+"grossLoss": 115769.99999999977,
+"commission": 1364,
+"maxDD": 11993.999999999709,
+"longPF": 1.2107005990251982,
+"longN": 171,
+"shortPF": 0.896317079463362,
+"shortN": 170,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 160,
+"pf": 0.897,
+"net": -4390
+},
+"2026": {
+"n": 181,
+"pf": 1.127,
+"net": 9286
+}
+},
+"secs": 13,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "V-1D-ATR",
+"priority": 2,
+"inputs": {
+"Row": "V-1D-ATR: first cross + 1 ATR stop, 1.5R target"
+},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-1D-ATR|COMEX:GC1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "3",
+"at": "2026-10-21T13:37:19.322Z",
+"status": "ok",
+"trades": 1128,
+"openTrades": 0,
+"pf": 0.8985729517237826,
+"net": -82667,
+"win": 0.48936170212765956,
+"avg": -73.28634752,
+"largestWin": 20416,
+"largestWinShare": null,
+"largestLoss": 19119,
+"worstTrade": {
+"pnl": -19119,
+"entry": "2025-10-10T14:03",
+"exit": "2025-10-10T19:57",
+"dir": "long",
+"comment": "C-RND rev long"
+},
+"grossProfit": 732372,
+"grossLoss": 815039,
+"commission": 4512,
+"maxDD": 107908,
+"longPF": 0.940751561320253,
+"longN": 565,
+"shortPF": 0.8607353338236801,
+"shortN": 563,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 527,
+"pf": 1.02,
+"net": 5942
+},
+"2026": {
+"n": 601,
+"pf": 0.828,
+"net": -88609
+}
+},
+"secs": 15,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "C-RND-s2",
+"priority": 2,
+"inputs": {
+"Row": "C-RND: random side, same trades (control)",
+"Random seed": 2
+},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-RND-s2|CME_MINI:NQ1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "3",
+"at": "2026-10-21T13:37:31.005Z",
+"status": "ok",
+"trades": 1174,
+"openTrades": 0,
+"pf": 1.0302197144111893,
+"net": 11354,
+"win": 0.5017035775127768,
+"avg": 9.67120954,
+"largestWin": 10083.5,
+"largestWinShare": 0.888,
+"largestLoss": 6041.5,
+"worstTrade": {
+"pnl": -6041.5,
+"entry": "2026-06-05T13:42",
+"exit": "2026-06-05T19:57",
+"dir": "long",
+"comment": "C-RND long"
+},
+"grossProfit": 387069,
+"grossLoss": 375715,
+"commission": 4696,
+"maxDD": 77480,
+"longPF": 1.0739251105466177,
+"longN": 582,
+"shortPF": 0.9940773446275486,
+"shortN": 592,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 549,
+"pf": 1.233,
+"net": 34579
+},
+"2026": {
+"n": 625,
+"pf": 0.898,
+"net": -23225
+}
+},
+"secs": 12,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "C-RND-s2",
+"priority": 2,
+"inputs": {
+"Row": "C-RND: random side, same trades (control)",
+"Random seed": 2
+},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-RND-s2|CME_MINI:ES1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "3",
+"at": "2026-10-21T13:37:42.451Z",
+"status": "ok",
+"trades": 1214,
+"openTrades": 0,
+"pf": 1.1233634293789767,
+"net": 78564.00000000116,
+"win": 0.5098846787479407,
+"avg": 64.71499176,
+"largestWin": 13276.000000000018,
+"largestWinShare": 0.169,
+"largestLoss": 11114.000000000036,
+"worstTrade": {
+"pnl": -11114,
+"entry": "2026-06-11T17:30",
+"exit": "2026-06-11T19:57",
+"dir": "short",
+"comment": "C-RND short"
+},
+"grossProfit": 715414.0000000002,
+"grossLoss": 636849.9999999991,
+"commission": 4856,
+"maxDD": 65749.99999999968,
+"longPF": 1.0439415239255962,
+"longN": 596,
+"shortPF": 1.209579387223118,
+"shortN": 618,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 528,
+"pf": 0.932,
+"net": -14622
+},
+"2026": {
+"n": 686,
+"pf": 1.222,
+"net": 93186
+}
+},
+"secs": 11,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "C-RND-s2",
+"priority": 2,
+"inputs": {
+"Row": "C-RND: random side, same trades (control)",
+"Random seed": 2
+},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-RND-s2|COMEX:GC1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "3",
+"at": "2026-10-21T13:37:57.773Z",
+"status": "ok",
+"trades": 1128,
+"openTrades": 0,
+"pf": 0.9181513413524364,
+"net": -66017,
+"win": 0.49822695035460995,
+"avg": -58.52570922,
+"largestWin": 20416,
+"largestWinShare": null,
+"largestLoss": 19119,
+"worstTrade": {
+"pnl": -19119,
+"entry": "2025-10-10T14:03",
+"exit": "2025-10-10T19:57",
+"dir": "long",
+"comment": "C-RND rev long"
+},
+"grossProfit": 740557,
+"grossLoss": 806574,
+"commission": 4512,
+"maxDD": 97008,
+"longPF": 0.9621140277421895,
+"longN": 553,
+"shortPF": 0.87926881408916,
+"shortN": 575,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 527,
+"pf": 0.973,
+"net": -8258
+},
+"2026": {
+"n": 601,
+"pf": 0.884,
+"net": -57759
+}
+},
+"secs": 15,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "C-RND-s3",
+"priority": 2,
+"inputs": {
+"Row": "C-RND: random side, same trades (control)",
+"Random seed": 3
+},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-RND-s3|CME_MINI:NQ1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "3",
+"at": "2026-10-21T13:38:08.975Z",
+"status": "ok",
+"trades": 1174,
+"openTrades": 0,
+"pf": 1.0259741294589497,
+"net": 9779,
+"win": 0.5017035775127768,
+"avg": 8.329642249,
+"largestWin": 10083.5,
+"largestWinShare": 1.031,
+"largestLoss": 6041.5,
+"worstTrade": {
+"pnl": -6041.5,
+"entry": "2026-06-05T13:42",
+"exit": "2026-06-05T19:57",
+"dir": "long",
+"comment": "C-RND long"
+},
+"grossProfit": 386269,
+"grossLoss": 376490,
+"commission": 4696,
+"maxDD": 73536,
+"longPF": 1.0694089065019992,
+"longN": 581,
+"shortPF": 0.9901375985573602,
+"shortN": 593,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 549,
+"pf": 1.157,
+"net": 24179
+},
+"2026": {
+"n": 625,
+"pf": 0.935,
+"net": -14400
+}
+},
+"secs": 11,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "C-RND-s3",
+"priority": 2,
+"inputs": {
+"Row": "C-RND: random side, same trades (control)",
+"Random seed": 3
+},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-RND-s3|CME_MINI:ES1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "3",
+"at": "2026-10-21T13:38:22.102Z",
+"status": "ok",
+"trades": 1214,
+"openTrades": 0,
+"pf": 1.130377085506972,
+"net": 82724.00000000244,
+"win": 0.5205930807248764,
+"avg": 68.1416804,
+"largestWin": 11385.999999999964,
+"largestWinShare": 0.138,
+"largestLoss": 13323.999999999982,
+"worstTrade": {
+"pnl": -13324,
+"entry": "2026-01-29T14:48",
+"exit": "2026-01-29T17:27",
+"dir": "long",
+"comment": "C-RND rev long"
+},
+"grossProfit": 717222.0000000009,
+"grossLoss": 634497.9999999985,
+"commission": 4856,
+"maxDD": 47003.999999999796,
+"longPF": 1.0518130569642077,
+"longN": 588,
+"shortPF": 1.2128637059724383,
+"shortN": 626,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 528,
+"pf": 1.222,
+"net": 41738
+},
+"2026": {
+"n": 686,
+"pf": 1.092,
+"net": 40986
+}
+},
+"secs": 13,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "C-RND-s3",
+"priority": 2,
+"inputs": {
+"Row": "C-RND: random side, same trades (control)",
+"Random seed": 3
+},
+"tag": "p2",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|C-RND-s3|COMEX:GC1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "3",
+"at": "2026-10-21T13:38:40.753Z",
+"status": "ok",
+"trades": 2756,
+"openTrades": 1,
+"pf": 1.0142031196606274,
+"net": 20574,
+"win": 0.22822931785195935,
+"avg": 7.465166909,
+"largestWin": 21451,
+"largestWinShare": 1.043,
+"largestLoss": 7534,
+"worstTrade": {
+"pnl": -7534,
+"entry": "2026-06-11T17:21",
+"exit": "2026-06-11T17:30",
+"dir": "short",
+"comment": "V-GX24 short"
+},
+"grossProfit": 1469129,
+"grossLoss": 1448555,
+"commission": 11026,
+"maxDD": 87140,
+"longPF": 1.1014822536357165,
+"longN": 1399,
+"shortPF": 0.9307663328287732,
+"shortN": 1357,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": {
+"entry": "2026-10-01T22:33",
+"dir": "long",
+"pnl": 401
+},
+"byYear": {
+"2025": {
+"n": 1329,
+"pf": 1.034,
+"net": 18019
+},
+"2026": {
+"n": 1427,
+"pf": 1.003,
+"net": 2557
+}
+},
+"secs": 19,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "V-GX24",
+"priority": 3,
+"inputs": {
+"Row": "V-GX24: Globex VWAP, entries 18:00-15:5x"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-GX24|CME_MINI:NQ1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "3",
+"at": "2026-10-21T13:38:55.586Z",
+"status": "ok",
+"trades": 3062,
+"openTrades": 1,
+"pf": 0.8024544871225,
+"net": -163325,
+"win": 0.205421293272371,
+"avg": -53.33932071,
+"largestWin": 9196,
+"largestWinShare": null,
+"largestLoss": 4529,
+"worstTrade": {
+"pnl": -4529,
+"entry": "2026-03-23T03:12",
+"exit": "2026-03-23T11:06",
+"dir": "short",
+"comment": "V-GX24 short"
+},
+"grossProfit": 663446.5,
+"grossLoss": 826771.5,
+"commission": 12250,
+"maxDD": 164100.5,
+"longPF": 0.856577045816625,
+"longN": 1551,
+"shortPF": 0.7503616905874995,
+"shortN": 1511,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": {
+"entry": "2026-10-01T22:33",
+"dir": "long",
+"pnl": 134
+},
+"byYear": {
+"2025": {
+"n": 1463,
+"pf": 0.83,
+"net": -57989
+},
+"2026": {
+"n": 1599,
+"pf": 0.783,
+"net": -105333
+}
+},
+"secs": 15,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "V-GX24",
+"priority": 3,
+"inputs": {
+"Row": "V-GX24: Globex VWAP, entries 18:00-15:5x"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-GX24|CME_MINI:ES1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "3",
+"at": "2026-10-21T13:39:09.474Z",
+"status": "ok",
+"trades": 2594,
+"openTrades": 1,
+"pf": 1.1572153543418287,
+"net": 233771.99999999953,
+"win": 0.23554356206630686,
+"avg": 90.12027756,
+"largestWin": 58185.99999999996,
+"largestWinShare": 0.249,
+"largestLoss": 7394.000000000055,
+"worstTrade": {
+"pnl": -7394,
+"entry": "2026-02-02T00:06",
+"exit": "2026-02-02T01:09",
+"dir": "long",
+"comment": "V-GX24 long"
+},
+"grossProfit": 1720726.000000001,
+"grossLoss": 1486954.0000000014,
+"commission": 10378,
+"maxDD": 76166.0000000007,
+"longPF": 1.1980202935084525,
+"longN": 1328,
+"shortPF": 1.118372897731153,
+"shortN": 1266,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": {
+"entry": "2026-10-01T22:39",
+"dir": "long",
+"pnl": 436
+},
+"byYear": {
+"2025": {
+"n": 1236,
+"pf": 1.185,
+"net": 90756
+},
+"2026": {
+"n": 1358,
+"pf": 1.143,
+"net": 143018
+}
+},
+"secs": 14,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "V-GX24",
+"priority": 3,
+"inputs": {
+"Row": "V-GX24: Globex VWAP, entries 18:00-15:5x"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-GX24|COMEX:GC1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "3",
+"at": "2026-10-21T13:39:28.154Z",
+"status": "ok",
+"trades": 726,
+"openTrades": 0,
+"pf": 0.9305035629195072,
+"net": -38299,
+"win": 0.33608815426997246,
+"avg": -52.75344353,
+"largestWin": 19031,
+"largestWinShare": null,
+"largestLoss": 8689,
+"worstTrade": {
+"pnl": -8689,
+"entry": "2026-06-11T17:06",
+"exit": "2026-06-11T17:33",
+"dir": "short",
+"comment": "V-MID short"
+},
+"grossProfit": 512794,
+"grossLoss": 551093,
+"commission": 2904,
+"maxDD": 53929,
+"longPF": 0.8634179770702525,
+"longN": 369,
+"shortPF": 0.9949206439542146,
+"shortN": 357,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 365,
+"pf": 0.933,
+"net": -15455
+},
+"2026": {
+"n": 361,
+"pf": 0.929,
+"net": -22844
+}
+},
+"secs": 19,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "V-MID",
+"priority": 3,
+"inputs": {
+"Row": "V-MID: VWAP anchored 00:00 ET, RTH entries"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-MID|CME_MINI:NQ1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "3",
+"at": "2026-10-21T13:39:40.938Z",
+"status": "ok",
+"trades": 916,
+"openTrades": 0,
+"pf": 0.8352520401119954,
+"net": -57164,
+"win": 0.28602620087336245,
+"avg": -62.40611354,
+"largestWin": 9358.5,
+"largestWinShare": null,
+"largestLoss": 2679,
+"worstTrade": {
+"pnl": -2679,
+"entry": "2026-06-11T16:42",
+"exit": "2026-06-11T17:33",
+"dir": "short",
+"comment": "V-MID short"
+},
+"grossProfit": 289814.5,
+"grossLoss": 346978.5,
+"commission": 3664,
+"maxDD": 59270.5,
+"longPF": 0.8525728710892088,
+"longN": 456,
+"shortPF": 0.8194409989249979,
+"shortN": 460,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 448,
+"pf": 0.886,
+"net": -17429
+},
+"2026": {
+"n": 468,
+"pf": 0.795,
+"net": -39734
+}
+},
+"secs": 13,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "V-MID",
+"priority": 3,
+"inputs": {
+"Row": "V-MID: VWAP anchored 00:00 ET, RTH entries"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-MID|CME_MINI:ES1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "3",
+"at": "2026-10-21T13:39:54.838Z",
+"status": "ok",
+"trades": 526,
+"openTrades": 0,
+"pf": 1.0452864542458002,
+"net": 14425.99999999965,
+"win": 0.3155893536121673,
+"avg": 27.42585551,
+"largestWin": 14015.999999999982,
+"largestWinShare": 0.972,
+"largestLoss": 6454,
+"worstTrade": {
+"pnl": -6454,
+"entry": "2026-02-02T18:18",
+"exit": "2026-02-02T19:45",
+"dir": "short",
+"comment": "V-MID short"
+},
+"grossProfit": 332975.99999999953,
+"grossLoss": 318549.9999999999,
+"commission": 2104,
+"maxDD": 46412.00000000096,
+"longPF": 1.0322842396509488,
+"longN": 264,
+"shortPF": 1.0569091190144955,
+"shortN": 262,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 249,
+"pf": 0.841,
+"net": -17496
+},
+"2026": {
+"n": 277,
+"pf": 1.153,
+"net": 31922
+}
+},
+"secs": 13,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "V-MID",
+"priority": 3,
+"inputs": {
+"Row": "V-MID: VWAP anchored 00:00 ET, RTH entries"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-MID|COMEX:GC1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "3",
+"at": "2026-10-21T13:40:09.231Z",
+"status": "ok",
+"trades": 1497,
+"openTrades": 0,
+"pf": 0.9190170902562669,
+"net": -73617.99999999907,
+"win": 0.2859051436205745,
+"avg": -49.17702071,
+"largestWin": 19346,
+"largestWinShare": null,
+"largestLoss": 6073.999999999982,
+"worstTrade": {
+"pnl": -6074,
+"entry": "2026-01-30T14:03",
+"exit": "2026-01-30T15:06",
+"dir": "long",
+"comment": "V-GC0820 long"
+},
+"grossProfit": 835438.0000000005,
+"grossLoss": 909055.9999999995,
+"commission": 5988,
+"maxDD": 124329.99999999945,
+"longPF": 0.8351219342160856,
+"longN": 753,
+"shortPF": 1.0045862793808529,
+"shortN": 744,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 691,
+"pf": 1.051,
+"net": 14376
+},
+"2026": {
+"n": 806,
+"pf": 0.859,
+"net": -87994
+}
+},
+"secs": 14,
+"clicks": 1,
+"id": "rl-ema9-vwap-cross",
+"row": "V-GC0820",
+"priority": 3,
+"inputs": {
+"Row": "V-GC0820: VWAP anchored 08:20 ET (COMEX open)"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-GC0820|COMEX:GC1!|3|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "1",
+"at": "2026-10-21T13:40:27.553Z",
+"status": "ok",
+"trades": 1929,
+"openTrades": 0,
+"pf": 0.9635420568572927,
+"net": -16546,
+"win": 0.39502332814930013,
+"avg": -8.577501296,
+"largestWin": 1716,
+"largestWinShare": null,
+"largestLoss": 1194,
+"worstTrade": {
+"pnl": -1194,
+"entry": "2026-06-26T13:53",
+"exit": "2026-06-26T13:54",
+"dir": "short",
+"comment": "V-ATR short"
+},
+"grossProfit": 437292,
+"grossLoss": 453838,
+"commission": 7716,
+"maxDD": 29150,
+"longPF": 0.9118385895520817,
+"longN": 973,
+"shortPF": 1.0203808810128456,
+"shortN": 956,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 948,
+"pf": 0.991,
+"net": -1557
+},
+"2026": {
+"n": 981,
+"pf": 0.947,
+"net": -14989
+}
+},
+"secs": 18,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "V-ATR-tf",
+"priority": 3,
+"inputs": {
+"Row": "V-ATR: + 1 ATR stop, 1.5R target"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-ATR-tf|CME_MINI:NQ1!|1|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "5",
+"at": "2026-10-21T13:40:34.504Z",
+"status": "ok",
+"trades": 826,
+"openTrades": 0,
+"pf": 1.0000959086949224,
+"net": 36,
+"win": 0.3910411622276029,
+"avg": 0.04358353511,
+"largestWin": 3596,
+"largestWinShare": 99.889,
+"largestLoss": 2489,
+"worstTrade": {
+"pnl": -2489,
+"entry": "2026-06-25T15:15",
+"exit": "2026-06-25T15:20",
+"dir": "short",
+"comment": "V-ATR short"
+},
+"grossProfit": 375393,
+"grossLoss": 375357,
+"commission": 3304,
+"maxDD": 36994,
+"longPF": 0.9721228200065811,
+"longN": 423,
+"shortPF": 1.0301778714040064,
+"shortN": 403,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 379,
+"pf": 0.926,
+"net": -10406
+},
+"2026": {
+"n": 447,
+"pf": 1.045,
+"net": 10442
+}
+},
+"secs": 7,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "V-ATR-tf",
+"priority": 3,
+"inputs": {
+"Row": "V-ATR: + 1 ATR stop, 1.5R target"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-ATR-tf|CME_MINI:NQ1!|5|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "15",
+"at": "2026-10-21T13:40:40.276Z",
+"status": "ok",
+"trades": 480,
+"openTrades": 0,
+"pf": 1.0822049762817834,
+"net": 22615,
+"win": 0.4166666666666667,
+"avg": 47.11458333,
+"largestWin": 4376,
+"largestWinShare": 0.193,
+"largestLoss": 2514,
+"worstTrade": {
+"pnl": -2514,
+"entry": "2026-06-11T17:15",
+"exit": "2026-06-11T17:15",
+"dir": "short",
+"comment": "V-ATR short"
+},
+"grossProfit": 297720,
+"grossLoss": 275105,
+"commission": 1920,
+"maxDD": 26920,
+"longPF": 0.9818703606611662,
+"longN": 252,
+"shortPF": 1.1939546212418075,
+"shortN": 228,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 227,
+"pf": 1.072,
+"net": 7307
+},
+"2026": {
+"n": 253,
+"pf": 1.088,
+"net": 15308
+}
+},
+"secs": 6,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "V-ATR-tf",
+"priority": 3,
+"inputs": {
+"Row": "V-ATR: + 1 ATR stop, 1.5R target"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-ATR-tf|CME_MINI:NQ1!|15|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "1",
+"at": "2026-10-21T13:40:53.219Z",
+"status": "ok",
+"trades": 2038,
+"openTrades": 0,
+"pf": 0.7831266479894529,
+"net": -52639.5,
+"win": 0.359666339548577,
+"avg": -25.82899902,
+"largestWin": 771,
+"largestWinShare": null,
+"largestLoss": 566.5,
+"worstTrade": {
+"pnl": -566.5,
+"entry": "2026-02-13T14:57",
+"exit": "2026-02-13T15:00",
+"dir": "short",
+"comment": "V-ATR short"
+},
+"grossProfit": 190080.5,
+"grossLoss": 242720,
+"commission": 8152,
+"maxDD": 55460.5,
+"longPF": 0.7947635716164538,
+"longN": 1024,
+"shortPF": 0.7710605265918389,
+"shortN": 1014,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 978,
+"pf": 0.848,
+"net": -15237
+},
+"2026": {
+"n": 1060,
+"pf": 0.738,
+"net": -37402
+}
+},
+"secs": 13,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "V-ATR-tf",
+"priority": 3,
+"inputs": {
+"Row": "V-ATR: + 1 ATR stop, 1.5R target"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-ATR-tf|CME_MINI:ES1!|1|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "5",
+"at": "2026-10-21T13:40:59.953Z",
+"status": "ok",
+"trades": 882,
+"openTrades": 0,
+"pf": 0.8924742868232097,
+"net": -20778,
+"win": 0.3764172335600907,
+"avg": -23.55782313,
+"largestWin": 1308.5,
+"largestWinShare": null,
+"largestLoss": 916.5,
+"worstTrade": {
+"pnl": -916.5,
+"entry": "2026-06-11T17:35",
+"exit": "2026-06-11T18:05",
+"dir": "long",
+"comment": "V-ATR long"
+},
+"grossProfit": 172459.5,
+"grossLoss": 193237.5,
+"commission": 3528,
+"maxDD": 24205,
+"longPF": 0.8478673171113218,
+"longN": 456,
+"shortPF": 0.9426433641016619,
+"shortN": 426,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 399,
+"pf": 0.877,
+"net": -9708
+},
+"2026": {
+"n": 483,
+"pf": 0.903,
+"net": -11069
+}
+},
+"secs": 7,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "V-ATR-tf",
+"priority": 3,
+"inputs": {
+"Row": "V-ATR: + 1 ATR stop, 1.5R target"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-ATR-tf|CME_MINI:ES1!|5|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "15",
+"at": "2026-10-21T13:41:05.740Z",
+"status": "ok",
+"trades": 503,
+"openTrades": 0,
+"pf": 0.9303607355403295,
+"net": -9899.5,
+"win": 0.40159045725646125,
+"avg": -19.68091451,
+"largestWin": 2096,
+"largestWinShare": null,
+"largestLoss": 1116.5,
+"worstTrade": {
+"pnl": -1116.5,
+"entry": "2026-06-11T17:00",
+"exit": "2026-06-11T17:15",
+"dir": "short",
+"comment": "V-ATR short"
+},
+"grossProfit": 132254.5,
+"grossLoss": 142154,
+"commission": 2012,
+"maxDD": 18284.5,
+"longPF": 0.9491336445103118,
+"longN": 265,
+"shortPF": 0.9109856336216139,
+"shortN": 238,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 250,
+"pf": 1.024,
+"net": 1438
+},
+"2026": {
+"n": 253,
+"pf": 0.862,
+"net": -11337
+}
+},
+"secs": 6,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "V-ATR-tf",
+"priority": 3,
+"inputs": {
+"Row": "V-ATR: + 1 ATR stop, 1.5R target"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-ATR-tf|CME_MINI:ES1!|15|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "1",
+"at": "2026-10-21T13:41:18.691Z",
+"status": "ok",
+"trades": 2229,
+"openTrades": 0,
+"pf": 0.9377673432882282,
+"net": -25605.99999999872,
+"win": 0.3813369223867205,
+"avg": -11.48766263,
+"largestWin": 2446,
+"largestWinShare": null,
+"largestLoss": 1573.9999999999818,
+"worstTrade": {
+"pnl": -1574,
+"entry": "2026-01-30T15:23",
+"exit": "2026-01-30T15:25",
+"dir": "long",
+"comment": "V-ATR long"
+},
+"grossProfit": 385850.00000000023,
+"grossLoss": 411455.99999999895,
+"commission": 8916,
+"maxDD": 31579.99999999872,
+"longPF": 0.8968284368177116,
+"longN": 1107,
+"shortPF": 0.9799703849950733,
+"shortN": 1122,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 1033,
+"pf": 0.92,
+"net": -11192
+},
+"2026": {
+"n": 1196,
+"pf": 0.947,
+"net": -14414
+}
+},
+"secs": 13,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "V-ATR-tf",
+"priority": 3,
+"inputs": {
+"Row": "V-ATR: + 1 ATR stop, 1.5R target"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-ATR-tf|COMEX:GC1!|1|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "5",
+"at": "2026-10-21T13:41:26.436Z",
+"status": "ok",
+"trades": 912,
+"openTrades": 0,
+"pf": 0.8737575882292467,
+"net": -49077.999999997846,
+"win": 0.375,
+"avg": -53.81359649,
+"largestWin": 5476.000000000018,
+"largestWinShare": null,
+"largestLoss": 3944.0000000000546,
+"worstTrade": {
+"pnl": -3944,
+"entry": "2026-01-29T17:35",
+"exit": "2026-01-29T19:10",
+"dir": "long",
+"comment": "V-ATR long"
+},
+"grossProfit": 339682.0000000003,
+"grossLoss": 388759.99999999814,
+"commission": 3648,
+"maxDD": 60525.999999999534,
+"longPF": 0.9789901397767925,
+"longN": 457,
+"shortPF": 0.7786267019296753,
+"shortN": 455,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 401,
+"pf": 0.951,
+"net": -5554
+},
+"2026": {
+"n": 511,
+"pf": 0.842,
+"net": -43524
+}
+},
+"secs": 8,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "V-ATR-tf",
+"priority": 3,
+"inputs": {
+"Row": "V-ATR: + 1 ATR stop, 1.5R target"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-ATR-tf|COMEX:GC1!|5|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "15",
+"at": "2026-10-21T13:41:32.159Z",
+"status": "ok",
+"trades": 440,
+"openTrades": 0,
+"pf": 0.9584630933697137,
+"net": -10109.99999999837,
+"win": 0.4159090909090909,
+"avg": -22.97727273,
+"largestWin": 7335.999999999964,
+"largestWinShare": null,
+"largestLoss": 3943.9999999999636,
+"worstTrade": {
+"pnl": -3944,
+"entry": "2026-03-19T14:45",
+"exit": "2026-03-19T15:30",
+"dir": "long",
+"comment": "V-ATR long"
+},
+"grossProfit": 233288.0000000003,
+"grossLoss": 243397.99999999866,
+"commission": 1760,
+"maxDD": 53497.999999999316,
+"longPF": 0.9332102432367382,
+"longN": 230,
+"shortPF": 0.9849362103208079,
+"shortN": 210,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-09-30",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 219,
+"pf": 1.382,
+"net": 28394
+},
+"2026": {
+"n": 221,
+"pf": 0.772,
+"net": -38504
+}
+},
+"secs": 6,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "V-ATR-tf",
+"priority": 3,
+"inputs": {
+"Row": "V-ATR: + 1 ATR stop, 1.5R target"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-ATR-tf|COMEX:GC1!|15|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "1",
+"at": "2026-10-21T13:41:48.661Z",
+"status": "ok",
+"trades": 350,
+"openTrades": 0,
+"pf": 1.5401555701456662,
+"net": 97080,
+"win": 0.3028571428571429,
+"avg": 277.3714286,
+"largestWin": 20836,
+"largestWinShare": 0.215,
+"largestLoss": 3454,
+"worstTrade": {
+"pnl": -3454,
+"entry": "2026-06-12T13:43",
+"exit": "2026-06-12T14:01",
+"dir": "short",
+"comment": "V-1D short"
+},
+"grossProfit": 276806,
+"grossLoss": 179726,
+"commission": 1400,
+"maxDD": 14799,
+"longPF": 1.5219053418586557,
+"longN": 171,
+"shortPF": 1.5579303451987392,
+"shortN": 179,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 165,
+"pf": 1.102,
+"net": 7270
+},
+"2026": {
+"n": 185,
+"pf": 1.827,
+"net": 89810
+}
+},
+"secs": 16,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "V-1D-tf",
+"priority": 3,
+"inputs": {
+"Row": "V-1D: first cross of the day only"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-1D-tf|CME_MINI:NQ1!|1|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "5",
+"at": "2026-10-21T13:41:54.403Z",
+"status": "ok",
+"trades": 321,
+"openTrades": 0,
+"pf": 1.3157959449168677,
+"net": 79621,
+"win": 0.3862928348909657,
+"avg": 248.0404984,
+"largestWin": 20456,
+"largestWinShare": 0.257,
+"largestLoss": 5704,
+"worstTrade": {
+"pnl": -5704,
+"entry": "2026-06-25T14:05",
+"exit": "2026-06-25T14:55",
+"dir": "short",
+"comment": "V-1D short"
+},
+"grossProfit": 331749,
+"grossLoss": 252128,
+"commission": 1284,
+"maxDD": 34754,
+"longPF": 1.4884441452637394,
+"longN": 162,
+"shortPF": 1.1689760450915923,
+"shortN": 159,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 148,
+"pf": 1.429,
+"net": 39648
+},
+"2026": {
+"n": 173,
+"pf": 1.25,
+"net": 39973
+}
+},
+"secs": 6,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "V-1D-tf",
+"priority": 3,
+"inputs": {
+"Row": "V-1D: first cross of the day only"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-1D-tf|CME_MINI:NQ1!|5|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:NQ1!",
+"tf": "15",
+"at": "2026-10-21T13:41:59.111Z",
+"status": "ok",
+"trades": 281,
+"openTrades": 0,
+"pf": 1.0698643969369048,
+"net": 16121,
+"win": 0.4377224199288256,
+"avg": 57.37010676,
+"largestWin": 16056,
+"largestWinShare": 0.996,
+"largestLoss": 5119,
+"worstTrade": {
+"pnl": -5119,
+"entry": "2026-09-28T14:45",
+"exit": "2026-09-28T16:30",
+"dir": "short",
+"comment": "V-1D short"
+},
+"grossProfit": 246868,
+"grossLoss": 230747,
+"commission": 1124,
+"maxDD": 44469,
+"longPF": 0.9805726736691533,
+"longN": 149,
+"shortPF": 1.1670256280315645,
+"shortN": 132,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 128,
+"pf": 0.684,
+"net": -28347
+},
+"2026": {
+"n": 153,
+"pf": 1.315,
+"net": 44468
+}
+},
+"secs": 5,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "V-1D-tf",
+"priority": 3,
+"inputs": {
+"Row": "V-1D: first cross of the day only"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-1D-tf|CME_MINI:NQ1!|15|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "1",
+"at": "2026-10-21T13:42:11.746Z",
+"status": "ok",
+"trades": 350,
+"openTrades": 0,
+"pf": 0.9040152687849886,
+"net": -8650,
+"win": 0.24571428571428572,
+"avg": -24.71428571,
+"largestWin": 4796,
+"largestWinShare": null,
+"largestLoss": 1341.5,
+"worstTrade": {
+"pnl": -1341.5,
+"entry": "2026-06-11T13:39",
+"exit": "2026-06-11T13:47",
+"dir": "short",
+"comment": "V-1D short"
+},
+"grossProfit": 81468.5,
+"grossLoss": 90118.5,
+"commission": 1400,
+"maxDD": 17096.5,
+"longPF": 1.1853240855793779,
+"longN": 168,
+"shortPF": 0.632475929823031,
+"shortN": 182,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 166,
+"pf": 1.065,
+"net": 2236
+},
+"2026": {
+"n": 184,
+"pf": 0.804,
+"net": -10886
+}
+},
+"secs": 12,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "V-1D-tf",
+"priority": 3,
+"inputs": {
+"Row": "V-1D: first cross of the day only"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-1D-tf|CME_MINI:ES1!|1|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "5",
+"at": "2026-10-21T13:42:18.449Z",
+"status": "ok",
+"trades": 322,
+"openTrades": 0,
+"pf": 1.0338402878930684,
+"net": 3949.5,
+"win": 0.33229813664596275,
+"avg": 12.26552795,
+"largestWin": 5396,
+"largestWinShare": 1.366,
+"largestLoss": 1941.5,
+"worstTrade": {
+"pnl": -1941.5,
+"entry": "2025-09-17T18:05",
+"exit": "2025-09-17T18:15",
+"dir": "long",
+"comment": "V-1D long"
+},
+"grossProfit": 120659.5,
+"grossLoss": 116710,
+"commission": 1288,
+"maxDD": 13850,
+"longPF": 1.4107729381598018,
+"longN": 172,
+"shortPF": 0.6575723592408379,
+"shortN": 150,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 152,
+"pf": 1.288,
+"net": 13967
+},
+"2026": {
+"n": 170,
+"pf": 0.853,
+"net": -10017
+}
+},
+"secs": 7,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "V-1D-tf",
+"priority": 3,
+"inputs": {
+"Row": "V-1D: first cross of the day only"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-1D-tf|CME_MINI:ES1!|5|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "CME_MINI:ES1!",
+"tf": "15",
+"at": "2026-10-21T13:42:23.188Z",
+"status": "ok",
+"trades": 286,
+"openTrades": 0,
+"pf": 1.0290627457890824,
+"net": 3381,
+"win": 0.4125874125874126,
+"avg": 11.82167832,
+"largestWin": 4733.5,
+"largestWinShare": 1.4,
+"largestLoss": 3704,
+"worstTrade": {
+"pnl": -3704,
+"entry": "2025-05-21T15:15",
+"exit": "2025-05-21T17:30",
+"dir": "long",
+"comment": "V-1D long"
+},
+"grossProfit": 119715.5,
+"grossLoss": 116334.5,
+"commission": 1144,
+"maxDD": 14507,
+"longPF": 1.3235431058237759,
+"longN": 150,
+"shortPF": 0.7858555419531029,
+"shortN": 136,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 138,
+"pf": 0.94,
+"net": -2989
+},
+"2026": {
+"n": 148,
+"pf": 1.096,
+"net": 6371
+}
+},
+"secs": 5,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "V-1D-tf",
+"priority": 3,
+"inputs": {
+"Row": "V-1D: first cross of the day only"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-1D-tf|CME_MINI:ES1!|15|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "1",
+"at": "2026-10-21T13:42:36.623Z",
+"status": "ok",
+"trades": 353,
+"openTrades": 0,
+"pf": 0.8701294875005532,
+"net": -17631.999999999825,
+"win": 0.2804532577903683,
+"avg": -49.9490085,
+"largestWin": 9626.000000000018,
+"largestWinShare": null,
+"largestLoss": 4693.999999999964,
+"worstTrade": {
+"pnl": -4694,
+"entry": "2025-10-17T13:32",
+"exit": "2025-10-17T14:02",
+"dir": "long",
+"comment": "V-1D long"
+},
+"grossProfit": 118133.99999999965,
+"grossLoss": 135765.99999999948,
+"commission": 1412,
+"maxDD": 35099.99999999962,
+"longPF": 0.7394307819839779,
+"longN": 157,
+"shortPF": 0.9673268089697139,
+"shortN": 196,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 167,
+"pf": 1.163,
+"net": 8572
+},
+"2026": {
+"n": 186,
+"pf": 0.685,
+"net": -26204
+}
+},
+"secs": 13,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "V-1D-tf",
+"priority": 3,
+"inputs": {
+"Row": "V-1D: first cross of the day only"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-1D-tf|COMEX:GC1!|1|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "5",
+"at": "2026-10-21T13:42:43.479Z",
+"status": "ok",
+"trades": 316,
+"openTrades": 0,
+"pf": 0.7502484294207821,
+"net": -59313.999999999505,
+"win": 0.3259493670886076,
+"avg": -187.7025316,
+"largestWin": 9406.000000000036,
+"largestWinShare": null,
+"largestLoss": 23744.000000000055,
+"worstTrade": {
+"pnl": -23744,
+"entry": "2026-01-29T14:40",
+"exit": "2026-01-29T15:25",
+"dir": "long",
+"comment": "V-1D long"
+},
+"grossProfit": 178178,
+"grossLoss": 237491.9999999995,
+"commission": 1264,
+"maxDD": 83161.999999999,
+"longPF": 0.650100800293237,
+"longN": 160,
+"shortPF": 0.8733433452224546,
+"shortN": 156,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-10-01",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 146,
+"pf": 1.323,
+"net": 18106
+},
+"2026": {
+"n": 170,
+"pf": 0.573,
+"net": -77420
+}
+},
+"secs": 7,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "V-1D-tf",
+"priority": 3,
+"inputs": {
+"Row": "V-1D: first cross of the day only"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-1D-tf|COMEX:GC1!|5|2025-05-01"
+},
+{
+"strategy": "EMA9 x VWAP Cross 3m, stop-and-reverse (Tim Hutter reel / RoboQuant 'Daily Anchored VWAP Signal Strategy') [reel]",
+"symbol": "COMEX:GC1!",
+"tf": "15",
+"at": "2026-10-21T13:42:48.442Z",
+"status": "ok",
+"trades": 251,
+"openTrades": 0,
+"pf": 1.2377710958991814,
+"net": 37166.00000000099,
+"win": 0.4820717131474104,
+"avg": 148.0717131,
+"largestWin": 12856.000000000036,
+"largestWinShare": 0.346,
+"largestLoss": 6663.999999999945,
+"worstTrade": {
+"pnl": -6664,
+"entry": "2026-06-17T15:45",
+"exit": "2026-06-17T18:30",
+"dir": "long",
+"comment": "V-1D long"
+},
+"grossProfit": 193476.0000000007,
+"grossLoss": 156309.9999999997,
+"commission": 1004,
+"maxDD": 26155.999999999854,
+"longPF": 1.0111675126903625,
+"longN": 143,
+"shortPF": 1.603680160588831,
+"shortN": 108,
+"btFrom": "2025-05-01",
+"btTo": "2026-10-02",
+"firstTrade": "2025-05-01",
+"lastTrade": "2026-09-30",
+"openTrade": null,
+"byYear": {
+"2025": {
+"n": 130,
+"pf": 1.354,
+"net": 20700
+},
+"2026": {
+"n": 121,
+"pf": 1.168,
+"net": 16466
+}
+},
+"secs": 5,
+"clicks": 0,
+"id": "rl-ema9-vwap-cross",
+"row": "V-1D-tf",
+"priority": 3,
+"inputs": {
+"Row": "V-1D: first cross of the day only"
+},
+"tag": "p3",
+"btFromWanted": "2025-05-01",
+"tradeListKey": "rl-ema9-vwap-cross|V-1D-tf|COMEX:GC1!|15|2025-05-01"
+}
+]

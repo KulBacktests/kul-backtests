@@ -1,0 +1,598 @@
+// =============================================================================
+//  EMA9 x VWAP Cross 3m, stop-and-reverse [reel test]
+//  Long when the 9-period EMA of the close crosses above the VWAP anchored at the New York open
+//  (09:30 ET), short when it crosses below. The opposite cross reverses the position; flat by 15:59 ET.
+//
+//  CREDIT: Idea from Tim Hutter (Instagram @timhutter.official, reel DepYGAgFDiM, 18 Oct 2026) and the
+//    RoboQuant template 'Daily Anchored VWAP Signal Strategy' (roboquant.dev; its source was not seen).
+//    Rules are our reading of the reel: the 09:30 ET VWAP anchor, hlc3, stop-and-reverse exit, 15:59 ET
+//    flat, holiday list, ATR bracket variants and the controls are ours.
+//    The reel's own backtest screen (396 trades Sep 2023 - Sep 2026, 56.6% win, PF 1.92, avg R:R 1.47,
+//    $3.00 per round trip) trades 0.52 times per session. The bare rule trades about 3.2 times per
+//    session, so the template has filters or a bracket the reel does not show. This file tests the rule
+//    the reel describes, not the hidden template.
+//  Spec: <lab>\strategy-overview\tv\batch14_reel_ema9vwap\SPEC.md
+//  Lab id: rl-ema9-vwap-cross (Strategy Lab batch 14, reel test). Written 2026-10-21.
+//
+//  RULES, decision row X0 (America/New_York; bars stamped at their open; t_close = open + timeframe)
+//    NY bars: bars opening in [09:30, 16:00) on a weekday that is not an NYSE full holiday.
+//    VWAP (orange): sum(hlc3 x volume) / sum(volume) over the NY bars of the date, restarted on the
+//      first NY bar of each date; drawn on NY bars only.
+//    EMA (blue): ta.ema(close, 9) on the chart timeframe, continuous across sessions (no daily reset).
+//    Cross on a bar close: ta.crossover / ta.crossunder of EMA and VWAP. The bar and the bar before it
+//      must both be NY bars of the same date, so the first possible signal is the 2nd NY bar's close
+//      (1m 09:32, 3m 09:36, 5m 09:40, 15m 10:00).
+//    F = open of the bar that holds 15:59 (1m 15:59, 2m 15:58, 3m 15:57, 5m 15:55, 15m 15:45).
+//    Event: an allowed cross (t_close < F, session date in Trade from .. Trade to) whose direction
+//      differs from the position, or any allowed cross while flat -> strategy.entry 1 contract in the
+//      cross direction, market at the next bar open. An opposite event reverses in one order.
+//      No stop and no target.
+//    Flat: strategy.close_all() on the close of the first bar with t_close >= F (fills at F).
+//      Safety (should never fire on a normal day): strategy.close_all(immediately = true) on a bar
+//      opening at or after 15:59 (and before 18:00) with a position, on a bar of another session date
+//      than the entry, or on session.islastbar (early closes). Nothing is held or entered from 15:59 to
+//      18:00 (the MFFU flat).
+//
+//  ROWS (input "Row"; every row uses the same VWAP / EMA / cross / flat unless it says otherwise)
+//    C-REV      same events, opposite side (fade every cross): the exact mirror of X0.
+//    C-RND      X0's trade windows, side from the hash below (input "Random seed", default 1).
+//    C-LONG     X0's trade windows, every trade long.
+//               C-RND and C-LONG run X0's state machine as a virtual state. At every X0 event the open
+//               control trade is closed and a new one is opened at the same open with strategy.order
+//               (flat: 1; opposite: |position| + 1; same side: close |position|, then open 1), so
+//               their trade count equals X0's.
+//    V-ATR      X0 + a bracket placed with each entry: stop 1.0 x ATR(14) of the signal bar from the
+//               fill, target 1.5 x that distance. After a bracket exit, flat until the next cross.
+//               Opposite events still reverse.
+//    C-REV-ATR  V-ATR with the side flipped (control for V-ATR).
+//    V-1D       only the first allowed cross of the day opens a trade; the next opposite cross closes
+//               it (no reversal), or the flat does.
+//    V-1D-ATR   V-1D + the V-ATR bracket; done for the day after any exit.
+//    V-NY15     X0, but new positions only if t_close <= 15:00; a later opposite cross only closes.
+//    V-GX       VWAP = ta.vwap(hlc3), TradingView's default anchor (CME session start, 18:00 ET).
+//               Crosses on NY bars opening before F, the bar before in the same Globex session (it may
+//               be the 09:27 bar).
+//    V-GX24     V-GX with crosses on every bar of the Globex session from its 2nd bar while t_close < F
+//               (entries 18:00 -> 15:5x, still flat 15:59 -> 18:00).
+//    V-MID      VWAP anchored at 00:00 ET (New York calendar day), entries on NY bars exactly as X0.
+//    V-GC0820   (gold) VWAP anchored at the first bar opening at or after 08:20 ET (COMEX day open:
+//               08:20 on 1/2/5m, 08:21 on 3m, 08:30 on 15m); crosses from its 2nd bar to F.
+//    Random side (C-RND, identical in Python): tm = floor(time / 60000) of the signal bar (minutes since
+//      1970 UTC); h1 = ((tm % 1000003) * 48271 + 7919 * seed) % 2147483647;
+//      h2 = ((h1 % 1000003) * 16807 + 12345) % 2147483647; long if h2 >= 1073741824, else short.
+//      Every intermediate stays below 2^53.
+//
+//  INTERPRETATION CHOICES (SPEC [I1]-[I13]; the implementation notes [P1]-[P7] are this file's)
+//    [I1] Anchor = the New York session open, 09:30 ET (card: "anchored at the start of each New
+//         York ..."; RoboQuant's Vwap::new() has no anchor argument). Other anchors: V-GX, V-MID.
+//    [I2] VWAP price hlc3.   [I3] EMA(9) of close on the chart timeframe, not reset daily.
+//    [I4] The first NY bar cannot signal (its previous VWAP belongs to the day before).
+//    [I5] Market order at the next open after the confirming close ("right when"); "right before"
+//         is discretionary and not tested.
+//    [I6] Stop-and-reverse; no stop or target in X0 (the template's exits are not visible).
+//    [I7] The user's MFFU flat (15:59 ET), not the reel's.   [I8] Same rule on NQ, ES and GC.
+//    [I9] Lab costs, harsher than the reel's $3.00 per round trip.
+//    [I10] NYSE full holidays hard-coded (2021-2027): no anchor and no trading. Early-close days trade
+//          normally and flatten on session.islastbar.
+//    [I11] V-ATR multiples (1.0 x ATR(14), 1.5R) are ours: they mirror the reel's 1.47, not fitted.
+//    [I12] The controls are ours.   [I13] Both sides are traded (calls on up-crosses, puts on down).
+//    [P1] Bracket in ticks from the fill: stopTk = max(1, round(ATR14 / mintick)),
+//         tgtTk = max(1, round(1.5 x stopTk)); strategy.exit in the same bar as strategy.entry.
+//    [P2] "Trade from" is inclusive and "Trade to" exclusive, both by the session date (the New York
+//         date; for V-GX24 bars from 18:00 belong to the next date).
+//    [P3] V-1D / V-1D-ATR: the closing cross is the next allowed cross opposite to the position.
+//    [P4] V-NY15: 15:00 is inclusive (t_close <= 15:00).
+//    [P5] V-GX24 skips Globex sessions whose session date is a weekend day or an NYSE holiday.
+//    [P6] V-MID keeps X0's cross rule (both bars NY bars of the same date), as the spec says "as X0".
+//    [P7] V-GC0820 trades on NYSE trading days only (the same holiday list as X0).
+//
+//  PRICE LEVELS AND BACK-ADJUSTMENT: the rule only compares EMA(9) and VWAP of the same series on the
+//    same bar (ATR is a range). A back-adjustment shifts a whole contract segment by a constant, so
+//    inside a session both move by that constant and the sign of EMA - VWAP is exact; with B-ADJ on, the
+//    EMA carries no roll gap. No spot, other month, round number or stored level is used. Do not change
+//    the layout's B-ADJ setting; record it in the driver output.
+//  LOOK-AHEAD: calc_on_order_fills off, process_orders_on_close off, no request.security, signals on
+//    confirmed closes filled at the next open, brackets placed with the entry, holidays hard-coded,
+//    session.islastbar read only on its own bar. The trade boxes are drawing only.
+//
+//  TEST SETTINGS (Strategy Lab hand-off standard): 1 contract fixed, $2 per contract per side, 1 tick
+//    slippage, $150K, margin 0, bar magnifier on, calc_on_order_fills off, calc_on_every_tick off,
+//    process_orders_on_close off, pyramiding 0, no end date in the past. Charts: CME_MINI:NQ1!,
+//    CME_MINI:ES1!, COMEX:GC1! on 3m (decision), then 1, 2, 5, 15m. Deep Backtesting 2025-05-01 ->
+//    2026-10-01. Round trip: NQ $14, ES $29, GC $24.
+//
+//  CHANGE LIST: new file (2026-10-21), built from the SPEC. There is no original source to change (the
+//    template's code is gated and was not seen). The trade-box helper is copied from the round-6
+//    "(paper, trade boxes)" files, plus a TP label (pts and R) for the bracket rows.
+//  UNIT CHECKS: a Pine Logs line per allowed cross (date, time, side, EMA, VWAP, row action), a warning
+//    per safety exit, and a table: events, trades, regular / safety flats, NYSE holiday dates skipped,
+//    long share of opened trades (C-RND: about 50%).
+// =============================================================================
+
+//@version=6
+strategy("EMA9 x VWAP Cross 3m (reel test)", shorttitle = "EMA9xVWAP",
+     overlay                 = true,
+     pyramiding              = 0,
+     initial_capital         = 150000,
+     currency                = currency.USD,
+     default_qty_type        = strategy.fixed,
+     default_qty_value       = 1,
+     commission_type         = strategy.commission.cash_per_contract,
+     commission_value        = 2,
+     slippage                = 1,
+     margin_long             = 0,
+     margin_short            = 0,
+     use_bar_magnifier       = true,
+     calc_on_order_fills     = false,
+     calc_on_every_tick      = false,
+     process_orders_on_close = false,
+     max_boxes_count         = 500,
+     max_labels_count        = 500,
+     max_lines_count         = 500)
+
+TZ = "America/New_York"
+
+// ----------------------------------------------------------------- inputs
+GRP_R     = "Row (default = X0, the decision row)"
+W_X0      = "X0: EMA9 x VWAP stop-and-reverse (decision)"
+W_CREV    = "C-REV: fade every cross (control)"
+W_CRND    = "C-RND: random side, same trades (control)"
+W_CLONG   = "C-LONG: always long, same trades (control)"
+W_VATR    = "V-ATR: + 1 ATR stop, 1.5R target"
+W_CREVATR = "C-REV-ATR: fade + 1 ATR stop, 1.5R target (control)"
+W_V1D     = "V-1D: first cross of the day only"
+W_V1DATR  = "V-1D-ATR: first cross + 1 ATR stop, 1.5R target"
+W_VNY15   = "V-NY15: entries 09:30-15:00 only"
+W_VGX     = "V-GX: Globex VWAP (18:00 ET anchor), RTH entries"
+W_VGX24   = "V-GX24: Globex VWAP, entries 18:00-15:5x"
+W_VMID    = "V-MID: VWAP anchored 00:00 ET, RTH entries"
+W_VGC0820 = "V-GC0820: VWAP anchored 08:20 ET (COMEX open)"
+row      = input.string(W_X0, "Row", options = [W_X0, W_CREV, W_CRND, W_CLONG, W_VATR, W_CREVATR, W_V1D, W_V1DATR, W_VNY15, W_VGX, W_VGX24, W_VMID, W_VGC0820], group = GRP_R, tooltip = "X0 is the decision row. C-REV / C-RND / C-LONG are controls with X0's exact trade windows. The V-rows are variants (a pass on a variant is not a pass of the rule).")
+seed     = input.int(1, "Random seed", minval = 1, group = GRP_R, tooltip = "C-RND only: seed of the deterministic side hash (identical in the Python harness).")
+fromDate = input.time(timestamp("01 May 2025 00:00 -0400"), "Trade from (New York date)", group = GRP_R, tooltip = "Entries only on session dates on or after this date (inclusive).")
+toDate   = input.time(timestamp("01 Jan 2099 00:00 -0500"), "Trade to (New York date)", group = GRP_R, tooltip = "Entries only on session dates before this date (exclusive).")
+GRP_D    = "Display and unit checks"
+logOn    = input.bool(true, "Log every allowed cross (Pine Logs)", group = GRP_D)
+showTbl  = input.bool(true, "Show the counts table", group = GRP_D)
+showTradeBoxes      = input.bool(true, "Show trade boxes", group = GRP_D)
+maxHistoricalTrades = input.int(10, "Boxes to keep", minval = 0, maxval = 50, group = GRP_D)
+
+bool   rCRND  = row == W_CRND
+bool   rCLONG = row == W_CLONG
+bool   rCtl   = rCRND or rCLONG
+bool   rFade  = row == W_CREV or row == W_CREVATR
+bool   rBkt   = row == W_VATR or row == W_CREVATR or row == W_V1DATR
+bool   r1D    = row == W_V1D or row == W_V1DATR
+bool   rNY15  = row == W_VNY15
+bool   rGX    = row == W_VGX
+bool   rGX24  = row == W_VGX24
+bool   rMID   = row == W_VMID
+bool   rGC    = row == W_VGC0820
+string rowTag = str.substring(row, 0, str.pos(row, ":"))
+
+// NYSE full holidays 2021-2027 [I10] (no anchor, no trading)
+var array<int> HOL = array.from(20210101, 20210118, 20210215, 20210402, 20210531, 20210705, 20210906, 20211125, 20211224, 20220117, 20220221, 20220415, 20220530, 20220620, 20220704, 20220905, 20221124, 20221226, 20230102, 20230116, 20230220, 20230407, 20230529, 20230619, 20230704, 20230904, 20231123, 20231225, 20240101, 20240115, 20240219, 20240329, 20240527, 20240619, 20240704, 20240902, 20241128, 20241225, 20250101, 20250109, 20250120, 20250217, 20250418, 20250526, 20250619, 20250704, 20250901, 20251127, 20251225, 20260101, 20260119, 20260216, 20260403, 20260525, 20260619, 20260703, 20260907, 20261126, 20261225, 20270101, 20270118, 20270215, 20270326, 20270531, 20270618, 20270705, 20270906, 20271125, 20271224)
+
+// ----------------------------------------------------------------- clock (New York)
+f_key(int t) =>
+    year(t, TZ) * 10000 + month(t, TZ) * 100 + dayofmonth(t, TZ)
+
+f_tod(int t) =>
+    hour(t, TZ) * 3600 + minute(t, TZ) * 60 + second(t, TZ)
+
+f_2d(int n) =>
+    (n < 10 ? "0" : "") + str.tostring(n)
+
+f_hhmm(int s) =>
+    int hh = int(math.floor(s / 3600.0))
+    int mm = int(math.floor((s - hh * 3600) / 60.0))
+    f_2d(hh) + ":" + f_2d(mm)
+
+f_wk(int t) =>
+    int d = dayofweek(t, TZ)
+    d != dayofweek.saturday and d != dayofweek.sunday
+
+// C-RND side hash (SPEC "Random side"); t = the signal bar's open time (ms, UTC)
+f_rndSide(int t, int s) =>
+    int tm = math.floor(t / 60000.0)
+    int h1 = ((tm % 1000003) * 48271 + 7919 * s) % 2147483647
+    int h2 = ((h1 % 1000003) * 16807 + 12345) % 2147483647
+    h2 >= 1073741824 ? 1 : -1
+
+int  tfSec   = timeframe.in_seconds()
+int  tfMin   = math.max(1, int(math.floor(tfSec / 60.0)))
+bool tfOK    = timeframe.isintraday and tfSec >= 60 and tfSec % 60 == 0 and 30 % tfMin == 0
+// F = open of the bar holding 15:59 ET: bars are aligned to the 18:00 ET session start (6 h before
+// midnight, a multiple of every allowed timeframe), and 15:59 is 1319 minutes after 18:00
+int  F_S     = ((18 * 60 + int(math.floor(1319.0 / tfMin)) * tfMin) % 1440) * 60
+int  NY_OPEN = 9 * 3600 + 30 * 60
+int  NY_END  = 16 * 3600
+int  GC_OPEN = 8 * 3600 + 20 * 60
+int  LATE_S  = 15 * 3600 + 59 * 60
+int  GX_S    = 18 * 3600
+int  T1500   = 15 * 3600
+
+int  todS    = f_tod(time)
+int  tClose  = time + tfSec * 1000
+int  tCloseS = f_tod(tClose)
+int  dateKey = f_key(time)
+int  sessKey = f_key(time + 6 * 3600000)      // Globex session date: bars from 18:00 belong to the next date
+bool wkDate  = f_wk(time)
+bool wkSess  = f_wk(time + 6 * 3600000)
+
+var int  cacheD = -1
+var bool holD   = false
+if dateKey != cacheD
+    cacheD := dateKey
+    holD   := HOL.includes(dateKey)
+var int  cacheS = -1
+var bool holS   = false
+if sessKey != cacheS
+    cacheS := sessKey
+    holS   := HOL.includes(sessKey)
+
+int  fromKey = f_key(fromDate)
+int  toKey   = f_key(toDate)
+bool inRange = sessKey >= fromKey and sessKey < toKey
+
+// NY bars and the gold 08:20 window
+bool isNY  = tfOK and wkDate and not holD and todS >= NY_OPEN and todS < NY_END
+var int lastNYKey = -1
+bool newNY = isNY and dateKey != lastNYKey
+if newNY
+    lastNYKey := dateKey
+bool inGCw = tfOK and wkDate and not holD and todS >= GC_OPEN and todS < NY_END
+var int lastGCKey = -1
+bool newGC = inGCw and dateKey != lastGCKey
+if newGC
+    lastGCKey := dateKey
+bool sameDate = dateKey == nz(dateKey[1], -1)
+bool sameSess = sessKey == nz(sessKey[1], -1)
+bool newDate  = not sameDate
+bool prevNY   = isNY[1]
+bool prevGC   = inGCw[1]
+
+// ----------------------------------------------------------------- indicators (every bar)
+// anchored VWAP from the chart bars: reset on the anchor bar, accumulate hlc3 x volume while inc
+f_avwap(bool reset, bool inc) =>
+    var float sPV = 0.0
+    var float sV  = 0.0
+    if reset
+        sPV := 0.0
+        sV  := 0.0
+    if inc
+        float v = nz(volume)
+        sPV += hlc3 * v
+        sV  += v
+    sV > 0 ? sPV / sV : na
+
+float vwNYa = f_avwap(newNY, isNY)             // X0: 09:30 ET anchor [I1] [I2]
+float vwMID = f_avwap(newDate, true)           // V-MID: 00:00 ET anchor
+float vwGCa = f_avwap(newGC, inGCw)            // V-GC0820: 08:20 ET anchor
+float vwGX  = ta.vwap(hlc3)                    // V-GX / V-GX24: TradingView default anchor (18:00 ET on CME)
+float vwNY  = isNY ? vwNYa : na
+float vwGC  = inGCw ? vwGCa : na
+float vwSel = rGX or rGX24 ? vwGX : rMID ? vwMID : rGC ? vwGC : vwNY
+float ema9  = ta.ema(close, 9)                 // [I3]
+float atr14 = ta.atr(14)
+bool  upX   = ta.crossover(ema9, vwSel)
+bool  dnX   = ta.crossunder(ema9, vwSel)
+
+// where a cross may count (the signal bar i and the bar before it)
+bool preOK  = rGX ? (isNY and sameSess) : rGX24 ? (tfOK and wkSess and not holS and sameSess) : rGC ? (inGCw and prevGC and sameDate) : (isNY and prevNY and sameDate)
+bool timeOK = rGX24 ? (todS >= GX_S or tCloseS < F_S) : tCloseS < F_S
+bool flatZone = tfOK and todS < GX_S and tCloseS >= F_S
+
+int stopTk = na(atr14) ? na : math.max(1, int(math.round(atr14 / syminfo.mintick)))
+int tgtTk  = na(stopTk) ? na : math.max(1, int(math.round(1.5 * stopTk)))
+
+// ----------------------------------------------------------------- state
+var int    rs          = 0       // direction of the cross that opened the row's position (C-RND / C-LONG: X0's virtual state); 0 = flat
+var int    ordBar      = -1
+var int    ordKey      = -1
+var int    dayDone     = -1
+var int    lastFlatKey = -1
+var int    lastHolKey  = -1
+var int    cCross      = 0
+var int    cEvents     = 0
+var int    cLongOpen   = 0
+var int    cShortOpen  = 0
+var int    cReg        = 0
+var int    cSafe       = 0
+var int    cHol        = 0
+var int    tbStopTk    = na
+var int    tbTgtTk     = na
+var string tbWhy       = ""
+string flatTxt = f_hhmm(F_S) + " ET flat"
+string exitTxt = rBkt ? (r1D ? "Exit: SL / TP, the next cross or the " + flatTxt : "Exit: SL / TP, the opposite cross (reverses) or the " + flatTxt) : r1D ? "No target: exit on the next cross or the " + flatTxt : rCtl ? "No target: exit at X0's next event (close and reopen) or the " + flatTxt : rNY15 ? "No target: exit on the opposite cross (reverses until 15:00, closes after) or the " + flatTxt : "No target: exit on the opposite cross (reverses) or the " + flatTxt
+
+// =============================================================================
+// Trade boxes (visual only: nothing in this section places or changes orders)
+// =============================================================================
+// Pattern from the round-6 "(paper, trade boxes)" files / the sweep strategies: red stop box and
+// green target box on the bracket rows, otherwise a P&L box from the entry to the current / exit
+// price; full labels on the open trade only; past trades keep only their boxes (last N drawn).
+// This section runs before the order logic, so a new trade is drawn with the stop / target ticks and
+// the reason of the order that opened it.
+TB_RISK   = color.rgb(160, 30, 45)
+TB_REWARD = color.rgb(20, 140, 125)
+TB_ENTRY  = color.rgb(41, 98, 255)
+TB_SLTXT  = color.rgb(242, 54, 69)
+TB_TPTXT  = color.rgb(8, 153, 129)
+TB_CLEAR  = color.new(color.black, 100)
+
+type TradeVisual
+    int    tradeNum
+    int    startBar
+    int    dir
+    float  entryPx
+    float  stopPx
+    float  tpPx
+    string why
+    box    riskBox
+    box    rewardBox
+    box    pnlBox
+    label  entryLabel
+    label  stopLabel
+    label  tpLabel
+
+f_tbPx(float p) =>
+    str.tostring(p, format.mintick)
+
+f_tbPts(float d) =>
+    str.tostring(d, "#.##")
+
+f_tbNew(int tradeNum, int dir, float e, int startBar, int stk, int ttk, string why) =>
+    float sl = na(stk) ? na : e - dir * stk * syminfo.mintick
+    float tp = na(ttk) ? na : e + dir * ttk * syminfo.mintick
+    TradeVisual v = TradeVisual.new(tradeNum, startBar, dir, e, sl, tp, why)
+    if not na(sl)
+        v.riskBox := box.new(startBar, math.max(e, sl), startBar + 1, math.min(e, sl), xloc = xloc.bar_index, border_color = color.new(TB_RISK, 30), border_width = 1, bgcolor = color.new(TB_RISK, 70))
+    if not na(tp)
+        v.rewardBox := box.new(startBar, math.max(e, tp), startBar + 1, math.min(e, tp), xloc = xloc.bar_index, border_color = color.new(TB_REWARD, 30), border_width = 1, bgcolor = color.new(TB_REWARD, 70))
+    else
+        v.pnlBox := box.new(startBar, e, startBar + 1, e, xloc = xloc.bar_index, border_color = color.new(TB_REWARD, 30), border_width = 1, bgcolor = color.new(TB_REWARD, 75))
+    v
+
+f_tbPaint(TradeVisual v, float px, int right) =>
+    color c = (px - v.entryPx) * v.dir > 0 ? TB_REWARD : TB_RISK
+    if not na(v.pnlBox)
+        box.set_right(v.pnlBox, right)
+        box.set_top(v.pnlBox, math.max(v.entryPx, px))
+        box.set_bottom(v.pnlBox, math.min(v.entryPx, px))
+        box.set_bgcolor(v.pnlBox, color.new(c, 75))
+        box.set_border_color(v.pnlBox, color.new(c, 30))
+    if not na(v.riskBox)
+        box.set_right(v.riskBox, right)
+    if not na(v.rewardBox)
+        box.set_right(v.rewardBox, right)
+
+f_tbEntryText(TradeVisual v, float px) =>
+    float  pts  = (px - v.entryPx) * v.dir
+    float  usd  = pts * syminfo.pointvalue * math.max(1.0, math.abs(strategy.position_size))
+    float  risk = na(v.stopPx) ? na : math.abs(v.entryPx - v.stopPx)
+    string rTxt = not na(risk) and risk > 0 ? ", " + (pts >= 0 ? "+" : "") + str.tostring(pts / risk, "#.##") + "R" : ""
+    (v.dir > 0 ? "LONG" : "SHORT") + " entry " + f_tbPx(v.entryPx) + "\nOpen P&L " + (pts >= 0 ? "+" : "-") + f_tbPts(math.abs(pts)) + " pts (" + (usd >= 0 ? "+$" : "-$") + str.tostring(math.abs(usd), "#,##0.##") + rTxt + ")\n" + v.why + "\n" + exitTxt
+
+f_tbAddLabels(TradeVisual v, int x) =>
+    v.entryLabel := label.new(x, v.entryPx, f_tbEntryText(v, close), xloc = xloc.bar_index, style = label.style_label_left, color = TB_CLEAR, textcolor = TB_ENTRY, size = size.normal, textalign = text.align_left)
+    float rk = na(v.stopPx) ? na : math.abs(v.entryPx - v.stopPx)
+    if not na(v.stopPx)
+        v.stopLabel := label.new(x, v.stopPx, "SL " + f_tbPx(v.stopPx) + "  (" + f_tbPts(rk) + " pts = 1R, 1.0 x ATR(14))", xloc = xloc.bar_index, style = label.style_label_left, color = TB_CLEAR, textcolor = TB_SLTXT, size = size.small)
+    if not na(v.tpPx)
+        float tk = math.abs(v.tpPx - v.entryPx)
+        v.tpLabel := label.new(x, v.tpPx, "TP " + f_tbPx(v.tpPx) + "  (" + f_tbPts(tk) + " pts" + (not na(rk) and rk > 0 ? " = " + str.tostring(tk / rk, "#.##") + "R" : "") + ")", xloc = xloc.bar_index, style = label.style_label_left, color = TB_CLEAR, textcolor = TB_TPTXT, size = size.small)
+
+f_tbFreeze(TradeVisual v, float xp, int xBar) =>
+    f_tbPaint(v, xp, math.max(xBar, v.startBar + 1))
+    if not na(v.entryLabel)
+        label.delete(v.entryLabel)
+    if not na(v.stopLabel)
+        label.delete(v.stopLabel)
+    if not na(v.tpLabel)
+        label.delete(v.tpLabel)
+    v.entryLabel := na
+    v.stopLabel  := na
+    v.tpLabel    := na
+
+f_tbDelete(TradeVisual v) =>
+    if not na(v.riskBox)
+        box.delete(v.riskBox)
+    if not na(v.rewardBox)
+        box.delete(v.rewardBox)
+    if not na(v.pnlBox)
+        box.delete(v.pnlBox)
+    if not na(v.entryLabel)
+        label.delete(v.entryLabel)
+    if not na(v.stopLabel)
+        label.delete(v.stopLabel)
+    if not na(v.tpLabel)
+        label.delete(v.tpLabel)
+
+var TradeVisual tbCur = na
+var array<TradeVisual> tbPast = array.new<TradeVisual>()
+var int tbLastClosed = 0
+int tbClosedNow = strategy.closedtrades
+
+// Trades closed since the last bar (one that opened and closed inside one bar is drawn here, frozen)
+if showTradeBoxes and tbClosedNow > tbLastClosed
+    for i = tbLastClosed to tbClosedNow - 1
+        TradeVisual v = na
+        if not na(tbCur) and tbCur.tradeNum == i
+            v := tbCur
+            tbCur := na
+        else
+            v := f_tbNew(i, int(math.sign(strategy.closedtrades.size(i))), strategy.closedtrades.entry_price(i), strategy.closedtrades.entry_bar_index(i), tbStopTk, tbTgtTk, tbWhy)
+        f_tbFreeze(v, strategy.closedtrades.exit_price(i), strategy.closedtrades.exit_bar_index(i))
+        tbPast.push(v)
+    while tbPast.size() > maxHistoricalTrades
+        f_tbDelete(tbPast.shift())
+
+// A position is open and not drawn yet: draw it with full labels
+if showTradeBoxes and strategy.position_size != 0 and na(tbCur)
+    TradeVisual v = f_tbNew(strategy.closedtrades, int(math.sign(strategy.position_size)), strategy.opentrades.entry_price(0), strategy.opentrades.entry_bar_index(0), tbStopTk, tbTgtTk, tbWhy)
+    f_tbAddLabels(v, math.max(bar_index, v.startBar + 1))
+    tbCur := v
+
+// While open: stretch the boxes to the current candle and follow the price
+if not na(tbCur) and strategy.position_size != 0
+    int right = math.max(bar_index, tbCur.startBar + 1)
+    f_tbPaint(tbCur, close, right)
+    if not na(tbCur.entryLabel)
+        label.set_x(tbCur.entryLabel, right)
+        label.set_text(tbCur.entryLabel, f_tbEntryText(tbCur, close))
+    if not na(tbCur.stopLabel)
+        label.set_x(tbCur.stopLabel, right)
+    if not na(tbCur.tpLabel)
+        label.set_x(tbCur.tpLabel, right)
+
+tbLastClosed := tbClosedNow
+
+// =============================================================================
+// Order logic
+// =============================================================================
+if sessKey != nz(sessKey[1], -1)
+    rs := 0
+
+// NYSE holiday dates skipped (unit check)
+if tfOK and holD and wkDate and dateKey != lastHolKey and dateKey >= fromKey and dateKey < toKey
+    lastHolKey := dateKey
+    cHol += 1
+
+// safety exit first [I7]: a bar opening 15:59-18:00 with a position, another session date than the
+// entry, or the session's last bar (early closes)
+bool inPos  = strategy.position_size != 0
+bool lateBar = todS >= LATE_S and todS < GX_S
+bool safety = inPos and (lateBar or sessKey != ordKey or session.islastbar)
+if safety
+    strategy.close_all(comment = "Safety exit", immediately = true)
+    cSafe += 1
+    rs := 0
+    if logOn
+        log.warning("{0} {1} ET safety exit ({2}), position {3}", str.tostring(dateKey), f_hhmm(todS), lateBar ? "bar opens at/after 15:59" : sessKey != ordKey ? "session date changed" : "session.islastbar", strategy.position_size)
+
+// regular flat: on the close of the first bar with t_close >= F (fills at F)
+if not safety and inPos and flatZone
+    strategy.close_all(comment = "Flat " + flatTxt)
+    if lastFlatKey != sessKey
+        lastFlatKey := sessKey
+        cReg += 1
+if flatZone
+    rs := 0
+
+// the position was closed by a bracket (or the flat) since the order bar: the row is flat
+if rs != 0 and strategy.position_size == 0 and bar_index > ordBar
+    rs := 0
+
+// allowed cross on this bar's close
+int crossDir = 0
+if tfOK and not safety and inRange and preOK and timeOK and not na(vwSel) and (not rBkt or not na(stopTk))
+    crossDir := upX ? 1 : dnX ? -1 : 0
+
+int    openSide = 0       // +1 / -1: open or reverse into this side at the next open
+bool   doClose  = false   // close the position at the next open (V-1D, V-NY15)
+string act      = ""
+if crossDir != 0
+    cCross += 1
+    if r1D
+        if rs == 0 and dayDone != sessKey
+            openSide := crossDir
+            rs       := crossDir
+            dayDone  := sessKey
+        else if rs != 0 and crossDir != rs
+            doClose := true
+            rs      := 0
+        else
+            act := "ignored (" + (rs != 0 ? "same side" : "done for the day") + ")"
+    else if rNY15
+        if crossDir != rs
+            if tCloseS <= T1500
+                openSide := crossDir
+                rs       := crossDir
+            else if rs != 0
+                doClose := true
+                rs      := 0
+            else
+                act := "ignored (no new positions after 15:00)"
+        else
+            act := "ignored (same side)"
+    else if crossDir != rs
+        openSide := rFade ? -crossDir : rCtl ? (rCLONG ? 1 : f_rndSide(time, seed)) : crossDir
+        rs       := crossDir
+    else
+        act := "ignored (same side)"
+
+if openSide != 0
+    cEvents += 1
+    cLongOpen  += openSide > 0 ? 1 : 0
+    cShortOpen += openSide < 0 ? 1 : 0
+    int cur = int(math.sign(strategy.position_size))
+    ordBar   := bar_index
+    ordKey   := sessKey
+    tbStopTk := rBkt ? stopTk : na
+    tbTgtTk  := rBkt ? tgtTk : na
+    tbWhy    := rowTag + ": " + (crossDir > 0 ? "EMA9 crossed above" : "EMA9 crossed below") + " VWAP at " + f_hhmm(tCloseS) + (rFade ? " (faded)" : rCRND ? " (random side, seed " + str.tostring(seed) + ")" : rCLONG ? " (always long)" : "")
+    string sideTxt = openSide > 0 ? "long" : "short"
+    act := (cur == 0 ? "open " : cur != openSide ? "reverse to " : "close and reopen ") + sideTxt + " at the next open" + (rBkt ? " (SL " + str.tostring(stopTk) + " / TP " + str.tostring(tgtTk) + " ticks)" : "")
+    if rCtl
+        // X0's exact windows: close the open control trade and open the new one at the same open
+        float q = math.abs(strategy.position_size)
+        if cur == 0
+            strategy.order(openSide > 0 ? "cLong" : "cShort", openSide > 0 ? strategy.long : strategy.short, qty = 1, comment = rowTag + " " + sideTxt)
+        else if cur != openSide
+            strategy.order(openSide > 0 ? "cLong" : "cShort", openSide > 0 ? strategy.long : strategy.short, qty = q + 1, comment = rowTag + " rev " + sideTxt)
+        else
+            strategy.order("cClose", openSide > 0 ? strategy.short : strategy.long, qty = q, comment = rowTag + " close")
+            strategy.order(openSide > 0 ? "cLong" : "cShort", openSide > 0 ? strategy.long : strategy.short, qty = 1, comment = rowTag + " " + sideTxt)
+    else if openSide > 0
+        strategy.entry("Long", strategy.long, qty = 1, comment = rowTag + " long")
+        if rBkt
+            strategy.exit("Long x", from_entry = "Long", loss = stopTk, profit = tgtTk, comment_loss = "SL", comment_profit = "TP")
+    else
+        strategy.entry("Short", strategy.short, qty = 1, comment = rowTag + " short")
+        if rBkt
+            strategy.exit("Short x", from_entry = "Short", loss = stopTk, profit = tgtTk, comment_loss = "SL", comment_profit = "TP")
+
+if doClose
+    cEvents += 1
+    act := "close at the next open (" + (r1D ? "next cross" : "after 15:00") + ")"
+    strategy.close_all(comment = rowTag + " exit cross")
+
+if logOn and crossDir != 0
+    log.info("{0} {1} ET {2} cross: EMA9 {3} / VWAP {4} -> {5}: {6}", str.tostring(dateKey), f_hhmm(tCloseS), crossDir > 0 ? "up" : "down", str.tostring(ema9, format.mintick), str.tostring(vwSel, format.mintick), rowTag, act)
+
+// ----------------------------------------------------------------- plots and table
+plot(ema9, "EMA 9", color = color.rgb(41, 98, 255), linewidth = 2)
+plot(vwSel, "VWAP", color = color.rgb(255, 152, 0), linewidth = 2, style = plot.style_linebr)
+plot(rs, "Row cross state", display = display.data_window)
+plot(cCross, "Allowed crosses", display = display.data_window)
+plot(cEvents, "Events (orders)", display = display.data_window)
+plot(cReg, "Regular flats", display = display.data_window)
+plot(cSafe, "Safety flats", display = display.data_window)
+plot(cHol, "NYSE holiday dates skipped", display = display.data_window)
+plot(cLongOpen, "Long trades opened", display = display.data_window)
+plot(cShortOpen, "Short trades opened", display = display.data_window)
+
+var table tbl = table.new(position.top_right, 2, 8, bgcolor = color.new(color.black, 20), border_width = 1)
+if showTbl and barstate.islast
+    int   nOpen  = cLongOpen + cShortOpen
+    float lShare = nOpen > 0 ? 100.0 * cLongOpen / nOpen : na
+    table.cell(tbl, 0, 0, "Row", text_color = color.white, text_size = size.small)
+    table.cell(tbl, 1, 0, rowTag + (rCRND ? " (seed " + str.tostring(seed) + ")" : "") + ", flat bar F " + f_hhmm(F_S), text_color = color.white, text_size = size.small)
+    table.cell(tbl, 0, 1, "Allowed crosses / events", text_color = color.white, text_size = size.small)
+    table.cell(tbl, 1, 1, str.tostring(cCross) + " / " + str.tostring(cEvents), text_color = color.white, text_size = size.small)
+    table.cell(tbl, 0, 2, "Trades (closed + open)", text_color = color.white, text_size = size.small)
+    table.cell(tbl, 1, 2, str.tostring(strategy.closedtrades + strategy.opentrades), text_color = color.white, text_size = size.small)
+    table.cell(tbl, 0, 3, "Regular flats", text_color = color.white, text_size = size.small)
+    table.cell(tbl, 1, 3, str.tostring(cReg), text_color = color.white, text_size = size.small)
+    table.cell(tbl, 0, 4, "Safety flats (should be ~0)", text_color = color.white, text_size = size.small)
+    table.cell(tbl, 1, 4, str.tostring(cSafe), text_color = cSafe > 0 ? color.orange : color.white, text_size = size.small)
+    table.cell(tbl, 0, 5, "NYSE holiday dates skipped", text_color = color.white, text_size = size.small)
+    table.cell(tbl, 1, 5, str.tostring(cHol), text_color = color.white, text_size = size.small)
+    table.cell(tbl, 0, 6, "Long share of opened trades", text_color = color.white, text_size = size.small)
+    table.cell(tbl, 1, 6, na(lShare) ? "-" : str.tostring(lShare, "0.0") + "% (" + str.tostring(cLongOpen) + " L / " + str.tostring(cShortOpen) + " S)", text_color = color.white, text_size = size.small)
+    table.cell(tbl, 0, 7, "Position / row state", text_color = color.white, text_size = size.small)
+    table.cell(tbl, 1, 7, str.tostring(strategy.position_size) + " / " + str.tostring(rs), text_color = color.white, text_size = size.small)
+
+if barstate.islastconfirmedhistory and not tfOK
+    label.new(bar_index, high, "EMA9xVWAP: use a 1, 2, 3, 5 or 15 minute chart (minutes that divide 30)", style = label.style_label_down, color = color.orange, textcolor = color.white)

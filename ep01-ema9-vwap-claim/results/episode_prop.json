@@ -1,0 +1,282 @@
+{
+ "title": "Prop pass odds: MFFU Pro 50K evaluation, the rule's own NQ trades",
+ "rules": {
+  "firm": "MyFundedFutures Pro 50K (as configured in edge-test-reel)",
+  "account": 50000,
+  "profit_target": 3000,
+  "trailing_drawdown": "$2,000 end-of-day trailing",
+  "consistency": 0.5,
+  "min_trading_days": 2,
+  "engine_defaults": "lockOffset $100, max 252 eval days; funded phase not used for pass odds"
+ },
+ "engine": {
+  "script": "~/.claude/skills/edge-test-reel/scripts/prop_mc.cjs",
+  "engine": "Desktop/02_Trading/prop-mc/engine/mc.js (PropMC v2)",
+  "method": "block bootstrap of 5-day blocks of the strategy's own trading days, 5,000 simulated evaluations, seed 20261001",
+  "costs": "engine re-prices commissions: NQ mini $4.68 round trip, micro $1.90; 1 tick slippage stays in the trades",
+  "pass_def": "pPass = share of evaluations that hit +$3,000 before the trailing drawdown (blow-up = pBust)"
+ },
+ "reel_claim": {
+  "simulated_pass": 0.799,
+  "historical_pass": 0.783,
+  "windows": 995,
+  "drawdown": "$2,000 trailing EOD",
+  "size": "not shown",
+  "avg_days_to_pass_calendar": 15.0,
+  "source": "claims.json prop_pass_799"
+ },
+ "size_choice": {
+  "headline": "1 MNQ (1 micro NQ)",
+  "why": "The reel's $2,000 trailing drawdown is the MFFU 50K rule. Its run B wins $296 and loses $201 on average; our rule at 1 micro NQ wins about $215 and loses about $104 a trade (engine sizing), at 1 mini $2,162 and $1,026. So 1 micro is the dollar scale closest to the reel's run, and the only size where one average loser is a small part of $2,000. 1 NQ mini is shown too: one worst NQ trade (-$8,299) is four times the whole drawdown.",
+  "scale": {
+   "mini": {
+    "avg_win": 2162.18,
+    "avg_loss": -1026.47,
+    "worst_trade": -8299.0
+   },
+   "micro_approx": {
+    "avg_win": 214.72,
+    "avg_loss": -104.15,
+    "worst_trade": -831.4,
+    "note": "engine sizing: micro pnl = (mini pnl + $4 commission) / 10 - $1.90 micro round trip"
+   },
+   "reel_size_B": {
+    "avg_win": 296.37,
+    "avg_loss": -200.95,
+    "source": "SPEC 'What the reel shows', config B"
+   }
+  }
+ },
+ "tv_window": {
+  "label": "NQ 3m X0, TradingView 1 May 2025 - 1 Oct 2026, 1,128 trades",
+  "one_micro": {
+   "size": "1 micro",
+   "pPass": 0.153,
+   "pBust": 0.847,
+   "pTimeout": 0,
+   "days": 32
+  },
+  "one_mini": {
+   "size": "1 mini",
+   "pPass": 0.1472,
+   "pBust": 0.8528,
+   "pTimeout": 0,
+   "days": 4
+  },
+  "best_size": {
+   "size": "5 micros",
+   "pPass": 0.1678,
+   "pBust": 0.8322,
+   "pTimeout": 0,
+   "days": 5
+  },
+  "grid": [
+   {
+    "size": "1 micro",
+    "pPass": 0.153,
+    "pBust": 0.847,
+    "pTimeout": 0,
+    "days": 32
+   },
+   {
+    "size": "2 micros",
+    "pPass": 0.1672,
+    "pBust": 0.8328,
+    "pTimeout": 0,
+    "days": 13
+   },
+   {
+    "size": "3 micros",
+    "pPass": 0.1636,
+    "pBust": 0.8364,
+    "pTimeout": 0,
+    "days": 8
+   },
+   {
+    "size": "4 micros",
+    "pPass": 0.1662,
+    "pBust": 0.8338,
+    "pTimeout": 0,
+    "days": 6
+   },
+   {
+    "size": "5 micros",
+    "pPass": 0.1678,
+    "pBust": 0.8322,
+    "pTimeout": 0,
+    "days": 5
+   },
+   {
+    "size": "6 micros",
+    "pPass": 0.1612,
+    "pBust": 0.8388,
+    "pTimeout": 0,
+    "days": 4.5
+   },
+   {
+    "size": "7 micros",
+    "pPass": 0.1568,
+    "pBust": 0.8432,
+    "pTimeout": 0,
+    "days": 4
+   },
+   {
+    "size": "8 micros",
+    "pPass": 0.1476,
+    "pBust": 0.8524,
+    "pTimeout": 0,
+    "days": 4
+   },
+   {
+    "size": "9 micros",
+    "pPass": 0.1428,
+    "pBust": 0.8572,
+    "pTimeout": 0,
+    "days": 4
+   },
+   {
+    "size": "10 micros",
+    "pPass": 0.1382,
+    "pBust": 0.8618,
+    "pTimeout": 0,
+    "days": 4
+   },
+   {
+    "size": "1 mini",
+    "pPass": 0.1472,
+    "pBust": 0.8528,
+    "pTimeout": 0,
+    "days": 4
+   },
+   {
+    "size": "2 minis",
+    "pPass": 0.1244,
+    "pBust": 0.8756,
+    "pTimeout": 0,
+    "days": 4
+   }
+  ],
+  "caveat": "MAE is not in the TradingView export, so intraday drawdown inside a trade is not counted (closed-trade equity only). Real pass odds are this or lower: these are an UPPER bound."
+ },
+ "local_history": {
+  "label": "NQ 3m X0, local Databento 1 Feb 2021 - 30 May 2025, 3,500 trades, MAE from 1-minute bars",
+  "one_micro": {
+   "size": "1 micro",
+   "pPass": 0.311,
+   "pBust": 0.6878,
+   "pTimeout": 0.0012,
+   "days": 59
+  },
+  "one_mini": {
+   "size": "1 mini",
+   "pPass": 0.1376,
+   "pBust": 0.8624,
+   "pTimeout": 0,
+   "days": 6
+  },
+  "best_size": {
+   "size": "1 micro",
+   "pPass": 0.311,
+   "pBust": 0.6878,
+   "pTimeout": 0.0012,
+   "days": 59
+  },
+  "grid": [
+   {
+    "size": "1 micro",
+    "pPass": 0.311,
+    "pBust": 0.6878,
+    "pTimeout": 0.0012,
+    "days": 59
+   },
+   {
+    "size": "2 micros",
+    "pPass": 0.2732,
+    "pBust": 0.7268,
+    "pTimeout": 0,
+    "days": 20
+   },
+   {
+    "size": "3 micros",
+    "pPass": 0.2412,
+    "pBust": 0.7586,
+    "pTimeout": 0.0002,
+    "days": 12
+   },
+   {
+    "size": "4 micros",
+    "pPass": 0.2264,
+    "pBust": 0.7734,
+    "pTimeout": 0.0002,
+    "days": 9
+   },
+   {
+    "size": "5 micros",
+    "pPass": 0.2022,
+    "pBust": 0.7978,
+    "pTimeout": 0,
+    "days": 8
+   },
+   {
+    "size": "6 micros",
+    "pPass": 0.1774,
+    "pBust": 0.8226,
+    "pTimeout": 0,
+    "days": 7
+   },
+   {
+    "size": "7 micros",
+    "pPass": 0.1604,
+    "pBust": 0.8396,
+    "pTimeout": 0,
+    "days": 6
+   },
+   {
+    "size": "8 micros",
+    "pPass": 0.1456,
+    "pBust": 0.8544,
+    "pTimeout": 0,
+    "days": 6
+   },
+   {
+    "size": "9 micros",
+    "pPass": 0.135,
+    "pBust": 0.865,
+    "pTimeout": 0,
+    "days": 6
+   },
+   {
+    "size": "10 micros",
+    "pPass": 0.1298,
+    "pBust": 0.8702,
+    "pTimeout": 0,
+    "days": 6
+   },
+   {
+    "size": "1 mini",
+    "pPass": 0.1376,
+    "pBust": 0.8624,
+    "pTimeout": 0,
+    "days": 6
+   },
+   {
+    "size": "2 minis",
+    "pPass": 0.0816,
+    "pBust": 0.9184,
+    "pTimeout": 0,
+    "days": 6
+   }
+  ],
+  "caveat": "the long history that still had a gross edge (PF 1.076); intraday drawdown counted"
+ },
+ "headline": {
+  "ours_pass": 0.153,
+  "ours_bust": 0.847,
+  "ours_days_median": 32,
+  "reel_pass": 0.799,
+  "line": "Reel: 79.9% pass. Ours on the same $2,000 drawdown at 1 MNQ: 15.3% pass, 84.7% blow-up (median 32 trading days when it does pass). Best size of 12: 5 micros at 16.8%."
+ },
+ "note": "A strategy that loses money still passes sometimes: the 15-17% are lucky runs of the bootstrap, not an edge (PF 0.940).",
+ "combos_file": "build/prop_combos.json",
+ "raw": "build/prop_raw.json"
+}

@@ -1,0 +1,204 @@
+{
+ "title": "What the reel claimed (data, not trusted)",
+ "source": {
+  "platform": "Instagram reel",
+  "url": "https://www.instagram.com/reels/DepYGAgFDiM/",
+  "creator": "Tim Hutter",
+  "handle": "@timhutter.official",
+  "posted": "2026-10-18",
+  "template": "RoboQuant 'Daily Anchored VWAP Signal Strategy' (roboquant.dev)",
+  "code_seen": false,
+  "code_note": "The template's source is only sent to people who comment 'ROBOQUANT'. We did not comment, so we never saw the code.",
+  "local_copy": "02_Trading/reel-strats/DepYGAgFDiM/watch/ (video.mp4 360x640 79.9 s, 33 frames, transcript_local.txt)"
+ },
+ "transcript_note": "Quotes are from transcript_local.txt, a machine transcript (faster-whisper) of the 360p copy, not checked word by word. It writes 'influenza strategies' where the presenter clearly says 'influencer strategies', and 'by calls' / 'by puts' for 'buy calls' / 'buy puts'.",
+ "claims": [
+  {
+   "id": "caption",
+   "value": "EMA 9 + VWAP, automated",
+   "quote": "EMA 9 + VWAP, automated. The results are insane.",
+   "where": "reel caption",
+   "source": "SPEC.md Source"
+  },
+  {
+   "id": "monthly_179k",
+   "value": 179000,
+   "unit": "USD",
+   "quote": "I made $179,000 this past month using one strategy on the 3 minute time frame",
+   "where": "voice 00:00",
+   "context": "discretionary options P&L shown by the presenter, not the automated futures backtest",
+   "source": "transcript_local.txt; REPORT section 1"
+  },
+  {
+   "id": "two_indicators",
+   "quote": "All you need is two indicators, the VWAP indicator and the EMA indicators.",
+   "where": "voice 00:08.7",
+   "source": "transcript_local.txt"
+  },
+  {
+   "id": "entry_rule",
+   "quote": "Our entry will be right before or right when the VWAP and the EMA cross.",
+   "where": "voice 00:12.7",
+   "our_reading": "'right when' = market order at the next bar open after the confirming close; 'right before' is discretionary and not tested",
+   "source": "transcript_local.txt; SPEC [I5]"
+  },
+  {
+   "id": "sides",
+   "quote": "cross to the upside ... calls / crossing to the downside ... puts",
+   "where": "voice 00:20-00:34",
+   "our_reading": "both sides traded [I13]",
+   "source": "transcript_local.txt"
+  },
+  {
+   "id": "automated",
+   "quote": "I automated this strategy on RoboQuant and here is how it performs.",
+   "where": "voice 00:40.8",
+   "source": "transcript_local.txt"
+  },
+  {
+   "id": "best_of_hundreds",
+   "quote": "one of the best strategies I have ever tested ... I have automated hundreds of influencer strategies. This is number one.",
+   "where": "voice 00:47.6-00:54",
+   "note": "selection: best of hundreds, in-sample",
+   "source": "transcript_local.txt (machine text reads 'influenza')"
+  },
+  {
+   "id": "four_year_backtest",
+   "quote": "This is a four-year backtest",
+   "where": "voice 00:55.4",
+   "value_shown": "chart dates 15 Sep 2023 - 24 Sep 2026 = about 3.0 years",
+   "source": "transcript_local.txt; SPEC equity-curve dates"
+  },
+  {
+   "id": "prop_pass_799",
+   "value": 0.799,
+   "quote": "this strategy has a 79.9% probability of passing a prop-firm challenge",
+   "where": "voice 00:55.4 + Prop Firm tab 00:57-01:02",
+   "detail": "Simulated pass rate 79.9%: block bootstrap of contiguous day blocks, 1,000 attempts, a pass takes 15.0 calendar days on average; label 'Likely to pass'",
+   "source": "transcript_local.txt; SPEC 'Prop Firm tab'"
+  },
+  {
+   "id": "prop_hist_783",
+   "value": 0.783,
+   "description": "Historical pass rate 78.3% of 995 rolling 365-day windows",
+   "where": "Prop Firm tab",
+   "source": "SPEC"
+  },
+  {
+   "id": "prop_fail_201",
+   "value": 0.201,
+   "description": "Failures all max-drawdown breaches (20.1%): total drawdown from peak exceeded $2,000, trailing EOD drawdown",
+   "where": "Prop Firm tab",
+   "source": "SPEC"
+  },
+  {
+   "id": "free_code",
+   "quote": "if you want to have access to this strategy here with the source code for completely free just comment RoboQuant",
+   "where": "voice 01:04",
+   "source": "transcript_local.txt"
+  }
+ ],
+ "backtest_screen": {
+  "where": "RoboQuant backtest screens 00:41-01:08, one strategy shown at two sizes (A 00:41-00:55, B 01:03-01:08)",
+  "fields": {
+   "return_pct": [
+    381.87,
+    127.29
+   ],
+   "net_pnl_usd": [
+    95467.63,
+    31822.54
+   ],
+   "trades": [
+    396,
+    396
+   ],
+   "win_rate": [
+    0.566,
+    0.566
+   ],
+   "profit_factor": [
+    1.92,
+    1.92
+   ],
+   "sharpe": [
+    1.66,
+    1.6
+   ],
+   "sortino": [
+    2.46,
+    2.37
+   ],
+   "calmar": [
+    2.17,
+    2.01
+   ],
+   "max_dd_pct": [
+    -24.2,
+    -12.3
+   ],
+   "avg_win_usd": [
+    889.1,
+    296.37
+   ],
+   "avg_loss_usd": [
+    -602.85,
+    -200.95
+   ],
+   "avg_rr": [
+    1.47,
+    1.47
+   ],
+   "expectancy_usd": [
+    241.08,
+    80.36
+   ],
+   "win_streak": [
+    9,
+    9
+   ],
+   "loss_streak": [
+    5,
+    5
+   ],
+   "commission_usd": [
+    -3554.0,
+    -1188.0
+   ]
+  },
+  "columns": [
+   "config A",
+   "config B"
+  ],
+  "dates": "15 Sep 2023, 28 May 2024, 27 Mar 2025, 23 Jan 2026, 24 Sep 2026 (equity-curve axis)",
+  "source": "SPEC.md 'RoboQuant backtest screens' (read from 360p frames)",
+  "flag": "A's commission reads -$3,554 but 3 x B's $1,188 = $3,564: probably a frame misread (verification checker, workflow_summary.txt); not used anywhere"
+ },
+ "template_card": {
+  "where": "01:10-01:16",
+  "pf": 1.84,
+  "dd_pct": 22.0,
+  "profit_pct": 299.9,
+  "legible": "blurry",
+  "text": "'Daily Anchored VWAP Signal ...', 'A volume-weighted average price is anchored at the start of each New York ...' (truncated)",
+  "note": "card numbers differ from the run shown (PF 1.92 / DD 24.2%), so the run shown is not the template's default",
+  "source": "SPEC.md"
+ },
+ "our_arithmetic": {
+  "size_B_is_A_over_3": true,
+  "start_capital_usd": 25000,
+  "commission_per_round_trip_usd": 3.0,
+  "pf_check": "0.566 x 1.47 / 0.434 = 1.92 (consistent)",
+  "expectancy_check": "0.566 x 296.37 - 0.434 x 200.95 = $80.5 (consistent)",
+  "trades_per_session": 0.52,
+  "sessions_approx": 755,
+  "bare_cross_trades_per_session": "3.2-3.4 (TradingView: NQ 3.16, ES 3.29, GC 3.40)",
+  "per_contract_scale_if_B_is_1_contract": {
+   "ES": "avg win 5.9 pts / avg loss 4.0 pts",
+   "NQ": "14.8 / 10.0 pts",
+   "MES": "59 / 40 pts (implausible)"
+  },
+  "conclusion": "56.6% winners with a 1.47 payoff and 0.52 trades a session is a bracket profile with filters, not the bare stop-and-reverse cross the voice-over describes",
+  "source": "SPEC.md 'Our arithmetic on those screens'"
+ }
+}

@@ -1,0 +1,935 @@
+{
+ "title": "EMA9 x VWAP cross (the reel's rule, our reading) - every result number used in the episode",
+ "rule": "3-minute chart; long when EMA(9) of close crosses above the hlc3 VWAP anchored at 09:30 ET, short when it crosses below; stop-and-reverse, no stop or target; flat at 15:57-15:59 ET (MFFU rule); 1 contract, $2 per side + 1 tick slippage (round trip NQ $14, ES $29, GC $24). Signals on confirmed bar closes, fills at the next open. Pine FNV 2a075770.",
+ "window_tv": "TradingView Deep Backtesting 1 May 2025 - 1 Oct 2026 (357 New York sessions); run 21 Oct 2026",
+ "bar": {
+  "pf_min": 1.15,
+  "n_min": 100,
+  "text": "pre-committed: TradingView n >= 100 and PF >= 1.15",
+  "source": "SPEC.md 'Pre-committed holds up rule' (a)"
+ },
+ "prior": {
+  "pf_low": 0.85,
+  "pf_high": 1.05,
+  "written": "before running (SPEC.md)",
+  "landed": "ES 0.857 and NQ 0.940 inside, gold 1.051 at the top edge",
+  "source": "SPEC.md, REPORT section 2"
+ },
+ "checks_text": {
+  "a": "TradingView n >= 100 and PF >= 1.15",
+  "b": "PF > 1 in 2025 and in 2026",
+  "c": "beats fade, random side (seed 1) and always long on the same chart",
+  "d": "local 2021-2025 PF > 1",
+  "e": "fewer than 1/60 of 1,000 random-side seeds reach the local net"
+ },
+ "decision_x0_3m": {
+  "NQ": {
+   "n": 1128,
+   "pf": 0.94,
+   "pf_exact": 0.9398,
+   "net": -48207.0,
+   "win": 0.3085,
+   "payoff": 2.11,
+   "avg_win": 2162.18,
+   "avg_loss": -1026.47,
+   "pf_2025": 0.914,
+   "pf_2026": 0.957,
+   "n_2025": 527,
+   "n_2026": 601,
+   "net_2025": -27298.0,
+   "net_2026": -20909.0,
+   "long_pf": 0.985,
+   "short_pf": 0.897,
+   "long_n": 575,
+   "short_n": 553,
+   "max_dd_tv": 58284,
+   "max_dd_closed": 57758.0,
+   "equity_peak": 7503.0,
+   "equity_trough": -50255.0,
+   "trades_per_session": 3.16,
+   "sessions": 357,
+   "trading_days": 334,
+   "worst_trade": -8299.0,
+   "worst_day": -12523.0,
+   "worst_day_date": "2025-12-18",
+   "days_below_minus_4500_at_1_mini": 41,
+   "days_below_minus_2000_at_1_mini": 85,
+   "largest_win": 20416.0,
+   "largest_win_share": null,
+   "gross_pts_per_trade": -1.437,
+   "costs_total": 15792.0,
+   "gross_before_costs": -32415.0,
+   "controls": {
+    "C-REV": {
+     "label": "fade every cross",
+     "pf": 1.022,
+     "net": 16623.0,
+     "beats_x0": true
+    },
+    "C-RND": {
+     "label": "random side, seed 1 (pre-committed control)",
+     "pf": 0.99,
+     "net": -7877.0,
+     "beats_x0": true
+    },
+    "C-RND-s2": {
+     "label": "random side, seed 2",
+     "pf": 0.899,
+     "net": -82667.0,
+     "beats_x0": false
+    },
+    "C-RND-s3": {
+     "label": "random side, seed 3",
+     "pf": 0.918,
+     "net": -66017.0,
+     "beats_x0": false
+    },
+    "C-LONG": {
+     "label": "always long",
+     "pf": 1.028,
+     "net": 21233.0,
+     "beats_x0": true
+    }
+   },
+   "random_side_1000": {
+    "seeds_net_ge_x0": 653,
+    "p": 0.653,
+    "x0_percentile": 34.7,
+    "null_pf_p95": 1.141,
+    "note": "information only on the TradingView trades; the pre-committed check (e) uses the local history"
+   },
+   "checks": {
+    "a": false,
+    "b": false,
+    "c": false,
+    "d": true,
+    "e": false
+   },
+   "result": "FAILS: (a, b, c, e) fail; first failed check (a)",
+   "first_failed": "a"
+  },
+  "ES": {
+   "n": 1174,
+   "pf": 0.857,
+   "pf_exact": 0.8569,
+   "net": -59996.0,
+   "win": 0.2743,
+   "payoff": 2.27,
+   "avg_win": 1115.6,
+   "avg_loss": -492.04,
+   "pf_2025": 0.862,
+   "pf_2026": 0.853,
+   "n_2025": 549,
+   "n_2026": 625,
+   "net_2025": -25171.0,
+   "net_2026": -34825.0,
+   "long_pf": 0.887,
+   "short_pf": 0.827,
+   "long_n": 597,
+   "short_n": 577,
+   "max_dd_tv": 62565.5,
+   "max_dd_closed": 62176.0,
+   "equity_peak": 0.0,
+   "equity_trough": -62176.0,
+   "trades_per_session": 3.29,
+   "sessions": 357,
+   "trading_days": 330,
+   "worst_trade": -3116.5,
+   "worst_day": -8015.5,
+   "worst_day_date": "2026-06-25",
+   "days_below_minus_4500_at_1_mini": 10,
+   "days_below_minus_2000_at_1_mini": 49,
+   "largest_win": 10083.5,
+   "largest_win_share": null,
+   "gross_pts_per_trade": -0.442,
+   "costs_total": 34046.0,
+   "gross_before_costs": -25950.0,
+   "controls": {
+    "C-REV": {
+     "label": "fade every cross",
+     "pf": 0.979,
+     "net": -8096.0,
+     "beats_x0": true
+    },
+    "C-RND": {
+     "label": "random side, seed 1 (pre-committed control)",
+     "pf": 1.017,
+     "net": 6279.0,
+     "beats_x0": true
+    },
+    "C-RND-s2": {
+     "label": "random side, seed 2",
+     "pf": 1.03,
+     "net": 11354.0,
+     "beats_x0": true
+    },
+    "C-RND-s3": {
+     "label": "random side, seed 3",
+     "pf": 1.026,
+     "net": 9779.0,
+     "beats_x0": true
+    },
+    "C-LONG": {
+     "label": "always long",
+     "pf": 0.948,
+     "net": -20546.0,
+     "beats_x0": true
+    }
+   },
+   "random_side_1000": {
+    "seeds_net_ge_x0": 782,
+    "p": 0.782,
+    "x0_percentile": 21.8,
+    "null_pf_p95": 1.056,
+    "note": "information only on the TradingView trades; the pre-committed check (e) uses the local history"
+   },
+   "checks": {
+    "a": false,
+    "b": false,
+    "c": false,
+    "d": "no local data",
+    "e": "no local data"
+   },
+   "result": "FAILS on TradingView: (a, b, c) fail, so it is not even provisional (X0-OOW PF 1.053 does not help: one trade is 81.8% of its net)",
+   "first_failed": "a"
+  },
+  "GC": {
+   "n": 1214,
+   "pf": 1.051,
+   "pf_exact": 1.0514,
+   "net": 34184.0,
+   "win": 0.3188,
+   "payoff": 2.25,
+   "avg_win": 1805.77,
+   "avg_loss": -803.69,
+   "pf_2025": 1.139,
+   "pf_2026": 1.014,
+   "n_2025": 528,
+   "n_2026": 686,
+   "net_2025": 27478.0,
+   "net_2026": 6706.0,
+   "long_pf": 0.977,
+   "short_pf": 1.131,
+   "long_n": 611,
+   "short_n": 603,
+   "max_dd_tv": 58869.99999999898,
+   "max_dd_closed": 56728.0,
+   "equity_peak": 41656.0,
+   "equity_trough": -15072.0,
+   "trades_per_session": 3.4,
+   "sessions": 357,
+   "trading_days": 341,
+   "worst_trade": -10694.0,
+   "worst_day": -11602.0,
+   "worst_day_date": "2026-01-21",
+   "days_below_minus_4500_at_1_mini": 19,
+   "days_below_minus_2000_at_1_mini": 70,
+   "largest_win": 13276.0,
+   "largest_win_share": 0.388,
+   "gross_pts_per_trade": 0.522,
+   "costs_total": 29136.0,
+   "gross_before_costs": 63320.0,
+   "controls": {
+    "C-REV": {
+     "label": "fade every cross",
+     "pf": 0.871,
+     "net": -92456.0,
+     "beats_x0": false
+    },
+    "C-RND": {
+     "label": "random side, seed 1 (pre-committed control)",
+     "pf": 0.923,
+     "net": -54416.0,
+     "beats_x0": false
+    },
+    "C-RND-s2": {
+     "label": "random side, seed 2",
+     "pf": 1.123,
+     "net": 78564.0,
+     "beats_x0": true
+    },
+    "C-RND-s3": {
+     "label": "random side, seed 3",
+     "pf": 1.13,
+     "net": 82724.0,
+     "beats_x0": true
+    },
+    "C-LONG": {
+     "label": "always long",
+     "pf": 0.89,
+     "net": -79096.0,
+     "beats_x0": false
+    }
+   },
+   "random_side_1000": {
+    "seeds_net_ge_x0": 184,
+    "p": 0.184,
+    "x0_percentile": 81.6,
+    "null_pf_p95": 1.123,
+    "note": "information only on the TradingView trades; the pre-committed check (e) uses the local history"
+   },
+   "checks": {
+    "a": false,
+    "b": true,
+    "c": true,
+    "d": false,
+    "e": false
+   },
+   "result": "FAILS: (a, d, e) fail; first failed check (a)",
+   "first_failed": "a"
+  }
+ },
+ "oow_ES_2023_2025": {
+  "window": "1 May 2023 - 30 Apr 2025 (TradingView)",
+  "n": 1750,
+  "pf": 1.053,
+  "net": 26325.0,
+  "pf_by_year": {
+   "2023": 0.941,
+   "2024": 1.074,
+   "2025": 1.125
+  },
+  "largest_win": 21533.5,
+  "largest_win_share": 0.818,
+  "note": "one trade (+$21,533, April 2025) is 81.8% of the net",
+  "source": "labTrades14_export.json X0-OOW (recomputed)"
+ },
+ "local_history": {
+  "window": "1 Feb 2021 - 30 May 2025 (Databento GLBX 1-minute, unadjusted front month; < 2025-06-01 asserted, holdout untouched)",
+  "NQ_3m": {
+   "n": 3500,
+   "pf": 1.076,
+   "net": 138540.0,
+   "win": 0.2997,
+   "payoff": 2.515,
+   "max_dd_closed": 64537.0,
+   "pf_by_year": {
+    "2021": 1.206,
+    "2022": 1.093,
+    "2023": 0.961,
+    "2024": 1.181,
+    "2025": 0.947
+   },
+   "random_side": {
+    "seeds": 1000,
+    "seeds_net_ge_x0": 37,
+    "p": 0.037,
+    "bar": "fewer than 1/60 of 1,000 seeds (16.7), i.e. p < 0.0167",
+    "passes": false,
+    "x0_percentile": 96.3
+   },
+   "controls_pf": {
+    "fade": 0.881,
+    "random_seed1": 0.916,
+    "random_seed2": 0.85,
+    "random_seed3": 0.834,
+    "always_long": 1.015
+   },
+   "tariff_trade": {
+    "entry": "2025-04-09 12:18 ET",
+    "side": "long",
+    "usd": 35636.0,
+    "share_of_net": 0.2572,
+    "pf_without": 1.057
+   },
+   "long_pf": 1.12,
+   "short_pf": 1.034,
+   "last_13_months_pf": 1.088,
+   "gross_pts_per_trade": 2.679,
+   "zero_cost_pf": 1.105,
+   "reel_cost_pf": 1.099,
+   "worst_trade": -6994,
+   "worst_day": -20879,
+   "worst_day_date": "2025-04-07",
+   "days_below_minus_4500": "60 of 1,005",
+   "source": "local_results.json rows X0 NQ 3m + null.NQ_3m; recomputed from local_trades_X0_NQ_3m.csv (all match)"
+  },
+  "GC_3m": {
+   "n": 3598,
+   "pf": 0.919,
+   "net": -55942.0,
+   "win": 0.3143,
+   "pf_by_year": {
+    "2021": 0.787,
+    "2022": 1.047,
+    "2023": 0.961,
+    "2024": 0.941,
+    "2025": 0.832
+   },
+   "random_side": {
+    "seeds_net_ge_x0": 192,
+    "p": 0.192
+   },
+   "controls_pf": {
+    "fade": 0.83,
+    "random_seed1": 0.879,
+    "always_long": 0.966
+   },
+   "gross_pts_per_trade": 0.085,
+   "last_13_months_pf": 0.865
+  },
+  "GC_15m": {
+   "n": 1382,
+   "pf": 0.857,
+   "net": -44618.0,
+   "p": 0.709
+  },
+  "other_tf": {
+   "NQ": {
+    "1": 1.104,
+    "2": 1.116,
+    "3": 1.076,
+    "5": 1.071,
+    "15": 1.142
+   },
+   "GC": {
+    "1": 0.9,
+    "2": 0.892,
+    "3": 0.919,
+    "5": 0.997,
+    "15": 0.857
+   }
+  },
+  "xcheck_may2025": {
+   "NQ": "72 of 72 entries match TradingView (time and side), all exits same bar, mean $ diff 0.00",
+   "GC": "77 of 79 (97.5%), 76 exits same bar, mean $ diff -0.26",
+   "bar": ">= 90%",
+   "source": "REPORT 3a"
+  }
+ },
+ "gold_15m_near_miss": {
+  "n": 440,
+  "pf": 1.204,
+  "net": 53870.0,
+  "pf_2025": 1.171,
+  "pf_2026": 1.223,
+  "fade_pf": 0.771,
+  "largest_win_share": 0.277,
+  "local_pf": 0.857,
+  "local_n": 1382,
+  "local_p": 0.709,
+  "why_not_a_pass": "not the decision row (3m); best of 86 combos; local gold 15m 2021-2025 is PF 0.857",
+  "source": "labTrades14_export.json X0-tf / C-REV-tf GC 15 (recomputed); local_results.json"
+ },
+ "reel_window": {
+  "NQ": {
+   "source": "local Databento X0 (2023-09-15..2025-04-30) + TradingView X0 (2025-05-01..2026-09-24)",
+   "trades": 2425,
+   "pf": 1.032,
+   "net": 48405,
+   "early": {
+    "trades": 1322,
+    "pf": 1.107
+   },
+   "tv": {
+    "trades": 1103,
+    "pf": 0.961
+   }
+  },
+  "ES": {
+   "source": "TradingView X0-OOW (2023-09-15..2025-04-30) + TradingView X0 (2025-05-01..2026-09-24)",
+   "trades": 2556,
+   "pf": 0.972,
+   "net": -23649,
+   "early": {
+    "trades": 1401,
+    "pf": 1.082
+   },
+   "tv": {
+    "trades": 1155,
+    "pf": 0.858
+   }
+  },
+  "GC": {
+   "source": "local Databento X0 (2023-09-15..2025-04-30) + TradingView X0 (2025-05-01..2026-09-24)",
+   "trades": 2577,
+   "pf": 1.02,
+   "net": 18952,
+   "early": {
+    "trades": 1382,
+    "pf": 0.948
+   },
+   "tv": {
+    "trades": 1195,
+    "pf": 1.053
+   }
+  },
+  "note": "15 Sep 2023 - 24 Sep 2026, the reel's own dates; NQ and gold mix local + TradingView (they agree on the May 2025 overlap)"
+ },
+ "other_timeframes_tv": {
+  "NQ": {
+   "1": {
+    "x0_pf": 0.968,
+    "n": 1929,
+    "fade_pf": 0.979
+   },
+   "2": {
+    "x0_pf": 0.996,
+    "n": 1366,
+    "fade_pf": 0.96
+   },
+   "3": {
+    "x0_pf": 0.94,
+    "n": 1128,
+    "fade_pf": 1.022
+   },
+   "5": {
+    "x0_pf": 0.965,
+    "n": 826,
+    "fade_pf": 1.0
+   },
+   "15": {
+    "x0_pf": 1.01,
+    "n": 480,
+    "fade_pf": 0.957
+   }
+  },
+  "ES": {
+   "1": {
+    "x0_pf": 0.896,
+    "n": 2038,
+    "fade_pf": 0.874
+   },
+   "2": {
+    "x0_pf": 0.919,
+    "n": 1410,
+    "fade_pf": 0.895
+   },
+   "3": {
+    "x0_pf": 0.857,
+    "n": 1174,
+    "fade_pf": 0.979
+   },
+   "5": {
+    "x0_pf": 0.929,
+    "n": 882,
+    "fade_pf": 0.915
+   },
+   "15": {
+    "x0_pf": 0.901,
+    "n": 503,
+    "fade_pf": 0.95
+   }
+  },
+  "GC": {
+   "1": {
+    "x0_pf": 1.0,
+    "n": 2229,
+    "fade_pf": 0.881
+   },
+   "2": {
+    "x0_pf": 1.0,
+    "n": 1576,
+    "fade_pf": 0.903
+   },
+   "3": {
+    "x0_pf": 1.051,
+    "n": 1214,
+    "fade_pf": 0.871
+   },
+   "5": {
+    "x0_pf": 0.955,
+    "n": 912,
+    "fade_pf": 0.969
+   },
+   "15": {
+    "x0_pf": 1.204,
+    "n": 440,
+    "fade_pf": 0.771
+   }
+  }
+ },
+ "variants_tv_3m": {
+  "V-ATR": {
+   "label": "+ 1 ATR stop, 1.5R target (copies the reel's 1.47 payoff)",
+   "NQ": {
+    "n": 1128,
+    "pf": 1.01,
+    "net": 3963,
+    "win": 0.3998,
+    "payoff": 1.515
+   },
+   "ES": {
+    "n": 1174,
+    "pf": 0.792,
+    "net": -46571,
+    "win": 0.3586,
+    "payoff": 1.416
+   },
+   "GC": {
+    "n": 1214,
+    "pf": 0.98,
+    "net": -8006,
+    "win": 0.3995,
+    "payoff": 1.473
+   }
+  },
+  "C-REV-ATR": {
+   "label": "fade + same bracket",
+   "NQ": {
+    "n": 1128,
+    "pf": 0.895,
+    "net": -44122,
+    "win": 0.4096
+   },
+   "ES": {
+    "n": 1174,
+    "pf": 0.888,
+    "net": -23046,
+    "win": 0.4097
+   },
+   "GC": {
+    "n": 1214,
+    "pf": 0.887,
+    "net": -43776,
+    "win": 0.4217
+   }
+  },
+  "V-1D": {
+   "label": "first cross of the day only (closer to the template's 0.52 trades a session)",
+   "NQ": {
+    "n": 334,
+    "pf": 1.215,
+    "net": 53384,
+    "win": 0.3383
+   },
+   "ES": {
+    "n": 330,
+    "pf": 0.895,
+    "net": -12658,
+    "win": 0.2788
+   },
+   "GC": {
+    "n": 341,
+    "pf": 1.042,
+    "net": 8326,
+    "win": 0.2991
+   }
+  },
+  "V-1D-ATR": {
+   "label": "first cross + bracket",
+   "NQ": {
+    "n": 334,
+    "pf": 1.132,
+    "net": 15949,
+    "win": 0.4192
+   },
+   "ES": {
+    "n": 330,
+    "pf": 0.68,
+    "net": -20708,
+    "win": 0.3242
+   },
+   "GC": {
+    "n": 341,
+    "pf": 1.042,
+    "net": 4896,
+    "win": 0.4135
+   }
+  },
+  "V-NY15": {
+   "label": "entries until 15:00",
+   "NQ": {
+    "n": 1048,
+    "pf": 0.945,
+    "net": -42107,
+    "win": 0.2948
+   },
+   "ES": {
+    "n": 1084,
+    "pf": 0.867,
+    "net": -53198,
+    "win": 0.2675
+   },
+   "GC": {
+    "n": 1116,
+    "pf": 1.058,
+    "net": 36846,
+    "win": 0.3109
+   }
+  },
+  "V-GX": {
+   "label": "Globex 18:00 VWAP, RTH entries",
+   "NQ": {
+    "n": 729,
+    "pf": 0.898,
+    "net": -54756,
+    "win": 0.3155
+   },
+   "ES": {
+    "n": 851,
+    "pf": 0.801,
+    "net": -65192,
+    "win": 0.282
+   },
+   "GC": {
+    "n": 431,
+    "pf": 0.913,
+    "net": -24494,
+    "win": 0.297
+   }
+  },
+  "V-GX24": {
+   "label": "Globex VWAP, entries 18:00-15:5x (overnight risk)",
+   "NQ": {
+    "n": 2756,
+    "pf": 1.014,
+    "net": 20574,
+    "win": 0.2282
+   },
+   "ES": {
+    "n": 3062,
+    "pf": 0.802,
+    "net": -163325,
+    "win": 0.2054
+   },
+   "GC": {
+    "n": 2594,
+    "pf": 1.157,
+    "net": 233772,
+    "win": 0.2355
+   }
+  },
+  "V-MID": {
+   "label": "VWAP anchored 00:00 ET",
+   "NQ": {
+    "n": 726,
+    "pf": 0.931,
+    "net": -38299,
+    "win": 0.3361
+   },
+   "ES": {
+    "n": 916,
+    "pf": 0.835,
+    "net": -57164,
+    "win": 0.286
+   },
+   "GC": {
+    "n": 526,
+    "pf": 1.045,
+    "net": 14426,
+    "win": 0.3156
+   }
+  }
+ },
+ "leads": [
+  {
+   "row": "V-1D-tf",
+   "market": "NQ",
+   "tf": "1m",
+   "n": 350,
+   "pf": 1.54,
+   "net": 97080,
+   "byYear": {
+    "2025": 1.102,
+    "2026": 1.827
+   },
+   "largestWinShare": 0.215
+  },
+  {
+   "row": "V-1D-tf",
+   "market": "NQ",
+   "tf": "5m",
+   "n": 321,
+   "pf": 1.316,
+   "net": 79621,
+   "byYear": {
+    "2025": 1.429,
+    "2026": 1.25
+   },
+   "largestWinShare": 0.257
+  },
+  {
+   "row": "V-1D-tf",
+   "market": "GC",
+   "tf": "15m",
+   "n": 251,
+   "pf": 1.238,
+   "net": 37166,
+   "byYear": {
+    "2025": 1.354,
+    "2026": 1.168
+   },
+   "largestWinShare": 0.346
+  },
+  {
+   "row": "V-1D",
+   "market": "NQ",
+   "tf": "3m",
+   "n": 334,
+   "pf": 1.215,
+   "net": 53384,
+   "byYear": {
+    "2025": 1.018,
+    "2026": 1.333
+   },
+   "largestWinShare": 0.216,
+   "local_pf": 1.242,
+   "local_byYear": {
+    "2021": 1.327,
+    "2022": 1.303,
+    "2023": 0.907,
+    "2024": 1.898,
+    "2025": 0.684
+   }
+  },
+  {
+   "row": "X0-tf",
+   "market": "GC",
+   "tf": "15m",
+   "n": 440,
+   "pf": 1.204,
+   "net": 53870,
+   "byYear": {
+    "2025": 1.171,
+    "2026": 1.223
+   },
+   "largestWinShare": 0.277,
+   "c_rev_pf": 0.771,
+   "local_pf": 0.857,
+   "local_p_random": 0.709
+  },
+  {
+   "row": "V-GX24",
+   "market": "GC",
+   "tf": "3m",
+   "n": 2594,
+   "pf": 1.157,
+   "net": 233772,
+   "byYear": {
+    "2025": 1.185,
+    "2026": 1.143
+   },
+   "largestWinShare": 0.249
+  }
+ ],
+ "verdict": {
+  "overall": "DOES NOT HOLD UP",
+  "text": "DOES NOT HOLD UP: no market passes all five checks. NQ fails (a) PF 0.940, (b), (c) and (e); ES fails (a)-(c) on TradingView; GC fails (a) PF 1.051 (< 1.15), (d) and (e), although it passes (b) and (c).",
+  "first_failed_all_markets": "(a)"
+ },
+ "sources": [
+  "labTrades14_export.json",
+  "labRes14_export.json",
+  "results.json",
+  "results_variants.json",
+  "local_results.json",
+  "local_trades_X0_NQ_3m.csv",
+  "local_trades_X0_GC_3m.csv",
+  "REPORT.md",
+  "SPEC.md"
+ ],
+ "equity_shape_tv": {
+  "NQ": {
+   "low_before_peak": {
+    "trade": 212,
+    "value": -50348.0
+   },
+   "peak": {
+    "trade": 433,
+    "value": 7503.0
+   },
+   "end": -48207.0,
+   "min": -50348.0,
+   "max": 7503.0,
+   "segments": [
+    {
+     "from_trade": 1,
+     "to_trade": 212,
+     "first_exit": "2025-05-01",
+     "last_exit": "2025-08-01",
+     "n": 212,
+     "net": -50348,
+     "pf": 0.589
+    },
+    {
+     "from_trade": 213,
+     "to_trade": 433,
+     "first_exit": "2025-08-04",
+     "last_exit": "2025-11-25",
+     "n": 221,
+     "net": 57851,
+     "pf": 1.474
+    },
+    {
+     "from_trade": 434,
+     "to_trade": 1128,
+     "first_exit": "2025-11-26",
+     "last_exit": "2026-10-01",
+     "n": 695,
+     "net": -55710,
+     "pf": 0.9
+    }
+   ],
+   "note": "hand-picked sub-windows, for illustration only (cherry-picking a window is exactly the selection problem the episode is about)"
+  },
+  "ES": {
+   "low_before_peak": {
+    "trade": 0,
+    "value": 0.0
+   },
+   "peak": {
+    "trade": 0,
+    "value": 0.0
+   },
+   "end": -59996.0,
+   "min": -62176.0,
+   "max": 0.0,
+   "segments": [
+    {
+     "from_trade": 1,
+     "to_trade": 1174,
+     "first_exit": "2025-05-01",
+     "last_exit": "2026-10-01",
+     "n": 1174,
+     "net": -59996.0,
+     "pf": 0.857
+    }
+   ],
+   "note": "hand-picked sub-windows, for illustration only (cherry-picking a window is exactly the selection problem the episode is about)"
+  },
+  "GC": {
+   "low_before_peak": {
+    "trade": 128,
+    "value": -14692.0
+   },
+   "peak": {
+    "trade": 611,
+    "value": 41656.0
+   },
+   "end": 34184.0,
+   "min": -15072.0,
+   "max": 47864.0,
+   "segments": [
+    {
+     "from_trade": 1,
+     "to_trade": 128,
+     "first_exit": "2025-05-01",
+     "last_exit": "2025-06-24",
+     "n": 128,
+     "net": -14692,
+     "pf": 0.707
+    },
+    {
+     "from_trade": 129,
+     "to_trade": 611,
+     "first_exit": "2025-06-24",
+     "last_exit": "2026-01-30",
+     "n": 483,
+     "net": 56348,
+     "pf": 1.255
+    },
+    {
+     "from_trade": 612,
+     "to_trade": 1214,
+     "first_exit": "2026-02-02",
+     "last_exit": "2026-10-01",
+     "n": 603,
+     "net": -7472,
+     "pf": 0.981
+    }
+   ],
+   "note": "hand-picked sub-windows, for illustration only (cherry-picking a window is exactly the selection problem the episode is about)"
+  }
+ }
+}
