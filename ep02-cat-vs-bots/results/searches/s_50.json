@@ -1,0 +1,1465 @@
+{
+ "rep": 50,
+ "cats": [
+  {
+   "i": 0,
+   "seed": 900050000,
+   "A": 0.391,
+   "Asize": "1 micro",
+   "B": 0.391,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.1152
+  },
+  {
+   "i": 1,
+   "seed": 900050001,
+   "A": 0.183,
+   "Asize": "1 micro",
+   "B": 0.218,
+   "Bsize": "3 micros",
+   "Bidx": 2,
+   "pf": 1.0053
+  },
+  {
+   "i": 2,
+   "seed": 900050002,
+   "A": 0.23,
+   "Asize": "1 micro",
+   "B": 0.23,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 0.9271
+  },
+  {
+   "i": 3,
+   "seed": 900050003,
+   "A": 0.216,
+   "Asize": "1 micro",
+   "B": 0.216,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.0106
+  },
+  {
+   "i": 4,
+   "seed": 900050004,
+   "A": 0.149,
+   "Asize": "1 micro",
+   "B": 0.18,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 0.9574
+  },
+  {
+   "i": 5,
+   "seed": 900050005,
+   "A": 0.372,
+   "Asize": "2 micros",
+   "B": 0.372,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 1.1794
+  },
+  {
+   "i": 6,
+   "seed": 900050006,
+   "A": 0.27,
+   "Asize": "2 micros",
+   "B": 0.27,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 1.0778
+  },
+  {
+   "i": 7,
+   "seed": 900050007,
+   "A": 0.01,
+   "Asize": "2 micros",
+   "B": 0.172,
+   "Bsize": "1 mini",
+   "Bidx": 10,
+   "pf": 0.831
+  },
+  {
+   "i": 8,
+   "seed": 900050008,
+   "A": 0.081,
+   "Asize": "3 micros",
+   "B": 0.176,
+   "Bsize": "9 micros",
+   "Bidx": 8,
+   "pf": 0.8402
+  },
+  {
+   "i": 9,
+   "seed": 900050009,
+   "A": 0.503,
+   "Asize": "3 micros",
+   "B": 0.503,
+   "Bsize": "3 micros",
+   "Bidx": 2,
+   "pf": 1.3073
+  },
+  {
+   "i": 10,
+   "seed": 900050010,
+   "A": 0.017,
+   "Asize": "1 micro",
+   "B": 0.082,
+   "Bsize": "4 micros",
+   "Bidx": 3,
+   "pf": 0.6629
+  },
+  {
+   "i": 11,
+   "seed": 900050011,
+   "A": 0.046,
+   "Asize": "1 micro",
+   "B": 0.17,
+   "Bsize": "3 micros",
+   "Bidx": 2,
+   "pf": 0.7316
+  },
+  {
+   "i": 12,
+   "seed": 900050012,
+   "A": 0.322,
+   "Asize": "2 micros",
+   "B": 0.34,
+   "Bsize": "3 micros",
+   "Bidx": 2,
+   "pf": 1.2072
+  },
+  {
+   "i": 13,
+   "seed": 900050013,
+   "A": 0.259,
+   "Asize": "2 micros",
+   "B": 0.279,
+   "Bsize": "6 micros",
+   "Bidx": 5,
+   "pf": 1.0282
+  },
+  {
+   "i": 14,
+   "seed": 900050014,
+   "A": 0.111,
+   "Asize": "1 micro",
+   "B": 0.242,
+   "Bsize": "4 micros",
+   "Bidx": 3,
+   "pf": 0.9936
+  },
+  {
+   "i": 15,
+   "seed": 900050015,
+   "A": 0.012,
+   "Asize": "1 micro",
+   "B": 0.104,
+   "Bsize": "6 micros",
+   "Bidx": 5,
+   "pf": 0.6927
+  },
+  {
+   "i": 16,
+   "seed": 900050016,
+   "A": 0.435,
+   "Asize": "1 micro",
+   "B": 0.435,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.3288
+  },
+  {
+   "i": 17,
+   "seed": 900050017,
+   "A": 0.272,
+   "Asize": "1 micro",
+   "B": 0.272,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.0413
+  },
+  {
+   "i": 18,
+   "seed": 900050018,
+   "A": 0.057,
+   "Asize": "1 micro",
+   "B": 0.175,
+   "Bsize": "4 micros",
+   "Bidx": 3,
+   "pf": 0.7903
+  },
+  {
+   "i": 19,
+   "seed": 900050019,
+   "A": 0.362,
+   "Asize": "1 micro",
+   "B": 0.362,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.0434
+  },
+  {
+   "i": 20,
+   "seed": 900050020,
+   "A": 0.17,
+   "Asize": "2 micros",
+   "B": 0.19,
+   "Bsize": "3 micros",
+   "Bidx": 2,
+   "pf": 1.0172
+  },
+  {
+   "i": 21,
+   "seed": 900050021,
+   "A": 0.011,
+   "Asize": "1 micro",
+   "B": 0.151,
+   "Bsize": "1 mini",
+   "Bidx": 10,
+   "pf": 0.8511
+  },
+  {
+   "i": 22,
+   "seed": 900050022,
+   "A": 0.015,
+   "Asize": "1 micro",
+   "B": 0.169,
+   "Bsize": "1 mini",
+   "Bidx": 10,
+   "pf": 0.8906
+  },
+  {
+   "i": 23,
+   "seed": 900050023,
+   "A": 0.077,
+   "Asize": "2 micros",
+   "B": 0.146,
+   "Bsize": "6 micros",
+   "Bidx": 5,
+   "pf": 0.8254
+  },
+  {
+   "i": 24,
+   "seed": 900050024,
+   "A": 0.099,
+   "Asize": "1 micro",
+   "B": 0.102,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 0.8037
+  },
+  {
+   "i": 25,
+   "seed": 900050025,
+   "A": 0.156,
+   "Asize": "1 micro",
+   "B": 0.164,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 0.8282
+  },
+  {
+   "i": 26,
+   "seed": 900050026,
+   "A": 0.13,
+   "Asize": "2 micros",
+   "B": 0.17,
+   "Bsize": "4 micros",
+   "Bidx": 3,
+   "pf": 0.9504
+  },
+  {
+   "i": 27,
+   "seed": 900050027,
+   "A": 0.107,
+   "Asize": "1 micro",
+   "B": 0.131,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 0.7858
+  },
+  {
+   "i": 28,
+   "seed": 900050028,
+   "A": 0.395,
+   "Asize": "1 micro",
+   "B": 0.395,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.161
+  },
+  {
+   "i": 29,
+   "seed": 900050029,
+   "A": 0.282,
+   "Asize": "1 micro",
+   "B": 0.282,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.0183
+  },
+  {
+   "i": 30,
+   "seed": 900050030,
+   "A": 0.28,
+   "Asize": "1 micro",
+   "B": 0.28,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 0.9711
+  },
+  {
+   "i": 31,
+   "seed": 900050031,
+   "A": 0.313,
+   "Asize": "1 micro",
+   "B": 0.313,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.0532
+  },
+  {
+   "i": 32,
+   "seed": 900050032,
+   "A": 0.385,
+   "Asize": "1 micro",
+   "B": 0.385,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.2479
+  },
+  {
+   "i": 33,
+   "seed": 900050033,
+   "A": 0.127,
+   "Asize": "2 micros",
+   "B": 0.179,
+   "Bsize": "3 micros",
+   "Bidx": 2,
+   "pf": 0.9417
+  },
+  {
+   "i": 34,
+   "seed": 900050034,
+   "A": 0.234,
+   "Asize": "1 micro",
+   "B": 0.271,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 1.0649
+  },
+  {
+   "i": 35,
+   "seed": 900050035,
+   "A": 0.124,
+   "Asize": "1 micro",
+   "B": 0.129,
+   "Bsize": "3 micros",
+   "Bidx": 2,
+   "pf": 0.9962
+  },
+  {
+   "i": 36,
+   "seed": 900050036,
+   "A": 0.094,
+   "Asize": "1 micro",
+   "B": 0.174,
+   "Bsize": "4 micros",
+   "Bidx": 3,
+   "pf": 0.9104
+  },
+  {
+   "i": 37,
+   "seed": 900050037,
+   "A": 0.016,
+   "Asize": "1 micro",
+   "B": 0.129,
+   "Bsize": "4 micros",
+   "Bidx": 3,
+   "pf": 0.9046
+  },
+  {
+   "i": 38,
+   "seed": 900050038,
+   "A": 0.12,
+   "Asize": "1 micro",
+   "B": 0.135,
+   "Bsize": "5 micros",
+   "Bidx": 4,
+   "pf": 0.9732
+  },
+  {
+   "i": 39,
+   "seed": 900050039,
+   "A": 0.216,
+   "Asize": "2 micros",
+   "B": 0.233,
+   "Bsize": "4 micros",
+   "Bidx": 3,
+   "pf": 1.0015
+  },
+  {
+   "i": 40,
+   "seed": 900050040,
+   "A": 0.412,
+   "Asize": "1 micro",
+   "B": 0.412,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.4564
+  },
+  {
+   "i": 41,
+   "seed": 900050041,
+   "A": 0.041,
+   "Asize": "1 micro",
+   "B": 0.041,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 0.6139
+  },
+  {
+   "i": 42,
+   "seed": 900050042,
+   "A": 0.074,
+   "Asize": "1 micro",
+   "B": 0.118,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 0.9543
+  },
+  {
+   "i": 43,
+   "seed": 900050043,
+   "A": 0.084,
+   "Asize": "2 micros",
+   "B": 0.103,
+   "Bsize": "3 micros",
+   "Bidx": 2,
+   "pf": 0.8938
+  },
+  {
+   "i": 44,
+   "seed": 900050044,
+   "A": 0.072,
+   "Asize": "1 micro",
+   "B": 0.151,
+   "Bsize": "3 micros",
+   "Bidx": 2,
+   "pf": 0.7995
+  },
+  {
+   "i": 45,
+   "seed": 900050045,
+   "A": 0.357,
+   "Asize": "1 micro",
+   "B": 0.359,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 1.082
+  },
+  {
+   "i": 46,
+   "seed": 900050046,
+   "A": 0.077,
+   "Asize": "1 micro",
+   "B": 0.104,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 0.7518
+  },
+  {
+   "i": 47,
+   "seed": 900050047,
+   "A": 0.089,
+   "Asize": "1 micro",
+   "B": 0.149,
+   "Bsize": "3 micros",
+   "Bidx": 2,
+   "pf": 0.9579
+  },
+  {
+   "i": 48,
+   "seed": 900050048,
+   "A": 0.269,
+   "Asize": "1 micro",
+   "B": 0.269,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.0991
+  },
+  {
+   "i": 49,
+   "seed": 900050049,
+   "A": 0.086,
+   "Asize": "2 micros",
+   "B": 0.152,
+   "Bsize": "4 micros",
+   "Bidx": 3,
+   "pf": 0.8314
+  },
+  {
+   "i": 50,
+   "seed": 900050050,
+   "A": 0.124,
+   "Asize": "2 micros",
+   "B": 0.162,
+   "Bsize": "4 micros",
+   "Bidx": 3,
+   "pf": 0.9129
+  },
+  {
+   "i": 51,
+   "seed": 900050051,
+   "A": 0.223,
+   "Asize": "2 micros",
+   "B": 0.225,
+   "Bsize": "3 micros",
+   "Bidx": 2,
+   "pf": 0.9776
+  },
+  {
+   "i": 52,
+   "seed": 900050052,
+   "A": 0.168,
+   "Asize": "2 micros",
+   "B": 0.188,
+   "Bsize": "3 micros",
+   "Bidx": 2,
+   "pf": 0.9636
+  },
+  {
+   "i": 53,
+   "seed": 900050053,
+   "A": 0.102,
+   "Asize": "2 micros",
+   "B": 0.158,
+   "Bsize": "5 micros",
+   "Bidx": 4,
+   "pf": 0.8469
+  },
+  {
+   "i": 54,
+   "seed": 900050054,
+   "A": 0.441,
+   "Asize": "1 micro",
+   "B": 0.489,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 1.4365
+  },
+  {
+   "i": 55,
+   "seed": 900050055,
+   "A": 0.222,
+   "Asize": "1 micro",
+   "B": 0.248,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 0.9688
+  },
+  {
+   "i": 56,
+   "seed": 900050056,
+   "A": 0.544,
+   "Asize": "1 micro",
+   "B": 0.544,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.3913
+  },
+  {
+   "i": 57,
+   "seed": 900050057,
+   "A": 0.027,
+   "Asize": "1 micro",
+   "B": 0.06,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 0.7152
+  },
+  {
+   "i": 58,
+   "seed": 900050058,
+   "A": 0.211,
+   "Asize": "1 micro",
+   "B": 0.211,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.0063
+  },
+  {
+   "i": 59,
+   "seed": 900050059,
+   "A": 0.872,
+   "Asize": "1 micro",
+   "B": 0.872,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.9357
+  },
+  {
+   "i": 60,
+   "seed": 900050060,
+   "A": 0.294,
+   "Asize": "1 micro",
+   "B": 0.343,
+   "Bsize": "3 micros",
+   "Bidx": 2,
+   "pf": 1.0871
+  },
+  {
+   "i": 61,
+   "seed": 900050061,
+   "A": 0.186,
+   "Asize": "1 micro",
+   "B": 0.21,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 0.9842
+  },
+  {
+   "i": 62,
+   "seed": 900050062,
+   "A": 0.041,
+   "Asize": "1 micro",
+   "B": 0.107,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 0.7917
+  },
+  {
+   "i": 63,
+   "seed": 900050063,
+   "A": 0.284,
+   "Asize": "1 micro",
+   "B": 0.284,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.1682
+  },
+  {
+   "i": 64,
+   "seed": 900050064,
+   "A": 0.208,
+   "Asize": "1 micro",
+   "B": 0.208,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 0.9227
+  },
+  {
+   "i": 65,
+   "seed": 900050065,
+   "A": 0.069,
+   "Asize": "1 micro",
+   "B": 0.115,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 0.721
+  },
+  {
+   "i": 66,
+   "seed": 900050066,
+   "A": 0.122,
+   "Asize": "1 micro",
+   "B": 0.138,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 0.8367
+  },
+  {
+   "i": 67,
+   "seed": 900050067,
+   "A": 0.364,
+   "Asize": "3 micros",
+   "B": 0.364,
+   "Bsize": "3 micros",
+   "Bidx": 2,
+   "pf": 1.0753
+  },
+  {
+   "i": 68,
+   "seed": 900050068,
+   "A": 0.095,
+   "Asize": "3 micros",
+   "B": 0.145,
+   "Bsize": "6 micros",
+   "Bidx": 5,
+   "pf": 0.8442
+  },
+  {
+   "i": 69,
+   "seed": 900050069,
+   "A": 0.087,
+   "Asize": "1 micro",
+   "B": 0.17,
+   "Bsize": "5 micros",
+   "Bidx": 4,
+   "pf": 0.901
+  },
+  {
+   "i": 70,
+   "seed": 900050070,
+   "A": 0.607,
+   "Asize": "1 micro",
+   "B": 0.607,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.6951
+  },
+  {
+   "i": 71,
+   "seed": 900050071,
+   "A": 0.28,
+   "Asize": "3 micros",
+   "B": 0.28,
+   "Bsize": "3 micros",
+   "Bidx": 2,
+   "pf": 1.091
+  },
+  {
+   "i": 72,
+   "seed": 900050072,
+   "A": 0.012,
+   "Asize": "3 micros",
+   "B": 0.085,
+   "Bsize": "1 mini",
+   "Bidx": 10,
+   "pf": 0.6577
+  },
+  {
+   "i": 73,
+   "seed": 900050073,
+   "A": 0.351,
+   "Asize": "2 micros",
+   "B": 0.351,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 1.4583
+  },
+  {
+   "i": 74,
+   "seed": 900050074,
+   "A": 0.289,
+   "Asize": "1 micro",
+   "B": 0.292,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 1.1009
+  },
+  {
+   "i": 75,
+   "seed": 900050075,
+   "A": 0.36,
+   "Asize": "1 micro",
+   "B": 0.36,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.1647
+  },
+  {
+   "i": 76,
+   "seed": 900050076,
+   "A": 0.347,
+   "Asize": "1 micro",
+   "B": 0.372,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 1.1569
+  },
+  {
+   "i": 77,
+   "seed": 900050077,
+   "A": 0.215,
+   "Asize": "1 micro",
+   "B": 0.219,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 0.9531
+  },
+  {
+   "i": 78,
+   "seed": 900050078,
+   "A": 0.344,
+   "Asize": "1 micro",
+   "B": 0.344,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.1231
+  },
+  {
+   "i": 79,
+   "seed": 900050079,
+   "A": 0.236,
+   "Asize": "1 micro",
+   "B": 0.236,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.0051
+  },
+  {
+   "i": 80,
+   "seed": 900050080,
+   "A": 0.56,
+   "Asize": "1 micro",
+   "B": 0.56,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.4284
+  },
+  {
+   "i": 81,
+   "seed": 900050081,
+   "A": 0.183,
+   "Asize": "1 micro",
+   "B": 0.201,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 1.0155
+  },
+  {
+   "i": 82,
+   "seed": 900050082,
+   "A": 0.379,
+   "Asize": "1 micro",
+   "B": 0.379,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.2067
+  },
+  {
+   "i": 83,
+   "seed": 900050083,
+   "A": 0.201,
+   "Asize": "1 micro",
+   "B": 0.294,
+   "Bsize": "3 micros",
+   "Bidx": 2,
+   "pf": 0.9514
+  },
+  {
+   "i": 84,
+   "seed": 900050084,
+   "A": 0.214,
+   "Asize": "1 micro",
+   "B": 0.232,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 0.9885
+  },
+  {
+   "i": 85,
+   "seed": 900050085,
+   "A": 0.184,
+   "Asize": "2 micros",
+   "B": 0.186,
+   "Bsize": "3 micros",
+   "Bidx": 2,
+   "pf": 1.0063
+  },
+  {
+   "i": 86,
+   "seed": 900050086,
+   "A": 0.072,
+   "Asize": "4 micros",
+   "B": 0.122,
+   "Bsize": "1 mini",
+   "Bidx": 10,
+   "pf": 0.8036
+  },
+  {
+   "i": 87,
+   "seed": 900050087,
+   "A": 0.376,
+   "Asize": "5 micros",
+   "B": 0.376,
+   "Bsize": "5 micros",
+   "Bidx": 4,
+   "pf": 1.1795
+  },
+  {
+   "i": 88,
+   "seed": 900050088,
+   "A": 0.005,
+   "Asize": "5 micros",
+   "B": 0.058,
+   "Bsize": "2 minis",
+   "Bidx": 11,
+   "pf": 0.5493
+  },
+  {
+   "i": 89,
+   "seed": 900050089,
+   "A": 0.193,
+   "Asize": "2 micros",
+   "B": 0.213,
+   "Bsize": "3 micros",
+   "Bidx": 2,
+   "pf": 0.9638
+  },
+  {
+   "i": 90,
+   "seed": 900050090,
+   "A": 0.124,
+   "Asize": "2 micros",
+   "B": 0.197,
+   "Bsize": "4 micros",
+   "Bidx": 3,
+   "pf": 0.8467
+  },
+  {
+   "i": 91,
+   "seed": 900050091,
+   "A": 0.062,
+   "Asize": "2 micros",
+   "B": 0.137,
+   "Bsize": "5 micros",
+   "Bidx": 4,
+   "pf": 0.8023
+  },
+  {
+   "i": 92,
+   "seed": 900050092,
+   "A": 0.307,
+   "Asize": "1 micro",
+   "B": 0.307,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.1686
+  },
+  {
+   "i": 93,
+   "seed": 900050093,
+   "A": 0.233,
+   "Asize": "1 micro",
+   "B": 0.233,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 0.9351
+  },
+  {
+   "i": 94,
+   "seed": 900050094,
+   "A": 0.218,
+   "Asize": "1 micro",
+   "B": 0.218,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 0.9259
+  },
+  {
+   "i": 95,
+   "seed": 900050095,
+   "A": 0.182,
+   "Asize": "1 micro",
+   "B": 0.182,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.0079
+  },
+  {
+   "i": 96,
+   "seed": 900050096,
+   "A": 0.172,
+   "Asize": "1 micro",
+   "B": 0.232,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 0.9123
+  },
+  {
+   "i": 97,
+   "seed": 900050097,
+   "A": 0.363,
+   "Asize": "1 micro",
+   "B": 0.363,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.2195
+  },
+  {
+   "i": 98,
+   "seed": 900050098,
+   "A": 0.3,
+   "Asize": "1 micro",
+   "B": 0.3,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.1794
+  },
+  {
+   "i": 99,
+   "seed": 900050099,
+   "A": 0.205,
+   "Asize": "1 micro",
+   "B": 0.205,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 0.9164
+  },
+  {
+   "i": 100,
+   "seed": 900050100,
+   "A": 0.047,
+   "Asize": "1 micro",
+   "B": 0.077,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 0.6294
+  },
+  {
+   "i": 101,
+   "seed": 900050101,
+   "A": 0.435,
+   "Asize": "1 micro",
+   "B": 0.435,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.3001
+  },
+  {
+   "i": 102,
+   "seed": 900050102,
+   "A": 0.243,
+   "Asize": "1 micro",
+   "B": 0.243,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.1071
+  },
+  {
+   "i": 103,
+   "seed": 900050103,
+   "A": 0.2,
+   "Asize": "2 micros",
+   "B": 0.243,
+   "Bsize": "4 micros",
+   "Bidx": 3,
+   "pf": 1.1192
+  },
+  {
+   "i": 104,
+   "seed": 900050104,
+   "A": 0.647,
+   "Asize": "1 micro",
+   "B": 0.647,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.4352
+  },
+  {
+   "i": 105,
+   "seed": 900050105,
+   "A": 0.16,
+   "Asize": "1 micro",
+   "B": 0.16,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 0.9552
+  },
+  {
+   "i": 106,
+   "seed": 900050106,
+   "A": 0.247,
+   "Asize": "1 micro",
+   "B": 0.265,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 1.0799
+  },
+  {
+   "i": 107,
+   "seed": 900050107,
+   "A": 0.244,
+   "Asize": "1 micro",
+   "B": 0.244,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 0.9869
+  },
+  {
+   "i": 108,
+   "seed": 900050108,
+   "A": 0.012,
+   "Asize": "1 micro",
+   "B": 0.065,
+   "Bsize": "5 micros",
+   "Bidx": 4,
+   "pf": 0.6394
+  },
+  {
+   "i": 109,
+   "seed": 900050109,
+   "A": 0.259,
+   "Asize": "1 micro",
+   "B": 0.259,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.0803
+  },
+  {
+   "i": 110,
+   "seed": 900050110,
+   "A": 0.007,
+   "Asize": "1 micro",
+   "B": 0.109,
+   "Bsize": "6 micros",
+   "Bidx": 5,
+   "pf": 0.6413
+  },
+  {
+   "i": 111,
+   "seed": 900050111,
+   "A": 0.071,
+   "Asize": "1 micro",
+   "B": 0.11,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 0.7045
+  },
+  {
+   "i": 112,
+   "seed": 900050112,
+   "A": 0.021,
+   "Asize": "1 micro",
+   "B": 0.16,
+   "Bsize": "4 micros",
+   "Bidx": 3,
+   "pf": 0.7719
+  },
+  {
+   "i": 113,
+   "seed": 900050113,
+   "A": 0.118,
+   "Asize": "1 micro",
+   "B": 0.118,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 0.7826
+  },
+  {
+   "i": 114,
+   "seed": 900050114,
+   "A": 0.11,
+   "Asize": "1 micro",
+   "B": 0.237,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 0.9952
+  },
+  {
+   "i": 115,
+   "seed": 900050115,
+   "A": 0.02,
+   "Asize": "1 micro",
+   "B": 0.074,
+   "Bsize": "5 micros",
+   "Bidx": 4,
+   "pf": 0.5839
+  },
+  {
+   "i": 116,
+   "seed": 900050116,
+   "A": 0.563,
+   "Asize": "1 micro",
+   "B": 0.591,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 1.5286
+  },
+  {
+   "i": 117,
+   "seed": 900050117,
+   "A": 0.305,
+   "Asize": "1 micro",
+   "B": 0.305,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.114
+  },
+  {
+   "i": 118,
+   "seed": 900050118,
+   "A": 0.389,
+   "Asize": "1 micro",
+   "B": 0.389,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.1607
+  },
+  {
+   "i": 119,
+   "seed": 900050119,
+   "A": 0.062,
+   "Asize": "1 micro",
+   "B": 0.088,
+   "Bsize": "3 micros",
+   "Bidx": 2,
+   "pf": 0.7115
+  },
+  {
+   "i": 120,
+   "seed": 900050120,
+   "A": 0.022,
+   "Asize": "1 micro",
+   "B": 0.121,
+   "Bsize": "4 micros",
+   "Bidx": 3,
+   "pf": 0.7308
+  },
+  {
+   "i": 121,
+   "seed": 900050121,
+   "A": 0.265,
+   "Asize": "1 micro",
+   "B": 0.265,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.0653
+  },
+  {
+   "i": 122,
+   "seed": 900050122,
+   "A": 0.085,
+   "Asize": "1 micro",
+   "B": 0.18,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 0.8278
+  },
+  {
+   "i": 123,
+   "seed": 900050123,
+   "A": 0.183,
+   "Asize": "1 micro",
+   "B": 0.183,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 0.9823
+  },
+  {
+   "i": 124,
+   "seed": 900050124,
+   "A": 0.011,
+   "Asize": "1 micro",
+   "B": 0.069,
+   "Bsize": "5 micros",
+   "Bidx": 4,
+   "pf": 0.6447
+  },
+  {
+   "i": 125,
+   "seed": 900050125,
+   "A": 0.312,
+   "Asize": "1 micro",
+   "B": 0.312,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.1345
+  },
+  {
+   "i": 126,
+   "seed": 900050126,
+   "A": 0.205,
+   "Asize": "1 micro",
+   "B": 0.285,
+   "Bsize": "3 micros",
+   "Bidx": 2,
+   "pf": 1.0079
+  },
+  {
+   "i": 127,
+   "seed": 900050127,
+   "A": 0.087,
+   "Asize": "1 micro",
+   "B": 0.13,
+   "Bsize": "3 micros",
+   "Bidx": 2,
+   "pf": 0.7437
+  },
+  {
+   "i": 128,
+   "seed": 900050128,
+   "A": 0.749,
+   "Asize": "1 micro",
+   "B": 0.749,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.5458
+  },
+  {
+   "i": 129,
+   "seed": 900050129,
+   "A": 0.324,
+   "Asize": "1 micro",
+   "B": 0.324,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.2061
+  },
+  {
+   "i": 130,
+   "seed": 900050130,
+   "A": 0.253,
+   "Asize": "1 micro",
+   "B": 0.253,
+   "Bsize": "1 micro",
+   "Bidx": 0,
+   "pf": 1.0376
+  },
+  {
+   "i": 131,
+   "seed": 900050131,
+   "A": 0.185,
+   "Asize": "3 micros",
+   "B": 0.226,
+   "Bsize": "5 micros",
+   "Bidx": 4,
+   "pf": 0.9834
+  },
+  {
+   "i": 132,
+   "seed": 900050132,
+   "A": 0.135,
+   "Asize": "2 micros",
+   "B": 0.168,
+   "Bsize": "5 micros",
+   "Bidx": 4,
+   "pf": 0.9105
+  },
+  {
+   "i": 133,
+   "seed": 900050133,
+   "A": 0.093,
+   "Asize": "3 micros",
+   "B": 0.152,
+   "Bsize": "1 mini",
+   "Bidx": 10,
+   "pf": 0.8317
+  },
+  {
+   "i": 134,
+   "seed": 900050134,
+   "A": 0.049,
+   "Asize": "3 micros",
+   "B": 0.141,
+   "Bsize": "1 mini",
+   "Bidx": 10,
+   "pf": 0.8845
+  },
+  {
+   "i": 135,
+   "seed": 900050135,
+   "A": 0.066,
+   "Asize": "2 micros",
+   "B": 0.143,
+   "Bsize": "1 mini",
+   "Bidx": 10,
+   "pf": 0.7421
+  },
+  {
+   "i": 136,
+   "seed": 900050136,
+   "A": 0.209,
+   "Asize": "2 micros",
+   "B": 0.252,
+   "Bsize": "3 micros",
+   "Bidx": 2,
+   "pf": 0.9203
+  },
+  {
+   "i": 137,
+   "seed": 900050137,
+   "A": 0.126,
+   "Asize": "1 micro",
+   "B": 0.151,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 0.8071
+  },
+  {
+   "i": 138,
+   "seed": 900050138,
+   "A": 0.108,
+   "Asize": "1 micro",
+   "B": 0.165,
+   "Bsize": "3 micros",
+   "Bidx": 2,
+   "pf": 0.7997
+  },
+  {
+   "i": 139,
+   "seed": 900050139,
+   "A": 0.032,
+   "Asize": "1 micro",
+   "B": 0.145,
+   "Bsize": "5 micros",
+   "Bidx": 4,
+   "pf": 0.9255
+  },
+  {
+   "i": 140,
+   "seed": 900050140,
+   "A": 0.143,
+   "Asize": "1 micro",
+   "B": 0.226,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 1.0111
+  },
+  {
+   "i": 141,
+   "seed": 900050141,
+   "A": 0.143,
+   "Asize": "1 micro",
+   "B": 0.212,
+   "Bsize": "4 micros",
+   "Bidx": 3,
+   "pf": 1.0208
+  },
+  {
+   "i": 142,
+   "seed": 900050142,
+   "A": 0.063,
+   "Asize": "1 mini",
+   "B": 0.119,
+   "Bsize": "2 minis",
+   "Bidx": 11,
+   "pf": 0.7362
+  },
+  {
+   "i": 143,
+   "seed": 900050143,
+   "A": 0.04,
+   "Asize": "3 micros",
+   "B": 0.135,
+   "Bsize": "1 mini",
+   "Bidx": 10,
+   "pf": 0.8838
+  },
+  {
+   "i": 144,
+   "seed": 900050144,
+   "A": 0.124,
+   "Asize": "2 micros",
+   "B": 0.126,
+   "Bsize": "3 micros",
+   "Bidx": 2,
+   "pf": 0.7993
+  },
+  {
+   "i": 145,
+   "seed": 900050145,
+   "A": 0.128,
+   "Asize": "2 micros",
+   "B": 0.128,
+   "Bsize": "2 micros",
+   "Bidx": 1,
+   "pf": 1.0048
+  }
+ ]
+}

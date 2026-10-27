@@ -1,0 +1,88 @@
+{
+ "title": "Kul Backtests episode 2: I Let My Cat Trade a Prop Firm Account (headline numbers)",
+ "status": "simulated / hypothetical, in-sample (TradingView backtests 1 May 2025 to 1 Oct 2026); not live trading; not financial advice",
+ "evaluation": "$50,000 account, $3,000 profit target, $2,000 end-of-day trailing drawdown, 50% best-day rule; firm not named",
+ "kul": "a cartoon cat; his paw is a seeded coin flip that picks the side of each of a bot's exact trades",
+ "average_cat": {
+  "cats": 146000,
+  "pass_mean": 0.2026,
+  "pass_median": 0.174,
+  "blowup_mean": 0.7535
+ },
+ "zero_edge_control_pass_median": 0.2129,
+ "bots_ranked": 146,
+ "bots_beating_their_median_cat": 146,
+ "bots_green_both_years": 119,
+ "cats_green_both_years_share": 0.1992,
+ "champion": {
+  "bot": "bot001",
+  "strategy": "Phase Oscillator (3 ATR stop, 3R target)",
+  "author": "DefinedEdge",
+  "market": "NQ 3m",
+  "pass": 0.925,
+  "its_cats_at_or_above": 2,
+  "its_cat_median": 0.195
+ },
+ "luckiest_cat_search_0": {
+  "host_bot": "bot010",
+  "cat_pass": 0.8178,
+  "cat_pf_per_mini": 1.757,
+  "host_bot_pass": 0.6992
+ },
+ "luckiest_of_146": {
+  "searches": 60,
+  "median": 0.7529,
+  "p10": 0.6545,
+  "p90": 0.8314
+ },
+ "forward_test_bots_above_luckiest_of_146": "4 of 18",
+ "funnel_best_of_n_cats_median": {
+  "1": 0.174,
+  "18": 0.4946,
+  "146": 0.7529,
+  "1098": 0.8475,
+  "2594": 0.8962
+ },
+ "funnel_note": "best of 1,098 and best of 2,594 are approximations: every cat trades one of the 146 bots' trade sets",
+ "best_of_2594_beats_champion_share": 0.25,
+ "lab_funnel": [
+  {
+   "n": 209,
+   "step": "strategies listed in the lab overview"
+  },
+  {
+   "n": 2594,
+   "step": "TradingView backtests with a result (strategy x market x timeframe)"
+  },
+  {
+   "n": 981,
+   "step": "made money at all (PF > 1)"
+  },
+  {
+   "n": 267,
+   "step": "PF >= 1.15 on >= 100 trades"
+  },
+  {
+   "n": 146,
+   "step": "combos on the prop ranking (the evaluation-flat re-runs)"
+  },
+  {
+   "n": 85,
+   "step": "combos >= 35% first-payout odds (150K)"
+  },
+  {
+   "n": 18,
+   "step": "forward-test list (tier A 7 + tier B 11)"
+  },
+  {
+   "n": 0,
+   "step": "forward-tested so far (not started)"
+  }
+ ],
+ "our_best_strategy": {
+  "bot": "bot032",
+  "main_leaderboard_rank": 59,
+  "pass": 0.5924,
+  "luckiest_of_146_beats_it_share": 0.95
+ }
+}

@@ -1,0 +1,314 @@
+{
+ "title": "The house cat: Kul alone, no selection (hypothetical, 50K evaluation)",
+ "cats": 146000,
+ "meanPass": 0.2026,
+ "medianPass": 0.174,
+ "meanBust": 0.7535,
+ "shareAbove50": 0.0485,
+ "shareAbove80": 0.0021,
+ "shareAbove925": 0.0001,
+ "catsProfitable": 0.3839,
+ "catsPfBothYearsAbove1": 0.1992,
+ "bots146": {
+  "meanPass": 0.491,
+  "medianPass": 0.4762,
+  "aboveOwnCatMedian": 146,
+  "aboveOwnCatP95": 77,
+  "aboveAllOwn1000": 2,
+  "pfBothYearsAbove1": 119
+ },
+ "bySize": {
+  "bot001": [
+   {
+    "size": "1 micro",
+    "catMeanPass": 0.2528,
+    "catMeanBust": 0.683,
+    "botPass": 0.925,
+    "botBust": 0.0502
+   },
+   {
+    "size": "2 micros",
+    "catMeanPass": 0.2579,
+    "catMeanBust": 0.7412,
+    "botPass": 0.7444,
+    "botBust": 0.2554
+   },
+   {
+    "size": "3 micros",
+    "catMeanPass": 0.2346,
+    "catMeanBust": 0.765,
+    "botPass": 0.5804,
+    "botBust": 0.4194
+   },
+   {
+    "size": "4 micros",
+    "catMeanPass": 0.2167,
+    "catMeanBust": 0.7831,
+    "botPass": 0.505,
+    "botBust": 0.4948
+   },
+   {
+    "size": "5 micros",
+    "catMeanPass": 0.2043,
+    "catMeanBust": 0.7955,
+    "botPass": 0.446,
+    "botBust": 0.554
+   },
+   {
+    "size": "6 micros",
+    "catMeanPass": 0.1904,
+    "catMeanBust": 0.8094,
+    "botPass": 0.4,
+    "botBust": 0.5998
+   },
+   {
+    "size": "7 micros",
+    "catMeanPass": 0.1724,
+    "catMeanBust": 0.8274,
+    "botPass": 0.3756,
+    "botBust": 0.6242
+   },
+   {
+    "size": "8 micros",
+    "catMeanPass": 0.1604,
+    "catMeanBust": 0.8395,
+    "botPass": 0.3292,
+    "botBust": 0.6708
+   },
+   {
+    "size": "9 micros",
+    "catMeanPass": 0.1523,
+    "catMeanBust": 0.8476,
+    "botPass": 0.3088,
+    "botBust": 0.6912
+   },
+   {
+    "size": "10 micros",
+    "catMeanPass": 0.1462,
+    "catMeanBust": 0.8537,
+    "botPass": 0.2878,
+    "botBust": 0.7122
+   },
+   {
+    "size": "1 mini",
+    "catMeanPass": 0.1478,
+    "catMeanBust": 0.8521,
+    "botPass": 0.291,
+    "botBust": 0.709
+   },
+   {
+    "size": "2 minis",
+    "catMeanPass": 0.1071,
+    "catMeanBust": 0.8928,
+    "botPass": 0.2254,
+    "botBust": 0.7746
+   }
+  ],
+  "bot032": [
+   {
+    "size": "1 micro",
+    "catMeanPass": 0.0251,
+    "catMeanBust": 0.4576,
+    "botPass": 0.1658,
+    "botBust": 0.0142
+   },
+   {
+    "size": "2 micros",
+    "catMeanPass": 0.1409,
+    "catMeanBust": 0.7982,
+    "botPass": 0.5924,
+    "botBust": 0.2438
+   },
+   {
+    "size": "3 micros",
+    "catMeanPass": 0.1701,
+    "catMeanBust": 0.8274,
+    "botPass": 0.5796,
+    "botBust": 0.4124
+   },
+   {
+    "size": "4 micros",
+    "catMeanPass": 0.1772,
+    "catMeanBust": 0.8225,
+    "botPass": 0.4884,
+    "botBust": 0.5114
+   },
+   {
+    "size": "5 micros",
+    "catMeanPass": 0.1777,
+    "catMeanBust": 0.8221,
+    "botPass": 0.4352,
+    "botBust": 0.5648
+   },
+   {
+    "size": "6 micros",
+    "catMeanPass": 0.1768,
+    "catMeanBust": 0.823,
+    "botPass": 0.3978,
+    "botBust": 0.6022
+   },
+   {
+    "size": "7 micros",
+    "catMeanPass": 0.1724,
+    "catMeanBust": 0.8275,
+    "botPass": 0.3642,
+    "botBust": 0.6358
+   },
+   {
+    "size": "8 micros",
+    "catMeanPass": 0.1672,
+    "catMeanBust": 0.8328,
+    "botPass": 0.3226,
+    "botBust": 0.6774
+   },
+   {
+    "size": "9 micros",
+    "catMeanPass": 0.164,
+    "catMeanBust": 0.8359,
+    "botPass": 0.2966,
+    "botBust": 0.7034
+   },
+   {
+    "size": "10 micros",
+    "catMeanPass": 0.1583,
+    "catMeanBust": 0.8416,
+    "botPass": 0.2806,
+    "botBust": 0.7194
+   },
+   {
+    "size": "1 mini",
+    "catMeanPass": 0.1734,
+    "catMeanBust": 0.8266,
+    "botPass": 0.3062,
+    "botBust": 0.6938
+   },
+   {
+    "size": "2 minis",
+    "catMeanPass": 0.1279,
+    "catMeanBust": 0.8721,
+    "botPass": 0.194,
+    "botBust": 0.806
+   }
+  ]
+ },
+ "bySizeNote": "Kul does not get better by betting bigger: the trailing drawdown, the 50% consistency rule and costs keep a no-edge trader near 25% at best (top bot's trades) and near 18% (user's sweep).",
+ "zeroEdgeBots": {
+  "note": "the bots' own trades with every trade shifted so the average trade is $0 (engine edgeKeep 0)",
+  "medianPass": 0.2129
+ },
+ "alwaysLongKul": {
+  "note": "Kul who only ever buys, at the bots' entry times; identical to the bot for the long-only bots",
+  "longOnlyBots": 59,
+  "longOnlyFt18": 6,
+  "ft18": [
+   {
+    "id": "bot001",
+    "bot": 0.925,
+    "alwaysLong": 0.1772,
+    "opposite": 0.0004
+   },
+   {
+    "id": "bot002",
+    "bot": 0.8456,
+    "alwaysLong": 0.8456,
+    "opposite": 0.0012
+   },
+   {
+    "id": "bot003",
+    "bot": 0.8394,
+    "alwaysLong": 0.1028,
+    "opposite": 0.0004
+   },
+   {
+    "id": "bot007",
+    "bot": 0.7598,
+    "alwaysLong": 0.7598,
+    "opposite": 0.0028
+   },
+   {
+    "id": "bot008",
+    "bot": 0.7392,
+    "alwaysLong": 0.1584,
+    "opposite": 0.0074
+   },
+   {
+    "id": "bot013",
+    "bot": 0.6878,
+    "alwaysLong": 0.6878,
+    "opposite": 0.0086
+   },
+   {
+    "id": "bot014",
+    "bot": 0.6806,
+    "alwaysLong": 0.6806,
+    "opposite": 0.0176
+   },
+   {
+    "id": "bot021",
+    "bot": 0.6656,
+    "alwaysLong": 0.6656,
+    "opposite": 0.0052
+   },
+   {
+    "id": "bot026",
+    "bot": 0.605,
+    "alwaysLong": 0.362,
+    "opposite": 0.0156
+   },
+   {
+    "id": "bot035",
+    "bot": 0.587,
+    "alwaysLong": 0.0392,
+    "opposite": 0.0008
+   },
+   {
+    "id": "bot036",
+    "bot": 0.5866,
+    "alwaysLong": 0.028,
+    "opposite": 0.0014
+   },
+   {
+    "id": "bot042",
+    "bot": 0.5602,
+    "alwaysLong": 0.04,
+    "opposite": 0.028
+   },
+   {
+    "id": "bot044",
+    "bot": 0.5554,
+    "alwaysLong": 0.1448,
+    "opposite": 0.0474
+   },
+   {
+    "id": "bot046",
+    "bot": 0.5542,
+    "alwaysLong": 0.396,
+    "opposite": 0.042
+   },
+   {
+    "id": "bot058",
+    "bot": 0.5272,
+    "alwaysLong": 0.181,
+    "opposite": 0.0356
+   },
+   {
+    "id": "bot067",
+    "bot": 0.4904,
+    "alwaysLong": 0.4904,
+    "opposite": 0.052
+   },
+   {
+    "id": "bot072",
+    "bot": 0.481,
+    "alwaysLong": 0.2074,
+    "opposite": 0.0692
+   },
+   {
+    "id": "bot090",
+    "bot": 0.4352,
+    "alwaysLong": 0.2742,
+    "opposite": 0.0594
+   }
+  ]
+ }
+}

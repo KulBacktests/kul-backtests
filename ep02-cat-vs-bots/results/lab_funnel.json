@@ -1,0 +1,39 @@
+{
+ "title": "How the bots were picked (selection funnel)",
+ "steps": [
+  {
+   "n": 209,
+   "label": "strategies listed in the lab overview"
+  },
+  {
+   "n": 2594,
+   "label": "TradingView backtests with a result (strategy x market x timeframe)",
+   "strategies": 188
+  },
+  {
+   "n": 981,
+   "label": "made money at all (PF > 1)"
+  },
+  {
+   "n": 267,
+   "label": "PF >= 1.15 on >= 100 trades"
+  },
+  {
+   "n": 146,
+   "label": "combos on the prop ranking (the evaluation-flat re-runs)"
+  },
+  {
+   "n": 85,
+   "label": "combos >= 35% first-payout odds (150K)"
+  },
+  {
+   "n": 18,
+   "label": "forward-test list (tier A 7 + tier B 11)"
+  },
+  {
+   "n": 0,
+   "label": "forward-tested so far (not started)"
+  }
+ ],
+ "tvWindow": "1 May 2025 – 1 Oct 2026"
+}

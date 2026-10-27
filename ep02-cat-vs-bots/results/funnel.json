@@ -1,0 +1,79 @@
+{
+ "title": "The luckiest cat: pass odds of the best Kul when you try N Kuls (hypothetical, 50K evaluation)",
+ "steps": [
+  {
+   "n": 1,
+   "label": "one cat",
+   "median": 0.174,
+   "mean": 0.2026,
+   "p10": 0.032,
+   "p90": 0.41,
+   "how": "all 146,000 pool cats (1,000 per bot)"
+  },
+  {
+   "n": 18,
+   "label": "best of 18 cats",
+   "median": 0.4946,
+   "p10": 0.3444,
+   "p90": 0.6913,
+   "how": "100 resampled searches from the pool, winner re-simulated (5,000 runs)"
+  },
+  {
+   "n": 146,
+   "label": "best of 146 cats (= combos ranked)",
+   "median": 0.7529,
+   "p10": 0.6545,
+   "p90": 0.8314,
+   "how": "60 literal searches (one new cat on each of the 146 bots' trades), winner re-simulated (5,000 runs)"
+  },
+  {
+   "n": 1098,
+   "label": "best of 1,098 cats (146 combos + 952 portfolio combos searched)",
+   "median": 0.8475,
+   "p10": 0.7842,
+   "p90": 0.9025,
+   "how": "100 resampled searches from the pool (cats drawn from the 146 bots' trade sets), winner re-simulated"
+  },
+  {
+   "n": 2594,
+   "label": "best of 2,594 cats (= TradingView backtests in the lab)",
+   "median": 0.8962,
+   "p10": 0.852,
+   "p90": 0.948,
+   "how": "as above; approximation: the lab's 2,594 backtests had their own trade sets, here every cat trades one of the 146 sets"
+  }
+ ],
+ "bots": {
+  "best": {
+   "id": "bot001",
+   "pass_": 0.925
+  },
+  "second": {
+   "id": "bot002",
+   "pass_": 0.8456
+  },
+  "ft18Mean": 0.6403,
+  "ft18Median": 0.596,
+  "usersBest": {
+   "id": "bot032",
+   "pass_": 0.5924
+  }
+ },
+ "chanceLuckiestBeats": {
+  "of146": {
+   "bestBot": 0.0,
+   "secondBot": 0.1,
+   "usersBest": 0.95,
+   "ft18Median": 0.95
+  },
+  "of1098": {
+   "bestBot": 0.05,
+   "secondBot": 0.5
+  },
+  "of2594": {
+   "bestBot": 0.25,
+   "secondBot": 0.92
+  }
+ },
+ "ft18BeatLuckiestOf146": 4
+}
