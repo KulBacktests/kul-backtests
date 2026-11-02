@@ -1,0 +1,100 @@
+{
+ "what": "v006 (and v003-v005) built their day-by-day numbers over every calendar date that had any price bar, including Sunday evenings and holidays, which have overnight trading but no 9:30-16:00 session. On a Monday, 'yesterday's close' was Sunday's, which does not exist, so the overnight gap was blank and the strategy silently skipped every Monday and every day after a holiday. The same empty dates put zero-volume days into the 14-day volume average, so 'above average volume' really meant about 0.83x of the true average.",
+ "how_found": "Round 8, while the AI was porting v006 to TradingView's Pine Script (journal title: 'bug fix found while porting to Pine'). The journal records only that it was found during the port; it gives no further detail. The Pine file keeps an input 'Skip days after a non-session day (replicates v006)', off by default.",
+ "affected_versions": "v004, v005, v006 skipped Mondays (0 Monday trades in-sample); v003 traded Mondays but had the diluted volume average (journal: 'v003-v005'). v001 and v002 do not use these daily series.",
+ "evidence": {
+  "v006_trades_by_weekday": {
+   "Tue": 85,
+   "Wed": 76,
+   "Thu": 68,
+   "Fri": 78
+  },
+  "v007_trades_by_weekday": {
+   "Mon": 40,
+   "Tue": 43,
+   "Wed": 49,
+   "Thu": 47,
+   "Fri": 44
+  },
+  "v007_monday_trades": {
+   "n": 40,
+   "pf": 0.92,
+   "net": -2030.0
+  },
+  "in_sample_sessions": 775,
+  "sessions_v006_could_never_trade": 157,
+  "of_which_mondays": 152,
+  "mondays_in_sample": 152,
+  "other_post_holiday_sessions": 5,
+  "v006_volume_reference_vs_true": {
+   "mean": 0.825,
+   "median": 0.836,
+   "p10": 0.761,
+   "p90": 0.875
+  },
+  "v006_volume_reference_note": "v006's 14-day 'average opening volume' divided by the true 14-session average, per in-sample session (mean 0.825): the journal's '~0.8x'."
+ },
+ "before_after": {
+  "v006": {
+   "trades": 307,
+   "pf": 1.26,
+   "net_1NQ": 40915.0,
+   "max_dd": -13460.0,
+   "oos_trades": 108,
+   "oos_pf": 1.51,
+   "oos_net": 32650
+  },
+  "v007": {
+   "trades": 223,
+   "pf": 1.29,
+   "net_1NQ": 34822.0,
+   "max_dd": -10720.0,
+   "oos_trades": 72,
+   "oos_pf": 1.46,
+   "oos_net": 21768
+  },
+  "note": "OOS figures are from results.md (2024-09-01 to 2026-01-28). Fewer trades after the fix because the volume bar is now honestly 1.0x; the added Mondays roughly wash."
+ },
+ "code_shot": {
+  "before": {
+   "file": "nq-loop/strategies/v006_orb_rvol1_gap.py",
+   "lines": "35-42",
+   "code": [
+    "    or_vol = df[\"volume\"].where(in_or).groupby(df[\"date\"]).sum()",
+    "    ref = or_vol.shift(1).rolling(int(p[\"rvol_days\"]), min_periods=5).mean()",
+    "    rvol = df[\"date\"].map(or_vol / ref)",
+    "",
+    "    rth = (df[\"minute_of_day\"] >= open_min) & (df[\"minute_of_day\"] < 16 * 60)",
+    "    rth_close = df[\"close\"].where(rth).groupby(df[\"date\"]).last()",
+    "    day_open = df[\"open\"].where(df[\"minute_of_day\"] == open_min).groupby(df[\"date\"]).first()",
+    "    gap = df[\"date\"].map(day_open - rth_close.shift(1))"
+   ],
+   "highlight": {
+    "35": "sum() over a Sunday = 0 volume, dragging the average down",
+    "42": "shift(1) on Monday = Sunday, which has no close -> gap is blank -> no trade"
+   }
+  },
+  "after": {
+   "file": "nq-loop/strategies/v007_orb_rvol1_gap_fixdays.py",
+   "lines": "39-50",
+   "code": [
+    "    # daily series over RTH sessions only (dates with no 9:30-16:00 bars are dropped, not zero-filled)",
+    "    rth = (df[\"minute_of_day\"] >= open_min) & (df[\"minute_of_day\"] < 16 * 60)",
+    "    daily = pd.DataFrame({",
+    "        \"or_vol\": df[\"volume\"].where(in_or).groupby(df[\"date\"]).sum(min_count=1),",
+    "        \"rth_close\": df[\"close\"].where(rth).groupby(df[\"date\"]).last(),",
+    "        \"day_open\": df[\"open\"].where(df[\"minute_of_day\"] == open_min).groupby(df[\"date\"]).first(),",
+    "    })",
+    "    daily = daily[daily[\"rth_close\"].notna()]",
+    "    daily[\"ref\"] = daily[\"or_vol\"].shift(1).rolling(int(p[\"rvol_days\"]), min_periods=5).mean()",
+    "    daily[\"gap\"] = daily[\"day_open\"] - daily[\"rth_close\"].shift(1)",
+    "    rvol = df[\"date\"].map(daily[\"or_vol\"] / daily[\"ref\"])",
+    "    gap = df[\"date\"].map(daily[\"gap\"])"
+   ],
+   "highlight": {
+    "46": "the fix: keep only dates that had a real session"
+   }
+  },
+  "pine_toggle": "bool   skipAfterNoSession = input.bool(false, \"Skip days after a non-session day (replicates v006)\", group=G2)  // pine/nq_orb_gap_rvol_v007.pine line 44"
+ }
+}

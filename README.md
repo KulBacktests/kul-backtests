@@ -8,6 +8,7 @@ The code, pre-registrations and raw results behind every Kul Backtests video. A 
 |---|---|---|
 | 1 | Using an Instagram Reel to Pass a Prop Firm | [`ep01-ema9-vwap-claim/`](ep01-ema9-vwap-claim/) |
 | 2 | I Let My Cat Trade a Prop Firm Account | [`ep02-cat-vs-bots/`](ep02-cat-vs-bots/) (data only) |
+| 3 | I Let an AI Build My Trading Strategy | [`ep03-ai-builds-strategy/`](ep03-ai-builds-strategy/) |
 
 Episode 1's folder has:
 - the pre-registration (the rules and pass bar, written before the test ran);

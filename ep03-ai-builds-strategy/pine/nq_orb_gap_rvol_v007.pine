@@ -1,0 +1,158 @@
+// NQ opening-range breakout with overnight-gap direction and relative-volume filters.
+// Port of nq-loop strategies/v007_orb_rvol1_gap_fixdays.py (parent v006, which passed
+// IS/OOS/sensitivity gates on 2026-09-18).
+//
+// Rule in two sentences: on days where the first 15 minutes trade above their 14-session
+// average volume, take the first 1-min close outside the opening range between 9:45 and
+// 11:00 ET, only in the direction of the overnight gap (9:30 open vs prior RTH close) and on
+// the VWAP side. Stop at the range midpoint, target 2R, flat by 15:58, one trade per side per day.
+//
+// Chart: NQ1! (or the front contract), 1-minute, EXTENDED HOURS ON. The VWAP resets at
+// midnight New York time to match the backtest; on an RTH-only chart it would start at 9:30.
+//
+// Differences from the Python harness you should know about:
+//  - The harness assumes the STOP fills first when a bar touches both stop and target.
+//    TradingView's broker emulator guesses intrabar path from the bar shape, so it is more
+//    generous. Expect Pine results to look a little better than the harness.
+//  - Harness slippage is 1.5 ticks per side; Pine slippage is integer ticks, default 2 (worse).
+//  - Harness time exits fill at the 15:58 close; here close_all fills at the 15:59 open.
+//  - "Skip days after a non-session day" (off by default) reproduces a quirk of the v006
+//    backtest that never traded Mondays or the day after a holiday. v007 fixed it.
+//@version=6
+strategy("NQ ORB gap+rvol (nq-loop v007)", shorttitle="ORB gap+rvol", overlay=true,
+     initial_capital=100000, default_qty_type=strategy.fixed, default_qty_value=1,
+     commission_type=strategy.commission.cash_per_contract, commission_value=2.5,
+     slippage=2, pyramiding=0, calc_on_every_tick=false, process_orders_on_close=false)
+
+// ───────────────────────── inputs ─────────────────────────
+string G1 = "Session (New York time)"
+string tz          = input.string("America/New_York", "Time zone", group=G1)
+int    orMin       = input.int(15,  "Opening range length (min)", minval=1, group=G1)
+int    entryDelay  = input.int(0,   "Entry delay after OR close (min)", minval=0, group=G1)
+int    entryWindow = input.int(75,  "Entry window length (min)", minval=1, group=G1, tooltip="75 = 9:45 to 11:00")
+int    flatHour    = input.int(15,  "Flatten hour", minval=0, maxval=23, group=G1)
+int    flatMinute  = input.int(58,  "Flatten minute", minval=0, maxval=59, group=G1)
+int    maxHold     = input.int(240, "Max bars in trade", minval=1, group=G1)
+
+string G2 = "Filters"
+float  minRange    = input.float(20.0,  "Min OR range (pts)", minval=0, group=G2)
+float  maxRange    = input.float(150.0, "Max OR range (pts)", minval=0, group=G2)
+float  minRvol     = input.float(1.0,   "Min OR relative volume", minval=0, step=0.05, group=G2,
+     tooltip="Opening-range volume divided by the mean OR volume of the previous N sessions")
+int    rvolDays    = input.int(14, "Relative-volume lookback (sessions)", minval=1, group=G2)
+int    minRvolDays = input.int(5,  "Min sessions before rvol is valid", minval=1, group=G2)
+bool   skipAfterNoSession = input.bool(false, "Skip days after a non-session day (replicates v006)", group=G2)
+
+string G3 = "Trade"
+float  targetR     = input.float(2.0, "Target (R multiple)", minval=0.1, step=0.1, group=G3)
+
+string G4 = "Display"
+bool   showLevels  = input.bool(true, "Show OR levels and VWAP", group=G4)
+bool   showDayBg   = input.bool(true, "Shade qualifying days", group=G4)
+
+// ───────────────────────── clock ─────────────────────────
+int OPEN_MIN = 9 * 60 + 30
+int RTH_END  = 16 * 60
+int mod      = hour(time, tz) * 60 + minute(time, tz)
+int dom      = dayofmonth(time, tz)
+bool newDay  = dom != nz(dom[1], -1)
+int flattenMin = flatHour * 60 + flatMinute
+
+// ───────────────────────── daily state ─────────────────────────
+var float cumPV        = 0.0
+var float cumV         = 0.0
+var float orHi         = na
+var float orLo         = na
+var float orVol        = 0.0
+var bool  orDone       = false
+var float rvol         = na
+var float dayOpen      = na
+var float rthCloseRun  = na      // last RTH close seen so far; carried across non-session days
+var float prevRthClose = na
+var bool  dayHadRth    = false
+var bool  prevDayHadRth = false
+var bool  longDone     = false
+var bool  shortDone    = false
+var float[] orVols     = array.new<float>()
+
+if newDay
+    cumPV         := 0.0
+    cumV          := 0.0
+    orHi          := na
+    orLo          := na
+    orVol         := 0.0
+    orDone        := false
+    rvol          := na
+    dayOpen       := na
+    prevRthClose  := rthCloseRun
+    prevDayHadRth := dayHadRth
+    dayHadRth     := false
+    longDone      := false
+    shortDone     := false
+
+// session VWAP anchored at midnight New York (matches the harness, which groups by ET date)
+cumPV += close * volume
+cumV  += volume
+float vwap = cumV > 0 ? cumPV / cumV : close
+
+bool inOR  = mod >= OPEN_MIN and mod < OPEN_MIN + orMin
+bool inRTH = mod >= OPEN_MIN and mod < RTH_END
+
+if mod == OPEN_MIN
+    dayOpen := open
+if inRTH
+    rthCloseRun := close
+    dayHadRth   := true
+if inOR
+    orHi  := na(orHi) ? high : math.max(orHi, high)
+    orLo  := na(orLo) ? low  : math.min(orLo, low)
+    orVol += volume
+
+// opening range completes on the first bar at/after its end; compute rvol against PRIOR sessions only
+if not orDone and mod >= OPEN_MIN + orMin and not na(orHi)
+    orDone := true
+    float ref = array.size(orVols) >= minRvolDays ? array.avg(orVols) : na
+    rvol := na(ref) or ref == 0 ? na : orVol / ref
+    array.push(orVols, orVol)
+    if array.size(orVols) > rvolDays
+        array.shift(orVols)
+
+// ───────────────────────── signals ─────────────────────────
+float rng = orHi - orLo
+float mid = (orHi + orLo) / 2
+float gap = dayOpen - prevRthClose
+int entryStart = OPEN_MIN + orMin + entryDelay
+int entryEnd   = entryStart + entryWindow
+
+bool window = orDone and mod >= entryStart and mod < entryEnd
+bool okDay  = rng >= minRange and rng <= maxRange and rvol >= minRvol and (not skipAfterNoSession or prevDayHadRth)
+bool longC  = window and okDay and gap > 0 and close > orHi and close > vwap and not longDone
+bool shortC = window and okDay and gap < 0 and close < orLo and close < vwap and not shortDone
+
+bool flat = strategy.position_size == 0
+
+// first breakout per side per day is consumed whether or not we are flat (harness behaviour)
+if longC
+    longDone := true
+    if flat
+        strategy.entry("L", strategy.long)
+        strategy.exit("L-x", from_entry="L", stop=mid, limit=close + targetR * (close - mid))
+if shortC
+    shortDone := true
+    if flat
+        strategy.entry("S", strategy.short)
+        strategy.exit("S-x", from_entry="S", stop=mid, limit=close - targetR * (mid - close))
+
+// time exits: 15:58 flatten, new day, or max hold
+int barsHeld = strategy.opentrades > 0 ? bar_index - strategy.opentrades.entry_bar_index(strategy.opentrades - 1) : 0
+if not flat and (mod >= flattenMin or newDay or barsHeld >= maxHold)
+    strategy.close_all(comment="time")
+
+// ───────────────────────── display ─────────────────────────
+plot(showLevels and orDone ? orHi : na, "OR high", color=color.new(color.teal, 0),   style=plot.style_linebr, linewidth=1)
+plot(showLevels and orDone ? orLo : na, "OR low",  color=color.new(color.teal, 0),   style=plot.style_linebr, linewidth=1)
+plot(showLevels and orDone ? mid  : na, "OR mid",  color=color.new(color.gray, 30),  style=plot.style_linebr, linewidth=1)
+plot(showLevels ? vwap : na,            "VWAP",    color=color.new(color.orange, 0), linewidth=1)
+plot(rvol, "OR relative volume", display=display.data_window)
+plot(gap,  "Overnight gap (pts)", display=display.data_window)
+bgcolor(showDayBg and window and okDay ? color.new(gap > 0 ? color.green : color.red, 92) : na)

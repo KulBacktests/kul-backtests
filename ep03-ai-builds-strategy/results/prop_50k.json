@@ -1,0 +1,1275 @@
+{
+ "rules": {
+  "account": 50000,
+  "profit_target": 3000,
+  "trailing_drawdown_eod": 2000,
+  "consistency": 0.5,
+  "min_trading_days": 2,
+  "max_eval_days": 252,
+  "engine": "the channel's own 50K evaluation simulator, same as Episodes 1-2 (source not published)",
+  "bootstrap": "5-day blocks drawn from every in-sample trading session (775), including days with no trade; 5,000 runs, seed 20261001",
+  "costs": "harness fills (1.5 ticks slippage per side) re-priced with firm commissions: micro $1.90 RT, mini $4.68 RT",
+  "firm": "never named"
+ },
+ "note": "'pass_' = reach +$3,000 before the trailing drawdown; 'timeout' = still going after 252 trading days. 'historical_starts' replays the real day order from every possible start day (no resampling).",
+ "versions": {
+  "v001_orb": {
+   "window": "in-sample 2021-09-01..2024-08-31",
+   "sessions": 775,
+   "trades": 889,
+   "net_1MNQ_engine": -2462,
+   "micro1": {
+    "pass_": 0.06,
+    "blowup": 0.6946,
+    "timeout": 0.2454,
+    "median_days": 171
+   },
+   "best_size": {
+    "size": "5 micros",
+    "pass_": 0.1978,
+    "blowup": 0.8022,
+    "timeout": 0,
+    "median_days": 12
+   },
+   "historical_starts_1micro": {
+    "starts": 775,
+    "pass": 3,
+    "bust": 366,
+    "unfinished": 406,
+    "pPass": 0.0039,
+    "pBust": 0.4723,
+    "medianDaysToPass": 65
+   },
+   "historical_starts_3micros": {
+    "starts": 775,
+    "pass": 101,
+    "bust": 659,
+    "unfinished": 15,
+    "pPass": 0.1303,
+    "pBust": 0.8503,
+    "medianDaysToPass": 24
+   },
+   "grid": [
+    {
+     "size": "1 micro",
+     "pass_": 0.06,
+     "blowup": 0.6946,
+     "timeout": 0.2454,
+     "median_days": 171
+    },
+    {
+     "size": "2 micros",
+     "pass_": 0.1742,
+     "blowup": 0.825,
+     "timeout": 0.0008,
+     "median_days": 62
+    },
+    {
+     "size": "3 micros",
+     "pass_": 0.1872,
+     "blowup": 0.8128,
+     "timeout": 0,
+     "median_days": 30
+    },
+    {
+     "size": "4 micros",
+     "pass_": 0.19,
+     "blowup": 0.81,
+     "timeout": 0,
+     "median_days": 18
+    },
+    {
+     "size": "5 micros",
+     "pass_": 0.1978,
+     "blowup": 0.8022,
+     "timeout": 0,
+     "median_days": 12
+    },
+    {
+     "size": "6 micros",
+     "pass_": 0.182,
+     "blowup": 0.818,
+     "timeout": 0,
+     "median_days": 9
+    },
+    {
+     "size": "7 micros",
+     "pass_": 0.159,
+     "blowup": 0.841,
+     "timeout": 0,
+     "median_days": 7
+    },
+    {
+     "size": "8 micros",
+     "pass_": 0.1502,
+     "blowup": 0.8498,
+     "timeout": 0,
+     "median_days": 6
+    },
+    {
+     "size": "9 micros",
+     "pass_": 0.1458,
+     "blowup": 0.8542,
+     "timeout": 0,
+     "median_days": 6
+    },
+    {
+     "size": "10 micros",
+     "pass_": 0.144,
+     "blowup": 0.856,
+     "timeout": 0,
+     "median_days": 6
+    },
+    {
+     "size": "1 mini",
+     "pass_": 0.1508,
+     "blowup": 0.8492,
+     "timeout": 0,
+     "median_days": 6
+    },
+    {
+     "size": "2 minis",
+     "pass_": 0.0848,
+     "blowup": 0.9152,
+     "timeout": 0,
+     "median_days": 4
+    }
+   ]
+  },
+  "v002_orb_atrnorm": {
+   "window": "in-sample 2021-09-01..2024-08-31",
+   "sessions": 775,
+   "trades": 907,
+   "net_1MNQ_engine": -3816,
+   "micro1": {
+    "pass_": 0.0528,
+    "blowup": 0.7832,
+    "timeout": 0.164,
+    "median_days": 165
+   },
+   "best_size": {
+    "size": "5 micros",
+    "pass_": 0.1816,
+    "blowup": 0.8184,
+    "timeout": 0,
+    "median_days": 12
+   },
+   "historical_starts_1micro": {
+    "starts": 775,
+    "pass": 34,
+    "bust": 368,
+    "unfinished": 373,
+    "pPass": 0.0439,
+    "pBust": 0.4748,
+    "medianDaysToPass": 75
+   },
+   "historical_starts_3micros": {
+    "starts": 775,
+    "pass": 101,
+    "bust": 659,
+    "unfinished": 15,
+    "pPass": 0.1303,
+    "pBust": 0.8503,
+    "medianDaysToPass": 25
+   },
+   "grid": [
+    {
+     "size": "1 micro",
+     "pass_": 0.0528,
+     "blowup": 0.7832,
+     "timeout": 0.164,
+     "median_days": 165
+    },
+    {
+     "size": "2 micros",
+     "pass_": 0.1484,
+     "blowup": 0.8516,
+     "timeout": 0,
+     "median_days": 55.5
+    },
+    {
+     "size": "3 micros",
+     "pass_": 0.1668,
+     "blowup": 0.8332,
+     "timeout": 0,
+     "median_days": 27
+    },
+    {
+     "size": "4 micros",
+     "pass_": 0.1712,
+     "blowup": 0.8288,
+     "timeout": 0,
+     "median_days": 16
+    },
+    {
+     "size": "5 micros",
+     "pass_": 0.1816,
+     "blowup": 0.8184,
+     "timeout": 0,
+     "median_days": 12
+    },
+    {
+     "size": "6 micros",
+     "pass_": 0.1728,
+     "blowup": 0.8272,
+     "timeout": 0,
+     "median_days": 9
+    },
+    {
+     "size": "7 micros",
+     "pass_": 0.1574,
+     "blowup": 0.8426,
+     "timeout": 0,
+     "median_days": 7
+    },
+    {
+     "size": "8 micros",
+     "pass_": 0.1468,
+     "blowup": 0.8532,
+     "timeout": 0,
+     "median_days": 6
+    },
+    {
+     "size": "9 micros",
+     "pass_": 0.1414,
+     "blowup": 0.8586,
+     "timeout": 0,
+     "median_days": 6
+    },
+    {
+     "size": "10 micros",
+     "pass_": 0.1408,
+     "blowup": 0.8592,
+     "timeout": 0,
+     "median_days": 6
+    },
+    {
+     "size": "1 mini",
+     "pass_": 0.1472,
+     "blowup": 0.8528,
+     "timeout": 0,
+     "median_days": 6
+    },
+    {
+     "size": "2 minis",
+     "pass_": 0.082,
+     "blowup": 0.918,
+     "timeout": 0,
+     "median_days": 4
+    }
+   ]
+  },
+  "v003_orb_rvol": {
+   "window": "in-sample 2021-09-01..2024-08-31",
+   "sessions": 775,
+   "trades": 444,
+   "net_1MNQ_engine": 2704,
+   "micro1": {
+    "pass_": 0.154,
+    "blowup": 0.218,
+    "timeout": 0.628,
+    "median_days": 185.5
+   },
+   "best_size": {
+    "size": "2 micros",
+    "pass_": 0.3752,
+    "blowup": 0.6,
+    "timeout": 0.0248,
+    "median_days": 96
+   },
+   "historical_starts_1micro": {
+    "starts": 775,
+    "pass": 0,
+    "bust": 0,
+    "unfinished": 775,
+    "pPass": 0,
+    "pBust": 0,
+    "medianDaysToPass": null
+   },
+   "historical_starts_3micros": {
+    "starts": 775,
+    "pass": 223,
+    "bust": 504,
+    "unfinished": 48,
+    "pPass": 0.2877,
+    "pBust": 0.6503,
+    "medianDaysToPass": 49
+   },
+   "grid": [
+    {
+     "size": "1 micro",
+     "pass_": 0.154,
+     "blowup": 0.218,
+     "timeout": 0.628,
+     "median_days": 185.5
+    },
+    {
+     "size": "2 micros",
+     "pass_": 0.3752,
+     "blowup": 0.6,
+     "timeout": 0.0248,
+     "median_days": 96
+    },
+    {
+     "size": "3 micros",
+     "pass_": 0.3412,
+     "blowup": 0.6588,
+     "timeout": 0,
+     "median_days": 45
+    },
+    {
+     "size": "4 micros",
+     "pass_": 0.312,
+     "blowup": 0.688,
+     "timeout": 0,
+     "median_days": 27
+    },
+    {
+     "size": "5 micros",
+     "pass_": 0.2884,
+     "blowup": 0.7116,
+     "timeout": 0,
+     "median_days": 19
+    },
+    {
+     "size": "6 micros",
+     "pass_": 0.2688,
+     "blowup": 0.7312,
+     "timeout": 0,
+     "median_days": 15
+    },
+    {
+     "size": "7 micros",
+     "pass_": 0.2468,
+     "blowup": 0.7532,
+     "timeout": 0,
+     "median_days": 13
+    },
+    {
+     "size": "8 micros",
+     "pass_": 0.2344,
+     "blowup": 0.7656,
+     "timeout": 0,
+     "median_days": 11
+    },
+    {
+     "size": "9 micros",
+     "pass_": 0.2076,
+     "blowup": 0.7924,
+     "timeout": 0,
+     "median_days": 11
+    },
+    {
+     "size": "10 micros",
+     "pass_": 0.1988,
+     "blowup": 0.8012,
+     "timeout": 0,
+     "median_days": 10
+    },
+    {
+     "size": "1 mini",
+     "pass_": 0.2068,
+     "blowup": 0.7932,
+     "timeout": 0,
+     "median_days": 10
+    },
+    {
+     "size": "2 minis",
+     "pass_": 0.1128,
+     "blowup": 0.8872,
+     "timeout": 0,
+     "median_days": 9
+    }
+   ]
+  },
+  "v004_orb_rvol_gap": {
+   "window": "in-sample 2021-09-01..2024-08-31",
+   "sessions": 775,
+   "trades": 180,
+   "net_1MNQ_engine": 3896,
+   "micro1": {
+    "pass_": 0.0694,
+    "blowup": 0.0014,
+    "timeout": 0.9292,
+    "median_days": 215
+   },
+   "best_size": {
+    "size": "3 micros",
+    "pass_": 0.601,
+    "blowup": 0.3398,
+    "timeout": 0.0592,
+    "median_days": 104
+   },
+   "historical_starts_1micro": {
+    "starts": 775,
+    "pass": 0,
+    "bust": 0,
+    "unfinished": 775,
+    "pPass": 0,
+    "pBust": 0,
+    "medianDaysToPass": null
+   },
+   "historical_starts_3micros": {
+    "starts": 775,
+    "pass": 318,
+    "bust": 261,
+    "unfinished": 196,
+    "pPass": 0.4103,
+    "pBust": 0.3368,
+    "medianDaysToPass": 115
+   },
+   "grid": [
+    {
+     "size": "1 micro",
+     "pass_": 0.0694,
+     "blowup": 0.0014,
+     "timeout": 0.9292,
+     "median_days": 215
+    },
+    {
+     "size": "2 micros",
+     "pass_": 0.4892,
+     "blowup": 0.1454,
+     "timeout": 0.3654,
+     "median_days": 155
+    },
+    {
+     "size": "3 micros",
+     "pass_": 0.601,
+     "blowup": 0.3398,
+     "timeout": 0.0592,
+     "median_days": 104
+    },
+    {
+     "size": "4 micros",
+     "pass_": 0.5482,
+     "blowup": 0.448,
+     "timeout": 0.0038,
+     "median_days": 67
+    },
+    {
+     "size": "5 micros",
+     "pass_": 0.5096,
+     "blowup": 0.4904,
+     "timeout": 0,
+     "median_days": 46
+    },
+    {
+     "size": "6 micros",
+     "pass_": 0.4604,
+     "blowup": 0.5396,
+     "timeout": 0,
+     "median_days": 37
+    },
+    {
+     "size": "7 micros",
+     "pass_": 0.4192,
+     "blowup": 0.5808,
+     "timeout": 0,
+     "median_days": 31
+    },
+    {
+     "size": "8 micros",
+     "pass_": 0.3842,
+     "blowup": 0.6158,
+     "timeout": 0,
+     "median_days": 27
+    },
+    {
+     "size": "9 micros",
+     "pass_": 0.3396,
+     "blowup": 0.6604,
+     "timeout": 0,
+     "median_days": 25
+    },
+    {
+     "size": "10 micros",
+     "pass_": 0.3094,
+     "blowup": 0.6906,
+     "timeout": 0,
+     "median_days": 24
+    },
+    {
+     "size": "1 mini",
+     "pass_": 0.32,
+     "blowup": 0.68,
+     "timeout": 0,
+     "median_days": 24
+    },
+    {
+     "size": "2 minis",
+     "pass_": 0.1974,
+     "blowup": 0.8026,
+     "timeout": 0,
+     "median_days": 21
+    }
+   ]
+  },
+  "v005_orb_rvol_gap_noon": {
+   "window": "in-sample 2021-09-01..2024-08-31",
+   "sessions": 775,
+   "trades": 194,
+   "net_1MNQ_engine": 3211,
+   "micro1": {
+    "pass_": 0.0488,
+    "blowup": 0.0062,
+    "timeout": 0.945,
+    "median_days": 220
+   },
+   "best_size": {
+    "size": "3 micros",
+    "pass_": 0.523,
+    "blowup": 0.4242,
+    "timeout": 0.0528,
+    "median_days": 105
+   },
+   "historical_starts_1micro": {
+    "starts": 775,
+    "pass": 0,
+    "bust": 0,
+    "unfinished": 775,
+    "pPass": 0,
+    "pBust": 0,
+    "medianDaysToPass": null
+   },
+   "historical_starts_3micros": {
+    "starts": 775,
+    "pass": 255,
+    "bust": 321,
+    "unfinished": 199,
+    "pPass": 0.329,
+    "pBust": 0.4142,
+    "medianDaysToPass": 109
+   },
+   "grid": [
+    {
+     "size": "1 micro",
+     "pass_": 0.0488,
+     "blowup": 0.0062,
+     "timeout": 0.945,
+     "median_days": 220
+    },
+    {
+     "size": "2 micros",
+     "pass_": 0.4158,
+     "blowup": 0.2108,
+     "timeout": 0.3734,
+     "median_days": 159
+    },
+    {
+     "size": "3 micros",
+     "pass_": 0.523,
+     "blowup": 0.4242,
+     "timeout": 0.0528,
+     "median_days": 105
+    },
+    {
+     "size": "4 micros",
+     "pass_": 0.4808,
+     "blowup": 0.5166,
+     "timeout": 0.0026,
+     "median_days": 65
+    },
+    {
+     "size": "5 micros",
+     "pass_": 0.4458,
+     "blowup": 0.5542,
+     "timeout": 0,
+     "median_days": 44
+    },
+    {
+     "size": "6 micros",
+     "pass_": 0.4044,
+     "blowup": 0.5956,
+     "timeout": 0,
+     "median_days": 36
+    },
+    {
+     "size": "7 micros",
+     "pass_": 0.3734,
+     "blowup": 0.6266,
+     "timeout": 0,
+     "median_days": 30
+    },
+    {
+     "size": "8 micros",
+     "pass_": 0.337,
+     "blowup": 0.663,
+     "timeout": 0,
+     "median_days": 26
+    },
+    {
+     "size": "9 micros",
+     "pass_": 0.294,
+     "blowup": 0.706,
+     "timeout": 0,
+     "median_days": 24
+    },
+    {
+     "size": "10 micros",
+     "pass_": 0.2696,
+     "blowup": 0.7304,
+     "timeout": 0,
+     "median_days": 23
+    },
+    {
+     "size": "1 mini",
+     "pass_": 0.2788,
+     "blowup": 0.7212,
+     "timeout": 0,
+     "median_days": 23
+    },
+    {
+     "size": "2 minis",
+     "pass_": 0.173,
+     "blowup": 0.827,
+     "timeout": 0,
+     "median_days": 20
+    }
+   ]
+  },
+  "v006_orb_rvol1_gap": {
+   "window": "in-sample 2021-09-01..2024-08-31",
+   "sessions": 775,
+   "trades": 307,
+   "net_1MNQ_engine": 3662,
+   "micro1": {
+    "pass_": 0.1012,
+    "blowup": 0.0312,
+    "timeout": 0.8676,
+    "median_days": 204
+   },
+   "best_size": {
+    "size": "3 micros",
+    "pass_": 0.4792,
+    "blowup": 0.5122,
+    "timeout": 0.0086,
+    "median_days": 79
+   },
+   "historical_starts_1micro": {
+    "starts": 775,
+    "pass": 28,
+    "bust": 0,
+    "unfinished": 747,
+    "pPass": 0.0361,
+    "pBust": 0,
+    "medianDaysToPass": 199
+   },
+   "historical_starts_3micros": {
+    "starts": 775,
+    "pass": 195,
+    "bust": 479,
+    "unfinished": 101,
+    "pPass": 0.2516,
+    "pBust": 0.6181,
+    "medianDaysToPass": 46
+   },
+   "grid": [
+    {
+     "size": "1 micro",
+     "pass_": 0.1012,
+     "blowup": 0.0312,
+     "timeout": 0.8676,
+     "median_days": 204
+    },
+    {
+     "size": "2 micros",
+     "pass_": 0.4706,
+     "blowup": 0.3458,
+     "timeout": 0.1836,
+     "median_days": 132
+    },
+    {
+     "size": "3 micros",
+     "pass_": 0.4792,
+     "blowup": 0.5122,
+     "timeout": 0.0086,
+     "median_days": 79
+    },
+    {
+     "size": "4 micros",
+     "pass_": 0.4364,
+     "blowup": 0.5634,
+     "timeout": 0.0002,
+     "median_days": 48
+    },
+    {
+     "size": "5 micros",
+     "pass_": 0.3998,
+     "blowup": 0.6002,
+     "timeout": 0,
+     "median_days": 31
+    },
+    {
+     "size": "6 micros",
+     "pass_": 0.3572,
+     "blowup": 0.6428,
+     "timeout": 0,
+     "median_days": 24
+    },
+    {
+     "size": "7 micros",
+     "pass_": 0.3264,
+     "blowup": 0.6736,
+     "timeout": 0,
+     "median_days": 20
+    },
+    {
+     "size": "8 micros",
+     "pass_": 0.3092,
+     "blowup": 0.6908,
+     "timeout": 0,
+     "median_days": 18
+    },
+    {
+     "size": "9 micros",
+     "pass_": 0.2768,
+     "blowup": 0.7232,
+     "timeout": 0,
+     "median_days": 17
+    },
+    {
+     "size": "10 micros",
+     "pass_": 0.2636,
+     "blowup": 0.7364,
+     "timeout": 0,
+     "median_days": 16
+    },
+    {
+     "size": "1 mini",
+     "pass_": 0.2746,
+     "blowup": 0.7254,
+     "timeout": 0,
+     "median_days": 16
+    },
+    {
+     "size": "2 minis",
+     "pass_": 0.1612,
+     "blowup": 0.8388,
+     "timeout": 0,
+     "median_days": 13
+    }
+   ],
+   "median_kul": {
+    "1 micro": {
+     "pass_": 0.009,
+     "blowup": 0.3322,
+     "timeout": 0.6588,
+     "median_days": 223
+    },
+    "3 micros": {
+     "pass_": 0.2,
+     "blowup": 0.798,
+     "timeout": 0.002,
+     "median_days": 76
+    }
+   }
+  },
+  "v007_orb_rvol1_gap_fixdays": {
+   "window": "in-sample 2021-09-01..2024-08-31",
+   "sessions": 775,
+   "trades": 223,
+   "net_1MNQ_engine": 3170,
+   "micro1": {
+    "pass_": 0.0842,
+    "blowup": 0.0334,
+    "timeout": 0.8824,
+    "median_days": 203
+   },
+   "best_size": {
+    "size": "3 micros",
+    "pass_": 0.4694,
+    "blowup": 0.5202,
+    "timeout": 0.0104,
+    "median_days": 84
+   },
+   "historical_starts_1micro": {
+    "starts": 775,
+    "pass": 0,
+    "bust": 0,
+    "unfinished": 775,
+    "pPass": 0,
+    "pBust": 0,
+    "medianDaysToPass": null
+   },
+   "historical_starts_3micros": {
+    "starts": 775,
+    "pass": 270,
+    "bust": 397,
+    "unfinished": 108,
+    "pPass": 0.3484,
+    "pBust": 0.5123,
+    "medianDaysToPass": 92
+   },
+   "grid": [
+    {
+     "size": "1 micro",
+     "pass_": 0.0842,
+     "blowup": 0.0334,
+     "timeout": 0.8824,
+     "median_days": 203
+    },
+    {
+     "size": "2 micros",
+     "pass_": 0.4282,
+     "blowup": 0.3532,
+     "timeout": 0.2186,
+     "median_days": 138
+    },
+    {
+     "size": "3 micros",
+     "pass_": 0.4694,
+     "blowup": 0.5202,
+     "timeout": 0.0104,
+     "median_days": 84
+    },
+    {
+     "size": "4 micros",
+     "pass_": 0.4322,
+     "blowup": 0.5676,
+     "timeout": 0.0002,
+     "median_days": 49
+    },
+    {
+     "size": "5 micros",
+     "pass_": 0.3966,
+     "blowup": 0.6034,
+     "timeout": 0,
+     "median_days": 33
+    },
+    {
+     "size": "6 micros",
+     "pass_": 0.3578,
+     "blowup": 0.6422,
+     "timeout": 0,
+     "median_days": 27
+    },
+    {
+     "size": "7 micros",
+     "pass_": 0.338,
+     "blowup": 0.662,
+     "timeout": 0,
+     "median_days": 23
+    },
+    {
+     "size": "8 micros",
+     "pass_": 0.3098,
+     "blowup": 0.6902,
+     "timeout": 0,
+     "median_days": 20
+    },
+    {
+     "size": "9 micros",
+     "pass_": 0.2824,
+     "blowup": 0.7176,
+     "timeout": 0,
+     "median_days": 18
+    },
+    {
+     "size": "10 micros",
+     "pass_": 0.2598,
+     "blowup": 0.7402,
+     "timeout": 0,
+     "median_days": 18
+    },
+    {
+     "size": "1 mini",
+     "pass_": 0.2674,
+     "blowup": 0.7326,
+     "timeout": 0,
+     "median_days": 18
+    },
+    {
+     "size": "2 minis",
+     "pass_": 0.1676,
+     "blowup": 0.8324,
+     "timeout": 0,
+     "median_days": 15
+    }
+   ],
+   "median_kul": {
+    "1 micro": {
+     "pass_": 0.0036,
+     "blowup": 0.1506,
+     "timeout": 0.8458,
+     "median_days": 220.5
+    },
+    "3 micros": {
+     "pass_": 0.2204,
+     "blowup": 0.7732,
+     "timeout": 0.0064,
+     "median_days": 80
+    }
+   }
+  },
+  "v004_orb_rvol_gap_oospre": {
+   "window": "OOS before holdout 2024-09-01..2025-05-31",
+   "sessions": 191,
+   "trades": 27,
+   "net_1MNQ_engine": 1648,
+   "micro1": {
+    "pass_": 0.2686,
+    "blowup": 0.0002,
+    "timeout": 0.7312,
+    "median_days": 207
+   },
+   "best_size": {
+    "size": "3 micros",
+    "pass_": 0.8284,
+    "blowup": 0.1402,
+    "timeout": 0.0314,
+    "median_days": 90
+   },
+   "historical_starts_1micro": {
+    "starts": 191,
+    "pass": 0,
+    "bust": 0,
+    "unfinished": 191,
+    "pPass": 0,
+    "pBust": 0,
+    "medianDaysToPass": null
+   },
+   "historical_starts_3micros": {
+    "starts": 191,
+    "pass": 57,
+    "bust": 30,
+    "unfinished": 104,
+    "pPass": 0.2984,
+    "pBust": 0.1571,
+    "medianDaysToPass": 56
+   },
+   "grid": [
+    {
+     "size": "1 micro",
+     "pass_": 0.2686,
+     "blowup": 0.0002,
+     "timeout": 0.7312,
+     "median_days": 207
+    },
+    {
+     "size": "2 micros",
+     "pass_": 0.7758,
+     "blowup": 0.036,
+     "timeout": 0.1882,
+     "median_days": 137
+    },
+    {
+     "size": "3 micros",
+     "pass_": 0.8284,
+     "blowup": 0.1402,
+     "timeout": 0.0314,
+     "median_days": 90
+    },
+    {
+     "size": "4 micros",
+     "pass_": 0.7836,
+     "blowup": 0.2136,
+     "timeout": 0.0028,
+     "median_days": 61
+    },
+    {
+     "size": "5 micros",
+     "pass_": 0.715,
+     "blowup": 0.285,
+     "timeout": 0,
+     "median_days": 47
+    },
+    {
+     "size": "6 micros",
+     "pass_": 0.6494,
+     "blowup": 0.3506,
+     "timeout": 0,
+     "median_days": 40
+    },
+    {
+     "size": "7 micros",
+     "pass_": 0.6038,
+     "blowup": 0.3962,
+     "timeout": 0,
+     "median_days": 36
+    },
+    {
+     "size": "8 micros",
+     "pass_": 0.5872,
+     "blowup": 0.4128,
+     "timeout": 0,
+     "median_days": 35
+    },
+    {
+     "size": "9 micros",
+     "pass_": 0.5434,
+     "blowup": 0.4566,
+     "timeout": 0,
+     "median_days": 33
+    },
+    {
+     "size": "10 micros",
+     "pass_": 0.5062,
+     "blowup": 0.4938,
+     "timeout": 0,
+     "median_days": 32
+    },
+    {
+     "size": "1 mini",
+     "pass_": 0.5132,
+     "blowup": 0.4868,
+     "timeout": 0,
+     "median_days": 32
+    },
+    {
+     "size": "2 minis",
+     "pass_": 0.4058,
+     "blowup": 0.5942,
+     "timeout": 0,
+     "median_days": 29
+    }
+   ]
+  },
+  "v006_orb_rvol1_gap_oospre": {
+   "window": "OOS before holdout 2024-09-01..2025-05-31",
+   "sessions": 191,
+   "trades": 53,
+   "net_1MNQ_engine": 2555,
+   "micro1": {
+    "pass_": 0.6614,
+    "blowup": 0.0012,
+    "timeout": 0.3374,
+    "median_days": 174
+   },
+   "best_size": {
+    "size": "2 micros",
+    "pass_": 0.9042,
+    "blowup": 0.0642,
+    "timeout": 0.0316,
+    "median_days": 95
+   },
+   "historical_starts_1micro": {
+    "starts": 191,
+    "pass": 0,
+    "bust": 0,
+    "unfinished": 191,
+    "pPass": 0,
+    "pBust": 0,
+    "medianDaysToPass": null
+   },
+   "historical_starts_3micros": {
+    "starts": 191,
+    "pass": 80,
+    "bust": 26,
+    "unfinished": 85,
+    "pPass": 0.4188,
+    "pBust": 0.1361,
+    "medianDaysToPass": 40.5
+   },
+   "grid": [
+    {
+     "size": "1 micro",
+     "pass_": 0.6614,
+     "blowup": 0.0012,
+     "timeout": 0.3374,
+     "median_days": 174
+    },
+    {
+     "size": "2 micros",
+     "pass_": 0.9042,
+     "blowup": 0.0642,
+     "timeout": 0.0316,
+     "median_days": 95
+    },
+    {
+     "size": "3 micros",
+     "pass_": 0.8354,
+     "blowup": 0.1644,
+     "timeout": 0.0002,
+     "median_days": 57
+    },
+    {
+     "size": "4 micros",
+     "pass_": 0.7426,
+     "blowup": 0.2574,
+     "timeout": 0,
+     "median_days": 38
+    },
+    {
+     "size": "5 micros",
+     "pass_": 0.6604,
+     "blowup": 0.3396,
+     "timeout": 0,
+     "median_days": 29
+    },
+    {
+     "size": "6 micros",
+     "pass_": 0.6004,
+     "blowup": 0.3996,
+     "timeout": 0,
+     "median_days": 23
+    },
+    {
+     "size": "7 micros",
+     "pass_": 0.5604,
+     "blowup": 0.4396,
+     "timeout": 0,
+     "median_days": 20
+    },
+    {
+     "size": "8 micros",
+     "pass_": 0.5264,
+     "blowup": 0.4736,
+     "timeout": 0,
+     "median_days": 19
+    },
+    {
+     "size": "9 micros",
+     "pass_": 0.4628,
+     "blowup": 0.5372,
+     "timeout": 0,
+     "median_days": 18
+    },
+    {
+     "size": "10 micros",
+     "pass_": 0.443,
+     "blowup": 0.557,
+     "timeout": 0,
+     "median_days": 17
+    },
+    {
+     "size": "1 mini",
+     "pass_": 0.4504,
+     "blowup": 0.5496,
+     "timeout": 0,
+     "median_days": 17
+    },
+    {
+     "size": "2 minis",
+     "pass_": 0.328,
+     "blowup": 0.672,
+     "timeout": 0,
+     "median_days": 15
+    }
+   ]
+  },
+  "v007_orb_rvol1_gap_fixdays_oospre": {
+   "window": "OOS before holdout 2024-09-01..2025-05-31",
+   "sessions": 191,
+   "trades": 30,
+   "net_1MNQ_engine": 1642,
+   "micro1": {
+    "pass_": 0.2822,
+    "blowup": 0.001,
+    "timeout": 0.7168,
+    "median_days": 202
+   },
+   "best_size": {
+    "size": "3 micros",
+    "pass_": 0.7938,
+    "blowup": 0.1828,
+    "timeout": 0.0234,
+    "median_days": 85
+   },
+   "historical_starts_1micro": {
+    "starts": 191,
+    "pass": 0,
+    "bust": 0,
+    "unfinished": 191,
+    "pPass": 0,
+    "pBust": 0,
+    "medianDaysToPass": null
+   },
+   "historical_starts_3micros": {
+    "starts": 191,
+    "pass": 45,
+    "bust": 0,
+    "unfinished": 146,
+    "pPass": 0.2356,
+    "pBust": 0,
+    "medianDaysToPass": 41
+   },
+   "grid": [
+    {
+     "size": "1 micro",
+     "pass_": 0.2822,
+     "blowup": 0.001,
+     "timeout": 0.7168,
+     "median_days": 202
+    },
+    {
+     "size": "2 micros",
+     "pass_": 0.779,
+     "blowup": 0.0572,
+     "timeout": 0.1638,
+     "median_days": 133
+    },
+    {
+     "size": "3 micros",
+     "pass_": 0.7938,
+     "blowup": 0.1828,
+     "timeout": 0.0234,
+     "median_days": 85
+    },
+    {
+     "size": "4 micros",
+     "pass_": 0.7316,
+     "blowup": 0.2676,
+     "timeout": 0.0008,
+     "median_days": 56
+    },
+    {
+     "size": "5 micros",
+     "pass_": 0.668,
+     "blowup": 0.3314,
+     "timeout": 0.0006,
+     "median_days": 43
+    },
+    {
+     "size": "6 micros",
+     "pass_": 0.589,
+     "blowup": 0.4108,
+     "timeout": 0.0002,
+     "median_days": 36
+    },
+    {
+     "size": "7 micros",
+     "pass_": 0.545,
+     "blowup": 0.455,
+     "timeout": 0,
+     "median_days": 32
+    },
+    {
+     "size": "8 micros",
+     "pass_": 0.5266,
+     "blowup": 0.4734,
+     "timeout": 0,
+     "median_days": 31
+    },
+    {
+     "size": "9 micros",
+     "pass_": 0.482,
+     "blowup": 0.518,
+     "timeout": 0,
+     "median_days": 29
+    },
+    {
+     "size": "10 micros",
+     "pass_": 0.4452,
+     "blowup": 0.5548,
+     "timeout": 0,
+     "median_days": 28
+    },
+    {
+     "size": "1 mini",
+     "pass_": 0.45,
+     "blowup": 0.55,
+     "timeout": 0,
+     "median_days": 29
+    },
+    {
+     "size": "2 minis",
+     "pass_": 0.3418,
+     "blowup": 0.6582,
+     "timeout": 0,
+     "median_days": 25
+    }
+   ]
+  }
+ }
+}

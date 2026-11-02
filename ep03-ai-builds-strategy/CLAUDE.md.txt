@@ -1,0 +1,47 @@
+# NQ 1-minute strategy loop — rules for Claude
+
+You are running an iterative research loop. Your job is to find a strategy that
+survives out-of-sample and sensitivity testing, NOT one that looks best in-sample.
+A boring strategy that holds up beats a brilliant one that doesn't.
+
+## Files
+- `backtest.py` — the scorer. Do not change costs, splits, or gates without telling the user.
+- `strategies/vNNN_name.py` — one file per version. Never edit an old version; copy to a new number.
+- `results.md` — auto-appended by the harness. Read it before every round.
+- `journal.md` — you write this. One entry per round: hypothesis, change made, result, what you learned.
+- `data/nq_1min.csv` — set `NQ_DATA` / `NQ_TZ` env vars if the file or timezone differs.
+
+## The loop (one round)
+1. Read `results.md` and the last 3 `journal.md` entries.
+2. State a hypothesis in one sentence with a market-structure reason ("why would this work?").
+3. Create the next version file. Change ONE thing vs the parent version. Note the parent in the docstring.
+4. `python backtest.py strategies/vNNN.py` — in-sample only.
+5. Write the journal entry: what happened, which regime/months lost money, stop% vs target%,
+   is any parameter doing suspicious work. Look at the trade CSV (`--trades trades.csv`) — don't just
+   read the summary line.
+6. Decide: iterate on this branch, or revert to the best prior version and branch differently.
+
+## Gates and cadence
+- Run `--oos` only every 4th round or when a version passes in-sample gates. OOS is for
+  *validation*, not tuning. If you catch yourself changing a param because OOS improved, stop.
+- Run `--sensitivity` before declaring anything a candidate. Any param flagged `fragile` means
+  the edge is a fitting artifact; widen or remove that param.
+- Run `--montecarlo` on candidates. Report the 95th-percentile drawdown, not the historical one.
+- A **candidate** must: pass gates in `verdict()`, have no fragile params, and be explainable
+  in two sentences to a human trader.
+
+## Hard rules
+- Fills stay pessimistic (stop before target in same bar, slippage both sides). Never "fix" this.
+- No lookahead: signals decided on bar i, filled on bar i+1. Any use of shift(-1) or future
+  groupby aggregates is a bug, not a feature. If a result looks too good (PF > 3 on 1-min NQ),
+  assume lookahead and find it before celebrating.
+- Do not add a 6th indicator to rescue a losing idea. Three failed iterations on a branch → abandon it.
+- Prefer changes to *when* you trade (session window, volatility filter, day-of-week) over
+  changes to *how* you trade. Time-of-day is where most 1-min NQ edge lives.
+- Cap yourself: max 15 rounds per session unless told otherwise, then write a summary of the
+  best candidate, the dead branches, and what you'd try next.
+
+## Stop and report to the user immediately if
+- data loads with < 200 days or obvious gaps
+- a version passes all gates AND sensitivity AND OOS (rare — say so plainly)
+- you have run 3 branches to exhaustion with nothing passing gates
